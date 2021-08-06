@@ -123,20 +123,27 @@
         "usingComponents" : true,
         "appid" : ""
     },
-    "h5" : {
-        "template" : "template.h5.html",
-        "router" : {
-            "mode" : "hash",
-            "base" : ""
-        },
-        "optimization" : {
-            "treeShaking" : {
-                "enable" : false
-            }
-        },
-        "title" : "uView UI",
-        "devServer" : {
-            "https" : false
-        }
-    }
+   "h5" : {
+       "title" : "加载中",
+       "domain" : "http://ljtest01.liuziqian.top/",
+       "router" : {
+           "base" : "/",
+           "mode" : "history"
+       },
+       "publicPath" : "/",
+       "devServer" : {
+           "https" : false,
+           "port" : 8080,
+           "proxy" : {
+               "/api" : {
+                   "target" : "http://10.10.20.223:667",
+                   "changeOrigin" : true,
+                   "secure" : false,
+                   "pathRewrite" : {
+                       "^/api" : "/"
+                   }
+               }
+           }
+       }
+   }
 }

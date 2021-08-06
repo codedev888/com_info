@@ -47,6 +47,17 @@ page{
   padding-top: 0;
 }
 .flex-1{flex:1}
+.flex-2{flex:2}
+.flex-3{flex:3}
+.flex-4{flex:4}
+.flex-5{flex:5}
+.flex-6{flex:6}
+.flex-7{flex:7}
+.flex-8{flex:8}
+.flex-9{flex:9}
+.flex-10{flex:10}
+.flex-11{flex:11}
+.flex-12{flex:12}
 .fw{font-weight: bold;}
 .group{background: #ffffff;}
 .line{height: 2rpx;  background: #f7f7f7; width: 100%;}
@@ -72,3 +83,29 @@ page{
 	 line-height: 60rpx;
 	 padding: 0rpx 30rpx;
 }
+.p-l-r{padding: 0rpx 30rpx;}
+
+.title{
+	line-height: 80rpx;}
+.title > .title-left{font-size: 34rpx;
+	background:url(./static/icon-title.png) no-repeat;
+	background-position: left center;
+	background-size: 26rpx 26rpx;
+	padding-left:36rpx;
+	font-weight:600;
+	}
+
+.title > .title-right{
+		font-size: 24rpx;
+		position:relative;
+		
+		.blue{color: #627BF8;}
+		
+	}
+.title > .title-right:before{content: ""; position: absolute; left:-20rpx; top:45%;
+	height: 8rpx;
+	width: 8rpx;
+	border-radius: 4rpx;
+	background:#666666
+	}
+.p30{padding: 30rpx;}

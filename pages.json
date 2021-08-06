@@ -2,25 +2,23 @@
 	"easycom": {
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
-	// "condition": { //模式配置，仅开发期间生效
-	// 	"current": 0, //当前激活的模式(list 的索引项)
-	// 	"list": [{
-	// 		"name": "test", //模式名称
-	// 		"path": "pages/componentsC/test/index", //启动页面，必选
-	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
-	// 	}]
-	// },
 	"pages": [
 		{
-			"path": "pages/company/index",
+			"path": "pages/supermarket/index",
 			"style": {
-				"navigationBarTitleText": "企业主页"
+				"navigationBarTitleText": "企服超市"
 			}
 		},
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "罗i企"
+			}
+		},
+		{
+			"path": "pages/company/index",
+			"style": {
+				"navigationBarTitleText": "企业主页"
 			}
 		},
 		{
@@ -200,6 +198,66 @@
                         }
                     }
                 }
+			}
+		},
+		{
+			"path": "pages/supermarket/categorize",
+			"style": {
+				"navigationBarTitleText": "全部分类"
+			}
+		},
+		{
+			"path": "pages/supermarket/categorize_search",
+			"style": {
+				"navigationBarTitleText": "分类查找"
+			}
+		},
+		{
+			"path": "pages/supermarket/intent_register",
+			"style": {
+				"navigationBarTitleText": "意向登记"
+			}
+		},
+		{    //意向登记成功
+			"path": "pages/supermarket/intention_registration_successful",
+			"style": {
+				"navigationBarTitleText": "意向登记"
+			}
+		},
+		{
+			"path": "pages/supermarket/release",
+			"style": {
+				"navigationBarTitleText": "我要发布"
+			}
+		},
+		{
+			"path": "pages/supermarket/search_service",
+			"style": {
+				"navigationBarTitleText": "搜索服务"
+			}
+		},
+		{
+			"path": "pages/supermarket/search_shop",
+			"style": {
+				"navigationBarTitleText": "搜索超市"
+			}
+		},
+		{
+			"path": "pages/supermarket/service_details",
+			"style": {
+				"navigationBarTitleText": "服务详情"
+			}
+		},
+		{
+			"path": "pages/supermarket/service_evaluation",
+			"style": {
+				"navigationBarTitleText": "服务评价"
+			}
+		},
+		{
+			"path": "pages/supermarket/shop_evaluation",
+			"style": {
+				"navigationBarTitleText": "超市评价"
 			}
 		}
 		

@@ -39,7 +39,8 @@ const service = axios.create({
 	baseURL: baseURL,
 	timeout: 10000,
 	header: {
-		'content-type': 'application/json'
+		'Accept': 'application/json, text/plain, */*',
+		'Access-Control-Allow-Origin':'*'
 	},
 
 });
@@ -53,7 +54,7 @@ service.interceptors.request.use(
 		if (config.method == 'GET') {
 			config.url += paramsToStr(config.params)
 		}
-		config.header.token = Cache.get(TOKEN)
+		config.header.access_token = Cache.get(TOKEN)?Cache.get(TOKEN):"add9bbb5-54cf-4f1a-8bb3-0ebdd022562d";
 		return config
 	},
 	error => {
@@ -66,6 +67,7 @@ service.interceptors.request.use(
 // response 拦截器
 service.interceptors.response.use(
 	async (response) => {
+		//console.log(response,"-----------response----------")
 			if (response.data) {
 				const {
 					code,

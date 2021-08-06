@@ -17,7 +17,7 @@ const state = {
 		user_integral: 0,
 		coupon: 0
 	},
-	token: Cache.get(TOKEN) || null,
+	token: Cache.get(TOKEN) || "",
 	cartNum: "",
 	//记录登录次数
 	loginNum: Cache.get(LOGIN_NUM) || 0,

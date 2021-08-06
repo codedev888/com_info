@@ -119,7 +119,7 @@ export default {
 page{padding-bottom: 100rpx;}
 .changelist{padding: 10rpx 20rpx; background: #F7F7F7; margin-right: 20rpx; display: flex;}
 .set-bar{position: fixed; width: 100%; justify-content: space-between; bottom: 0rpx; left: 0rpx; background: #ffffff;}
-.section3{flex: 1; line-height: 90rpx; text-align: center; font-size: 28rpx;color: rgba(100, 130, 255, 1); border-left: #f2f2f2 solid 2rpx;}
+.section3{flex: 1; line-height: 100rpx; text-align: center; font-size: 28rpx;color: rgba(100, 130, 255, 1); border-left: #f2f2f2 solid 2rpx;}
 .section3.active{background-color: rgba(100, 130, 255, 1); color: #ffffff;}
 .section3:first{border: 0;}
 .info-item{line-height: 80rpx; padding: 0rpx 30rpx;flex-wrap: wrap;}

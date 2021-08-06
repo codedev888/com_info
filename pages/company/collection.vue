@@ -1,57 +1,15 @@
 <template>
   <view class="page flex-col">
  
-<!-- 	<scroll-view scroll-x class="bg-white nav flex-row bd" scroll-with-animation show-scrollbar="false" :scroll-left="scrollLeft">
-			<view class="cu-item flex-flex" :class="index==TabCur?'cur':''" v-for="(item,index) in list" :key="index" @tap="tabSelect" :data-id="index">
-				{{item.name}}
-			</view>
-	</scroll-view>
-	<view class="modecotent">
-		<view class="mode1" v-if="currentItem === 0">
-			<collection></collection>
-		</view>
-		<view class="mode2" v-if="currentItem === 1">
-			选项卡2的内容
-		</view>
-		<view class="mode3" v-if="currentItem === 2">
-			选项卡3的内容
-		</view>
-		<view class="mode4" v-if="currentItem === 3">
-			选项卡4的内容
-		</view>
-		<view class="mode4" v-if="currentItem === 4">
-			选项卡5的内容
-		</view>
-	</view> -->
  
 		<view class="wrap">
 			<view class="u-tabs-box">
 				<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8'}" :list="list" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
 			</view>
 			<swiper class="swiper-box" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<collection></collection>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<collection></collection>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;">
-					<collection></collection>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<collection></collection>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<collection></collection>
+				<swiper-item v-for="(item,index) in list" class="swiper-item">
+					<scroll-view scroll-y style="height: 100%;width: 100%;" >
+						<collection :type="item.row_type" :clist="com_list"></collection>
 					</scroll-view>
 				</swiper-item>
 			</swiper>
@@ -61,6 +19,16 @@
 </template>
 <script>
 import collection from '../../components/company/collection.vue';
+import {
+		pubGetpage,
+		pubPostpage,
+	} from '@/api/store';
+import {
+		loadingFun
+	} from '@/utils/tools';
+	import {
+		loadingType
+	} from '@/utils/type';
 export default {
   data() {
     return {
@@ -75,10 +43,16 @@ export default {
 			list:[
 				{
 					name:'产业空间',
+					url:"park/attent/gardenList",
+					type:"get",
+					row_type:"hous",
 					check:true
 				},
 				{
 					name:'企业服务',
+					url:"service/list/attent",
+					type:"post",
+					row_type:"com",
 					check:false
 				},
 				{
@@ -95,9 +69,15 @@ export default {
 				},
 			],
 			checkIndex:0,
-			currentItem:0
+			currentItem:0,
+			status: loadingType.LOADING,
+			page:1,
+			com_list:[],
 
     };
+  },
+  onLoad() {
+  	this.getListFun();
   },
   methods: {
 	  tabSelect(e) {
@@ -111,15 +91,47 @@ export default {
 	  },		// tab栏切换
 		change(index) {
 			this.swiperCurrent = index;
-			this.getOrderList(index);
+			this.current=index;
+			this.status=loadingType.LOADING;
+			this.page=1;
+			this.com_list=[];
+			this.getListFun();
 		},
 		transition({ detail: { dx } }) {
 			this.$refs.tabs.setDx(dx);
 		},
 		animationfinish({ detail: { current } }) {
+			 
 			this.$refs.tabs.setFinishCurrent(current);
-			this.swiperCurrent = current;
-			this.current = current;
+			this.change(current);
+		},
+		async getListFun() {
+			let {
+				page,
+				com_list,
+				list,
+				current,
+				status
+			} = this;
+			if (status == loadingType.FINISHED) return;
+			
+			var active_list=list[current];
+			const params = {
+				 page: page
+			}
+			var pdata={url:active_list.url,params:params};
+			var data ="";
+			if(active_list.type=="get"){
+				  data = await loadingFun(pubGetpage, page, com_list, status, pdata)
+			}else{
+				  data = await loadingFun(pubPostpage, page, com_list, status, pdata)
+			} 
+			if (!data) return
+			
+		 	//console.log(data,"----data----");
+			this.page = data.page
+			this.com_list = data.dataList
+			this.status = data.status
 		}
   },
   components:{

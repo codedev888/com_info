@@ -109,25 +109,28 @@ export function paramsToStr(params) {
 
 //分页加载
 export async function loadingFun(fun, page, dataList = [], status, params) {
-	// 拷贝对象
+	// 拷贝对象 
 	dataList = Object.assign([], dataList)
+	
 	if (status == loadingType.FINISHED) return false
+	 
 	const {
 		code,
 		data
 	} = await fun({
-		page_no: page,
+		page: page,
 		...params
 	})
+	//console.log(data,"---data---");
 	uni.stopPullDownRefresh()
-	if (code == 1) {
+	if (code == 0) {
 		let {
 			list,
-			more
+			total,
 		} = data
 		dataList.push(...list)
 		page = ++page
-		if (!more) {
+		if (params.params.pageSize>total) {
 			status = loadingType.FINISHED
 		}
 		if (dataList.length <= 0) {
@@ -136,11 +139,13 @@ export async function loadingFun(fun, page, dataList = [], status, params) {
 	} else {
 		status = loadingType.ERROR
 	}
-	return {
+	var res={
 		page,
 		dataList,
 		status
-	}
+	};
+	//console.log(res,"res---")
+	return res;
 }
 
 

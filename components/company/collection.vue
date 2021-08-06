@@ -9,13 +9,15 @@
 		</view>
 
 		<view class="modecotent">
-			<view class="group" v-if="currentItem === 0">
-					<view class="section24 flex-row bd">
+			<view class="group"  >
+				  <block v-for="(item,index) in clist">
+					<!--hous-->
+					<view v-if="type=='hous'" class="section24 flex-row bd">
 						<view class="main2 flex-flex">
-							<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa" mode="widthFix"></image>
+							<image :src="item.gardenImg" mode="widthFix"></image>
 						</view>
 						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
+						  <text class="info5">{{item.gardenName}}</text>
 						  <view class="outer1 flex-row">
 							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
 							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
@@ -24,7 +26,7 @@
 						  <text class="paragraph1">
 							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
 							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
+							{{item.gardenAddress}}&nbsp;|&nbsp;办公&nbsp;、商铺
 						  </text>
 						  <view class="outer2 flex-row">
 							<view class="wrap1">
@@ -41,107 +43,37 @@
 						  </view>
 						</view>
 					</view>
-					  
-					<view class="section24 flex-row bd">
+					<view v-else-if="type=='com'" class="section24 flex-row bd">
 						<view class="main2 flex-flex">
-							<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
+							<image :src="item.imgUrl" mode="widthFix"></image>
 						</view>
 						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
+						  <text class="info5">{{item.corpName}}</text>
 						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
+							<view class="mod2 flex-col" v-for="(row,ky) in item.labels"><text class="txt8">{{row}}</text></view>
+							 
 						  </view>
 						  <text class="paragraph1">
 							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
 							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
+							{{item.gardenAddress}}&nbsp;|&nbsp;办公&nbsp;、商铺
 						  </text>
 						  <view class="outer2 flex-row">
 							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
+							  <text class="info6">{{item.servicePrice}}</text>
+							  <text class="info7">{{item.priceUnit}}</text>
+							   
 							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
+							 
 						  </view>
 						</view>
 					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
+				</block>
 					
+					
+					   
 			</view>	
-			<view class="group" v-if="currentItem === 1">
-					<view class="section24 flex-col bd">
-						<view class="names">
-								金和瑞瑚琳工业园
-						</view>
-
-						<view class="item-box flex-row">
-							<view class="main2 flex-flex">
-								<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa" mode="widthFix"></image>
-							</view>
-							<view class="main3 flex-col">
-								<view class="flex-col flex-1">
-									<text class="info5">深业进元大厦</text>
-									<view class="outer1 flex-row">
-										<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-										<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-										<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-									</view>
-								</view>
-
-								<view class="outer2 flex-row">
-									<view class="wrap1">
-									  <text class="info6">75</text>
-									  <text class="info7">元</text>
-									  <text class="txt9">/㎡/月起</text>
-									</view>
-									<view class="wrap2">
-									<text class="info6">租</text> 
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-					  
-					<view class="section24 bd" @tap="go('../../pages/member/cykj')">
-						<view class="names">甘坑同富裕工业区</view>
-						<view class="item-box flex-row">
-							<view class="main2 flex-flex">
-								<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
-							</view>
-							<view class="main3 flex-col">
-								<view class="flex-col flex-1">
-									<text class="info5">深业进元大厦</text>
-									<view class="outer1 flex-row">
-										<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-										<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-										<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-									</view>
-								</view>
-
-								<view class="outer2 flex-row">
-									<view class="wrap1">
-									  <text class="info6">75</text>
-									  <text class="info7">元</text>
-									  <text class="txt9">/㎡/月起</text>
-									</view>
-									<view class="wrap2">
-									<text class="info6">租</text> 
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
-					
-			</view>
+			 
 			<text class="word19">没有更多了</text>
 		</view>
 
@@ -150,6 +82,20 @@
 
 <script>
 export default {
+	props: {
+		type: {
+			type: String,
+			default: 'double'
+		},
+		clist: {
+			type: Array,
+			default: () => []
+		},
+	    isBargain: {
+	        type: Boolean,
+	        default: false
+	    }
+	},
   data() {
     return {
       constants: {},

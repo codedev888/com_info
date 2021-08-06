@@ -2,7 +2,7 @@
 	<view class="page flex-col">
 			<view class="box1 flex-col">
 				<!-- 用户账号信息开始 -->
-			  <view v-if="isLogin" class="section3 flex-row bd">
+			  <view class="section3 flex-row bd">
 				<view class="userinfo flex-flex">
 					<view class="section4 flex-col">
 						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd1fe087671bd8852d108646b5073bfeecd3d6b5381285ebaecdda36f8c54f90a" mode="widthFix"></image>
@@ -14,26 +14,7 @@
 					</view>
 				</view>
 				<text class="word4" @tap="go('../company/setting')">退出登录</text>
-				
-				
 			  </view>
-			  <view v-else class="section3 flex-row bd">
-			  				<view class="userinfo flex-flex">
-			  					<view class="section4 flex-col">
-			  						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd1fe087671bd8852d108646b5073bfeecd3d6b5381285ebaecdda36f8c54f90a" mode="widthFix"></image>
-			  						
-			  					</view>
-			  					<view class="section5 flex-col">
-			  					  <text class="word2 fw">用户名</text>
-			  					  <text class="word3">游客</text>
-			  					</view>
-			  				</view>
-			  				<text class="word4" @tap="goLogin">登录</text>
-			  				
-			  				
-			  </view>
-			  
-			  
 			<!-- 用户账号信息结束 -->
 			<!-- 菜单开始 -->
 			  <view class="section7 bd">
@@ -348,18 +329,6 @@
 </template>
 
 <script>
-	import {
-		mapGetters,
-		mapActions
-	} from 'vuex'
-	import {
-		getUser
-	} from '@/api/user'; 
-	import {
-		showLoginDialog
-	} from '@/utils/wxutil'
-	import Cache from '@/utils/cache'
-	const app = getApp()
 	export default{
 	  data() {
 	    return {
@@ -414,16 +383,6 @@
 	    };
 	  },
 	  methods: {
-		 goLogin() {
-				let {
-					isLogin
-				} = this;
-				if (!isLogin) {
-					 console.log(1111);
-				}
-				 
-		   },
-
 		go(e){
 			uni.navigateTo({
 						url:e
@@ -431,10 +390,7 @@
 		},
 
 		  
-	  },
-	  computed: {
-	  			...mapGetters(["userInfo"])
-	  		}
+	  }
 	};
 	
 </script>

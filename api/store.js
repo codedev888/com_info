@@ -1,5 +1,27 @@
 import request from '@/utils/request'
 import {client} from '@/utils/tools'
+//公共请求get分页
+export function pubGetpage(data) {
+	var url=data.url==undefined?'park/attent/gardenList':data.url;
+	 
+	 data.params.pageSize=data.params.pageSize?data.params.pageSize:10;
+	return request.get(url, {
+		params: data.params
+	});
+}
+export function pubGet(data) {
+	var url=data.url==undefined?'park/attent/gardenList':data.url;
+	  data.params=data.params?data.params:{};
+	return request.get(url, {
+		params: data.params
+	});
+}
+//公共请求POST分页
+export function pubPostpage(data) {
+	var url=data.url==undefined?'park/attent/gardenList':data.url;
+	 data.params.pageSize=data.params.pageSize?data.params.pageSize:10;
+	return request.post(url,data.params);
+}
 //获取首页数据接口
 export function getHome() {
 	return request.get('index/lists')
@@ -45,6 +67,7 @@ export function getGoodsDetail(data) {
 		params: data
 	});
 }
+
 
 // 商品搜索
 
