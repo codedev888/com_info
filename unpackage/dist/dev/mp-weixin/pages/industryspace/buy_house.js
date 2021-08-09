@@ -112,6 +112,9 @@ try {
     },
     uDropdownItem: function() {
       return __webpack_require__.e(/*! import() | uview-ui/components/u-dropdown-item/u-dropdown-item */ "uview-ui/components/u-dropdown-item/u-dropdown-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-dropdown-item/u-dropdown-item.vue */ 859))
+    },
+    uTabbar: function() {
+      return Promise.all(/*! import() | uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabbar/u-tabbar.vue */ 364))
     }
   }
 } catch (e) {
@@ -168,65 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -358,8 +303,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 var _default =
 {
-  data: function data() {
-    return {
+  data: function data() {var _ref;
+    return _ref = {
+      current: 0,
+      show: true,
+      bgColor: '#ffffff',
+      borderTop: true,
+      barlist: [{
+        iconPath: "/static/tabbar/home.png",
+        selectedIconPath: "/static/tabbar/home-active.png",
+        //pagePath:'/page/company/index',
+        text: '首页',
+        //count: 2,
+        //isDot: true,
+        customIcon: false },
+
+      {
+        iconPath: "/static/tabbar/service.png",
+        selectedIconPath: "/static/tabbar/service-active.png",
+        //pagePath:'/page/company/index',
+        text: '客服',
+        customIcon: false },
+
+      {
+        iconPath: "/static/tabbar/info.png",
+        selectedIconPath: "/static/tabbar/info-active.png",
+        //pagePath:'/page/company/index',
+        text: '消息',
+        customIcon: false },
+
+      {
+        iconPath: "/static/tabbar/member.png",
+        selectedIconPath: "/static/tabbar/member-active.png",
+        //pagePath:'/page/company/index',
+        text: '主页',
+        //count: 23,
+        isDot: false,
+        customIcon: false }],
+
+
+      midButton: false,
+      inactiveColor: '#909399',
+      activeColor: '#5098FF',
       custonStyle: '',
       keyword: '',
       bg: 'none',
@@ -397,100 +382,92 @@ var _default =
 
       {
         label: "商铺",
-        icon: '/static/industryspace/buyhouse/sp.png' }],
+        icon: '/static/industryspace/buyhouse/sp.png' }] }, _defineProperty(_ref, "current",
 
 
 
-      current: 0,
-      value1: 1,
-      value2: 2,
-      value3: 2,
-      value4: 2,
-      options1: [{
-        label: '罗湖区委（政府）办公室',
-        value: 1 },
+    0), _defineProperty(_ref, "value1",
+    1), _defineProperty(_ref, "value2",
+    2), _defineProperty(_ref, "value3",
+    2), _defineProperty(_ref, "value4",
+    2), _defineProperty(_ref, "options1",
+    [{
+      label: '罗湖区委（政府）办公室',
+      value: 1 },
 
-      {
-        label: '罗湖区发展和改革局',
-        value: 2 },
+    {
+      label: '罗湖区发展和改革局',
+      value: 2 },
 
-      {
-        label: '罗湖区工业和信息化局',
-        value: 3 },
+    {
+      label: '罗湖区工业和信息化局',
+      value: 3 },
 
-      {
-        label: '罗湖区科技创新局',
-        value: 4 },
+    {
+      label: '罗湖区科技创新局',
+      value: 4 },
 
-      {
-        label: '罗湖区人力资源局',
-        value: 5 },
+    {
+      label: '罗湖区人力资源局',
+      value: 5 },
 
-      {
-        label: '罗湖区住房和建设局',
-        value: 6 },
+    {
+      label: '罗湖区住房和建设局',
+      value: 6 },
 
-      {
-        label: '罗湖区工业和信息化局',
-        value: 7 }],
-
-
-      options2: [{
-        label: '部门1',
-        value: 1 },
-
-      {
-        label: '部门2',
-        value: 2 }],
+    {
+      label: '罗湖区工业和信息化局',
+      value: 7 }]), _defineProperty(_ref, "options2",
 
 
-      options3: [{
-        label: '类型1',
-        value: 1 },
+    [{
+      label: '部门1',
+      value: 1 },
 
-      {
-        label: '类2',
-        value: 2 }],
-
-
-      options4: [{
-        label: '类型4',
-        value: 1 },
-
-      {
-        label: '类2',
-        value: 2 }],
+    {
+      label: '部门2',
+      value: 2 }]), _defineProperty(_ref, "options3",
 
 
-      options5: [{
-        name: "有空置房政府产权",
-        value: "1" },
+    [{
+      label: '类型1',
+      value: 1 },
 
-      {
-        name: "政府产权",
-        value: "2" },
-
-      {
-        name: "有租金补贴",
-        value: "3" }],
+    {
+      label: '类2',
+      value: 2 }]), _defineProperty(_ref, "options4",
 
 
-      top: 0,
-      height: 0,
-      indexOn: 0,
-      chShow: true };
+    [{
+      label: '类型4',
+      value: 1 },
+
+    {
+      label: '类2',
+      value: 2 }]), _defineProperty(_ref, "options5",
+
+
+    [{
+      name: "有空置房政府产权",
+      value: "1" },
+
+    {
+      name: "政府产权",
+      value: "2" },
+
+    {
+      name: "有租金补贴",
+      value: "3" }]), _defineProperty(_ref, "top",
+
+
+    0), _defineProperty(_ref, "height",
+    0), _defineProperty(_ref, "indexOn",
+    0), _defineProperty(_ref, "chShow",
+    true), _ref;
 
   },
   methods: {
-    /* 			tabChange(index) {
-             				index == 2 ? this.chShow = false : this.chShow = true
-             				this.$refs["sticky"].initObserver()
-             				this.current = index;
-             				this.$refs["uDropdown"].close()
-             				this.goTop()
-             			}, */
     goTop: function goTop() {var _this = this;
-      console.log(111111);
       if (!this.$refs["sticky"].fixed) {
         this.$u.getRect("#tab").then(function (res) {
           uni.pageScrollTo({
@@ -503,15 +480,36 @@ var _default =
         });
       }
     },
+    tabChange: function tabChange(index) {
+      index == 2 ? this.chShow = false : this.chShow = true;
+      this.$refs["sticky"].initObserver();
+      this.current = index;
+      this.$refs["uDropdown"].close();
+      this.goTop();
+    },
     closeDropdown: function closeDropdown() {
       this.$refs.uDropdown.close();
     },
     typeOn: function typeOn(i) {
       this.indexOn = i;
     },
-    sort: function sort() {
+    sorts: function sorts() {
       console.log('排序');
-    } } };exports.default = _default;
+    } },
+
+  onPageScroll: function onPageScroll(e) {
+    this.top = e.scrollTop;
+  },
+  onShow: function onShow() {
+
+  },
+  onHide: function onHide() {},
+  onLaunch: function onLaunch() {
+
+  },
+  mounted: function mounted() {
+    console.log(this.$mp.page);
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

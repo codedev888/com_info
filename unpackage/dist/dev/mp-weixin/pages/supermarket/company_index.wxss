@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  padding-bottom: 150rpx;
+}
+.lastLogin {
+  padding: 0rpx 30rpx;
+  padding-bottom: 30rpx;
+  color: #B4B6BE;
+  font-size: 24rpx;
+}
+.evbox {
+  padding: 20rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.evbox view {
+  font-size: 26rpx;
+  color: #999999;
+}
+.evbox view.fb {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.evbox .li {
+  width: 50%;
+  margin-right: 50rpx;
+}
+.likebox {
+  background: #ffffff;
+  z-index: 10071;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 750rpx;
+  line-height: 100rpx;
+}
+.likebox .text {
+  text-align: center;
+  font-size: 30rpx;
+}
+.likebox .text view:last-child {
+  color: #4967FA;
+}
+.likebox .tips {
+  font-size: 32rpx;
+  line-height: 100rpx;
+  color: #333333;
+}
+.address {
+  padding: 20rpx 0 30rpx 0;
+}
+.address .map {
+  border-radius: 30rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  display: block;
+  border: #4967FA solid 2rpx;
+  padding: 0rpx 20rpx 0rpx 50rpx;
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng44a757594bf7cc9722171de7c7360ddf3a995eb2405a66411cee0cf15e24a2cc) no-repeat;
+  background-position: 20rpx center;
+  width: 240rpx;
+}
+.ft-icon {
+  font-size: 30rpx;
+  padding-bottom: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.ft-icon view {
+  margin-right: 10rpx;
+}
+.shop-title .shop-icon image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.shop-title .name-box {
+  position: relative;
+  width: 550rpx;
+}
+.shop-title .name-box .hot {
+  position: absolute;
+  right: 0rpx;
+  top: 15rpx;
+}
+.shop-title .shop-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 60rpx;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.shop-title .bar {
+  padding: 0rpx;
+  width: 360rpx;
+  line-height: 60rpx;
+}
+.shop-title .bar .likes {
+  background: #4967fa;
+  color: #fff;
+}
+.shop-title .bar .view {
+  background: #97C3FF;
+  color: #fff;
+}
+.shop-title .bar text {
+  display: block;
+  line-height: 60rpx;
+  padding: 0rpx 40rpx;
+  border-radius: 30rpx;
+}
+.product-intro {
+  padding-bottom: 20rpx;
+}
+.yellow {
+  color: #F5CB4A;
+}
+.section34 {
+  z-index: auto;
+  width: 750rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 30rpx;
+}
+.group1 {
+  z-index: 130;
+  position: relative;
+}
+.group1 image {
+  width: 210rpx;
+  border-radius: 4rpx;
+}
+.box3 {
+  z-index: 165;
+  height: 40rpx;
+  border-radius: 4rpx 0 4rpx 0;
+  background-color: #5d7eff;
+  width: 112rpx;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.word40 {
+  color: #FFFFFF;
+  font-size: 24rpx;
+  display: block;
+  line-height: 40rpx;
+  text-align: left;
+}
+.group2 {
+  z-index: auto;
+  width: 450rpx;
+}
+.txt14 {
+  color: #333333;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
+  display: block;
+  line-height: 40rpx;
+  text-align: left;
+}
+.group2 .title {
+  height: 130rpx;
+}
+.word26 {
+  z-index: 158;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow-wrap: break-word;
+  color: #666666;
+  font-size: 26rpx;
+  white-space: nowrap;
+  line-height: 36rpx;
+  text-align: left;
+  -webkit-align-self: flex-start;
+          align-self: flex-start;
+  margin-top: 20rpx;
+}
+.outer3 {
+  z-index: auto;
+  /* width: 380rpx; */
+  height: 36rpx;
+  /* justify-content: space-between; */
+}
+.section35 {
+  height: 36rpx;
+  overflow-wrap: break-word;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 0;
+  color: #FEA251;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-right: 30rpx;
+}
+.word27 {
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.word28 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold;
+  color: #FEA251;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.word29 {
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.screen {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+          box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+.screen view {
+  font-size: 28rpx;
+  display: inline-block;
+  line-height: 100rpx;
+  text-align: center;
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8f3bf33343e3196004a4280a227e24030b5bb6b8a2f1666d380a10c7aa32b038) no-repeat;
+  background-position: right center;
+  padding-right: 30rpx;
+  color: #999999;
+  margin: 0rpx 60rpx;
+}
+.screen view.categorize {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA10lEQVRYR+3UTQrCMBAF4BmlC0XwQgpu25OIK8EzeAURwQt4gFr3eh03oaumjlhsESFmMhG6meyT9+XlB6HngT3ngwK0AW1AG4hqYLGiycjaEwxge94nN8mnJga8wse1zQloDgAGEFMJQgT4Cm83LkIEAxzhHYIIs+KQXLnHEQTwhL8z0dAQsmLHQ7ABvPB233wECxAWHobwAmThfMRPQFw4D+EENOEPmxM17zxyuO+EE5Auqw0QzCKTu+mIaOqqXF+O0/vnmt478C+Aax0FaAPagDagDTwB+5B0IQU0EdIAAAAASUVORK5CYII=) no-repeat;
+  background-size: 32rpx 32rpx;
+  background-position: right center;
+  color: #007AFF;
+}
+uni-button {
+  border-radius: 0;
+}
+.tips {
+  font-size: 28rpx;
+  color: #EB5E00;
+  background-color: rgba(235, 94, 0, 0.02);
+  line-height: 60rpx;
+  padding: 0rpx 30rpx;
+}
+.u-indicator-item-dot {
+  background: #f00;
+}
+

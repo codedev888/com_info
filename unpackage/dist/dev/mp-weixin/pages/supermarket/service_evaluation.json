@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "服务评价",
   "usingComponents": {
+    "u-image": "/uview-ui/components/u-image/u-image",
     "u-rate": "/uview-ui/components/u-rate/u-rate"
   }
 }

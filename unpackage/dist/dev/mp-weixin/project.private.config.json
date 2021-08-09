@@ -1,0 +1,30 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/company/index",
+          "pathName": "pages/company/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/company/collection",
+          "pathName": "pages/company/collection",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

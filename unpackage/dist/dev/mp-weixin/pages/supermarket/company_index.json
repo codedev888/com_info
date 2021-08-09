@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "企业主页"
+  "navigationBarTitleText": "企业主页",
+  "usingComponents": {
+    "u-select": "/uview-ui/components/u-select/u-select"
+  }
 }

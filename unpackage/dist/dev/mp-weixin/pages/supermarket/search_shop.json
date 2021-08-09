@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "搜索超市",
   "usingComponents": {
-    "u-search": "/uview-ui/components/u-search/u-search"
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-image": "/uview-ui/components/u-image/u-image"
   }
 }

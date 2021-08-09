@@ -127,9 +127,89 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/phpStudy/WWW/git/h5/com/pages/appeal/evaluation.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js):\nError: Can't resolve '../../components/appeal/detail.vue' in 'E:\\phpStudy\\WWW\\git\\h5\\com\\pages\\appeal'\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:209:21\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\UnsafeCachePlugin.js:44:7\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:25:1)\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:67:43\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:14:1)\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:25:1)\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:67:43\n    at G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\enhanced-resolve\\lib\\Resolver.js:285:5\n    at eval (eval at create (G:\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:14:1)");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var detail = function detail() {__webpack_require__.e(/*! require.ensure | components/appeal/detail */ "components/appeal/detail").then((function () {return resolve(__webpack_require__(/*! ../../components/appeal/detail.vue */ 956));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var evaluation = function evaluation() {__webpack_require__.e(/*! require.ensure | components/appeal/evaluation */ "components/appeal/evaluation").then((function () {return resolve(__webpack_require__(/*! ../../components/appeal/evaluation.vue */ 963));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var progresss = function progresss() {__webpack_require__.e(/*! require.ensure | components/appeal/progress */ "components/appeal/progress").then((function () {return resolve(__webpack_require__(/*! ../../components/appeal/progress.vue */ 970));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  onload: function onload() {
+
+  },
+  data: function data() {
+    return {
+      constants: {},
+      TabCur: 0,
+      scrollLeft: 0,
+      list: [
+      {
+        name: '诉求内容',
+        check: true },
+
+      {
+        name: '诉求进度',
+        check: false },
+
+      {
+        name: '诉求评价',
+        check: false }],
+
+
+      checkIndex: 0,
+      currentItem: 0 };
+
+  },
+  methods: {
+    tabSelect: function tabSelect(e) {
+      this.TabCur = e.currentTarget.dataset.id;
+      this.currentItem = e.currentTarget.dataset.id;
+      this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
+    },
+    checkOne: function checkOne(index) {
+      this.checkIndex = index;
+      console.log(index);
+    } },
+
+  components: {
+    detail: detail,
+    evaluation: evaluation,
+    progresss: progresss } };exports.default = _default;
 
 /***/ }),
 

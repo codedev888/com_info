@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "找伙伴",
-  "usingComponents": {}
+  "usingComponents": {
+    "pub-list": "/components/pub-list/pub-list"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "navigationBarTitleText": "企业主页",
   "usingComponents": {
+    "u-image": "/uview-ui/components/u-image/u-image",
+    "u-cell-item": "/uview-ui/components/u-cell-item/u-cell-item",
+    "my-recom": "/components/my-recom/my-recom",
     "u-tabbar": "/uview-ui/components/u-tabbar/u-tabbar"
   }
 }

@@ -1,9 +1,9 @@
 {
+  "component": true,
   "usingComponents": {
     "u-search": "/uview-ui/components/u-search/u-search",
     "u-select": "/uview-ui/components/u-select/u-select",
     "u-button": "/uview-ui/components/u-button/u-button",
     "u-calendar": "/uview-ui/components/u-calendar/u-calendar"
-  },
-  "component": true
+  }
 }

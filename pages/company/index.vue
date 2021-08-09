@@ -5,312 +5,70 @@
 			  <view class="section3 flex-row bd">
 				<view class="userinfo flex-flex">
 					<view class="section4 flex-col"> 
-						<image src="../../static/company/user.png" mode="widthFix"></image>
-						
+						<u-image width="88rpx" height="88rpx" :src="'/static/company/user.png'" ></u-image>
 					</view>
 					<view class="section5 flex-col">
 					  <text class="word2 fw">用户名</text>
 					  <text class="word3">罗湖区科技创新有限公司</text>
 					</view>
 				</view>
-				<text class="word4" @tap="go('../company/setting')">退出登录</text>
+				<text class="word4">退出登录</text>
 			  </view>
 			<!-- 用户账号信息结束 -->
 			<!-- 菜单开始 -->
 			  <view class="section7 bd">
 				<view class="item" @tap="go('../company/collection')">
-					<image
-					  class="icon"
-					  mode ="aspectFit"
-					  src="../../static/company/wdsc.png"
-					></image>
+					<u-image width="64rpx" height="64rpx" :src="'/static/company/wdsc.png'" ></u-image>
 					<text class="word">我的收藏</text>
 				</view>
-				<view class="item" @tap="go('../company/industrial_space')">
-				  <image
-					class="icon"
-					mode ="aspectFit"
-					src=" ../../static/company/kj.png"
-				  ></image>
+					<view class="item" @tap="go('demand')">
+					<u-image width="64rpx" height="64rpx" :src="'/static/company/kj.png'" ></u-image>
+				
 				  <text class="word">产业空间</text>
 				</view>
 				<view class="item" @tap="go('../company/ess')">
-				  <image
-					class="icon"
-					mode ="aspectFit"
-					src="../../static/company/qfcs.png"
-				  ></image>
+				<u-image width="64rpx" height="64rpx" :src="'/static/company/qfcs.png'" ></u-image>
 				  <text class="word">企服超市</text>
 				</view>
 				<view class="item">
-				  <image
-					class="icon"
-					mode ="aspectFit"
-					src="../../static/company/bzzx.png"
-				  ></image>
+				  <u-image width="64rpx" height="64rpx" :src="'/static/company/bzzx.png'" ></u-image>
 				  <text class="word">帮助中心</text>
 				</view>
 			  </view>
 			 
-			  <view class="section9 flex-row bd">
-				<view>
-					<image
-					  class="icon"
-					  mode ="aspectFit"
-					  src="../../static/company/1.png"
-					></image>
-					<text class="txt3 fw">空间发布</text>
-				</view>
-				
-				<image
-				  class="icon-right"
-				  mode ="widthFix"
-				  src="../../static/company/jt.png"
-				></image>
+			  <!--<view class="section9 bd">
+				<u-image width="36rpx" height="36rpx" :src="'/static/company/1.png'" ></u-image>
+				<u-cell-item title="空间发布"></u-cell-item>
 			  </view>
 
 			  <view class="section9 flex-row bd">
-				<view>  
-					<image
-					  class="icon"
-					  mode ="aspectFit"
-					  src="../../static/company/2.png"
-					></image>
-					<text class="txt3 fw">服务发布</text>
-				</view>
-				<image
-				  class="icon-right"
-				  mode ="widthFix"
-				  src="../../static/company/jt.png"
-				></image>
-			  </view>
-
+				<u-image width="36rpx" height="36rpx" :src="'/static/company/2.png'" ></u-image>
+				<u-cell-item title="服务发布"></u-cell-item>
+			  </view>-->
+			  
 			  <view class="section9 flex-row bd">
-				<view> 
-					<image
-					  class="icon"
-					  mode ="aspectFit"
-					  src="../../static/company/3.png"
-					></image>
-					<text class="txt3 fw">消息中心</text>
-				</view>
-				<image
-				  class="icon-right"
-				  mode ="widthFix"
-				  src="../../static/company/jt.png"
-				></image>
-				
+				<u-image width="36rpx" height="36rpx" :src="'/static/company/3.png'" ></u-image>
+				<u-cell-item title="消息中心"></u-cell-item>
 			  </view>
+	
 			   <!-- 菜单结束 -->
 				<!-- 消息提示开始 -->
-			  <view class="tips-item bd">
+			  <!--<view class="tips-item bd">
 				  <view>你提交的房源意向登记已被跟进</view>
 				  <view class="active">收到一条新的通知消息！</view>
 				  <view>你关注的中设广场房源上新了！</view>
-			  </view>
-			 <view class="view-more">查看更多&gt;</view>
+			  </view>-->
+			 <!--<view class="view-more">查看更多&gt;</view>-->
 			  <!-- 消息提示结束 -->
 			<view class="height20"></view>
-			 <!-- 找政府开始 -->
-			<view class="group">
-				<view class="section18 flex-row bd">
-					<view class="section18-left" @tap="go('../company/find_government')">
-						
-						<text class="icon szf"></text>
-						<text class="txt6 fw">找政府</text>
-						<text class="word10">为你智能匹配推荐4条政策扶持</text>
-					</view>
-
-					<image
-					  class="icon7"
-					  mode="widthFix"
-					  src=" ../../static/company/jt.png"
-					></image>
-				</view>
-				<view class="tips-item bd">
-					  <view>市内免税店引进品牌奖励</view>
-					  <view>大型商业网点升级改造扶持！</view>
-					  <view>商贸企业做大做强奖励</view>
-				</view>
-				<view class="view-more" @tap="go('../company/find_government')">查看更多&gt;</view>
-			</view>
-			 <!-- 找政府结束 -->
-			<view class="height20"></view>
-			<!-- 找找房源开始 -->
-			<view class="group">
-				<view class="section18 flex-row bd">
-					<view class="section18-left" @tap="go('../company/find_house')">
-						<text class="icon sfz"></text>
-						
-						<text class="txt6 fw">找房源</text>
-						<text class="word10">根据你的偏好，智能匹配推荐20个房源</text>
-					</view>
-
-					<image
-					  class="icon7"
-					  mode="widthFix"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
-					></image>
-				</view>
-				<view class="section24 flex-row bd">
-					<view class="main2 flex-flex">
-						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa" mode="widthFix"></image>
-					</view>
-					<view class="main3 flex-col">
-					  <text class="info5">深业进元大厦</text>
-					  <view class="outer1 flex-row">
-						<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-						<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-						<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-					  </view>
-					  <text class="paragraph1">
-						社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-						<br />
-						清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-					  </text>
-					  <view class="outer2 flex-row">
-						<view class="wrap1">
-						  <text class="info6">75</text>
-						  <text class="info7">元</text>
-						  <text class="txt9">/㎡/月起</text>
-						</view>
-						<view class="wrap2">
-						  <text class="word17">在租</text>
-						  <text class="info8"></text>
-						  <text class="info6">4</text>
-						  <text class="info9">套</text>
-						</view>
-					  </view>
-					</view>
-				</view>
-				  
-				<view class="section24 flex-row bd">
-					<view class="main2 flex-flex">
-						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
-					</view>
-					<view class="main3 flex-col">
-					  <text class="info5">深业进元大厦</text>
-					  <view class="outer1 flex-row">
-						<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-						<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-						<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-					  </view>
-					  <text class="paragraph1">
-						社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-						<br />
-						清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-					  </text>
-					  <view class="outer2 flex-row">
-						<view class="wrap1">
-						  <text class="info6">75</text>
-						  <text class="info7">元</text>
-						  <text class="txt9">/㎡/月起</text>
-						</view>
-						<view class="wrap2">
-						  <text class="word17">在租</text>
-						  <text class="info8"></text>
-						  <text class="info6">4</text>
-						  <text class="info9">套</text>
-						</view>
-					  </view>
-					</view>
-				</view>
-				<text class="view-more">查看更多&gt;</text>
-			</view>
-			<!-- 找找房源结束 -->
-			<view class="height20"></view>
-			<!-- 找伙伴源开始 -->
-			<view class="group">
-				<view class="section18 flex-row bd">
-					<view class="section18-left" @tap="go('../company/find_partner')">
-						<text class="icon shb"></text>
-						
-						<text class="txt6 fw">找伙伴</text>
-						<text class="word10">根据你的偏好，智能匹配推荐9个企业服务</text>
-					</view>
-
-					<image
-					  class="icon7"
-					  referrerpolicy="no-referrer"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
-					></image>
-				</view>		  
-				<view class="section34 flex-row bd">
-					<view class="group1 flex-col">
-						<view class="box3 flex-col"><text class="word40">法律服务</text></view>
-						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb895c0e64f27a9ebe83cd114bdaf250154eac91a15c93e0a2be4a917ad4a1686" mode="widthFix"></image>	
-					</view>
-					<view class="group2 flex-col">
-						<view class="flex-col title">
-						  <text class="txt14">服务标题服务标题服务标题服务标题</text>
-						  <text class="word26">创新科技旗舰店</text>	
-						</view>
-						<view class="outer3 flex-row">
-							<view class="section35">
-							  <text class="word27">访问</text>
-							  <text class="word28">430</text>
-							  <text class="word29">次</text>
-							</view>
-							<view class="section36">
-							  <text class="info13">登记意向</text>
-							  <text class="word30">43</text>
-							  <text class="info14">个</text>
-							</view>
-						</view>
-					</view>
-				</view>
-				<view class="section34 flex-row bd">
-					<view class="group1 flex-col">
-						<view class="box3 flex-col"><text class="word40">法律服务</text></view>
-						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb895c0e64f27a9ebe83cd114bdaf250154eac91a15c93e0a2be4a917ad4a1686" mode="widthFix"></image>	
-					</view>
-					<view class="group2 flex-col">
-						<view class="flex-col title">
-						  <text class="txt14">服务标题服务标题服务标题服务标题</text>
-						  <text class="word26">创新科技旗舰店</text>	
-						</view>
-						<view class="outer3 flex-row">
-							<view class="section35">
-							  <text class="word27">访问</text>
-							  <text class="word28">430</text>
-							  <text class="word29">次</text>
-							</view>
-							<view class="section36">
-							  <text class="info13">登记意向</text>
-							  <text class="word30">43</text>
-							  <text class="info14">个</text>
-							</view>
-						</view>
-					</view>
-				</view>
-				<text class="view-more" @tap="go('../company/find_partner')">查看更多&gt;</text>	
-			</view>
-			<!-- 找伙伴源结束 -->
-			<view class="height20"></view>
-			<!-- 找融资源开始 -->
-			<view class="group">
-				<view class="section18 flex-row bd">
-					<view class="section18-left" @tap="go('../company/find_financing')">
-						<text class="icon srz"></text>
-						
-						<text class="txt6 fw">找融资</text>
-						<text class="word10">根据你的偏好，智能匹配推荐3个融资服务</text>
-					</view>
-
-					<image
-					  class="icon7"
-					  referrerpolicy="no-referrer"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
-					></image>
-				</view>
-				<view class="tips-item bd">
-					  <view>“专精特新”贷利率9.5折优惠</view>
-					  <view>债转股转股资产交易！</view>
-					  <view>融资辅导</view>
-				</view>
-				<view class="view-more" @tap="go('../company/find_financing')">查看更多&gt;</view>
-			</view>
-			<!-- 找融资源开始 -->
+			
+			 <!--底部推荐数据 start-->
+			 <block v-for="(row,index) in recom_data">
+			     <my-recom :row="row" ></my-recom>
+			     <view class="height20"></view>
+			</block>
+			 <!--底部推荐数据 end-->
+			 
 		</view>
 		<!-- 底部菜单开始 -->	
 		<u-tabbar
@@ -377,9 +135,36 @@
 						customIcon: false,
 					},
 				],
+				recom_data:[{
+					type:"gove",
+					icon:"/static/company/4.png",
+					title:"找政府",
+					more_url:"find_govement",
+					total_title:"为你智能匹配推荐{{num}}条政策扶持"
+				},{
+					type:"house",
+					icon:"/static/company/5.png",
+					title:"找房子",
+					more_url:"find_house",
+					total_title:"根据你的偏好，智能匹配推荐{{num}}个房源"
+				},{
+					type:"partner",
+					icon:"/static/company/6.png",
+					title:"找伙伴",
+					more_url:"find_partner",
+					total_title:"根据你的偏好，智能匹配推荐{{num}}个企业服务"
+				},{
+					type:"fina",
+					icon:"/static/company/7.png",
+					title:"找金融",
+					total_title:"根据你的偏好，智能匹配推荐{{num}}个融资服务",
+				    more_url:"find_house"
+				}
+				],
 				midButton: true,
 				inactiveColor: '#909399',
-				activeColor: '#5098FF'
+				activeColor: '#5098FF',
+				
 	    };
 	  },
 	  methods: {
@@ -394,35 +179,34 @@
 	};
 	
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 	.u-demo-area {
 		margin: 0 -40rpx;
 	}
-</style>
-<style>
 
 	.page {
 	  padding-bottom: 160rpx;
 	}
-	.group{background: #ffffff;}
 	.tips-item {
 		padding:20rpx 30rpx;
 		line-height: 46rpx;
-	font-size: 28rpx;}
-	.tips-item .active{color: #5C7EFE;}
+		font-size: 28rpx;
+	}
+	.tips-item .active{
+		color: #5C7EFE;
+		}
 	.box1 {
 	  z-index: auto;
 	  width: 750rpx;
 	  background: #fff;
 	}
-	
-	.txt1 {
-	  z-index: 37;
+		
+.txt1 {
+	 
 	  width: 318rpx;
 	  display: block;
 	  overflow-wrap: break-word;
 	  color: rgba(0, 0, 0, 1);
-	  font-size: ;
 	  font-family: PingFang-SC-Bold;
 	  white-space: nowrap;
 	  line-height: 34rpx;
@@ -431,13 +215,10 @@
 	}
 	
 	.icon1 {
-	  z-index: 21;
+
 	  width: 54rpx;
-	  height: ;
 	  margin: 6rpx 0 0 2rpx;
 	}
-	
-
 	
 	.section3 {
 	  z-index: auto;
@@ -447,7 +228,7 @@
 	}
 	
 	.section4 {
-	  z-index: 48;
+
 	  width: 88rpx;
 	  height: 88rpx;
 	  border-radius: 50rpx;
@@ -466,7 +247,6 @@
 	}
 	
 	.word2 {
-	  z-index: 61;
 	  width: 418rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -474,17 +254,14 @@
 	  font-size: 28rpx;
 	  white-space: nowrap;
 	  line-height: 34rpx;
-	  
 	  margin-top: 6rpx;
 	}
 	
 	.word3 {
-	  z-index: 47;
 	  width: 268rpx;
 	  display: block;
 	  overflow-wrap: break-word;
 	  color: #666666;
-	  font-size: ;
 	  white-space: nowrap;
 	  line-height: 34rpx;
 	  text-align: left;
@@ -492,12 +269,10 @@
 	}
 	
 	.word4 {
-	  z-index: 84;
-	  
 	  display: block;
 	  overflow-wrap: break-word;
 	  color: rgba(93, 123, 255, 1);
-	  font-size: ;
+
 	  white-space: nowrap;
 	  
 	  text-align: right;
@@ -524,30 +299,28 @@
 	.section7 .item .icon{
 		width: 64rpx;
 		height: 64rpx;
-	}
+	} 
 
 
-	.section9 {
+ 	.section9 {
 	  z-index: auto;
 	  width: 750rpx;
-	  padding: 28rpx 30rpx;
+	  padding: 10rpx;
+	  padding-left: 50rpx;
 	  justify-content: space-between;
-	  
+	  position: relative;
+	  font-weight: 600;
+		.u-image{
+			position: absolute;
+			left: 30rpx;
+			top: 46rpx;
+		}
+
 	}
-	.section9 view{display: flex;}
-	.section9 image.icon{
-		width:36rpx;
-		height: 36rpx;
-	}
-	.section9 image.icon-right{
-		width:32rpx;
-		height: 32rpx;
-		display: flex;
-	}
+
 
 	
 	.txt3 {
-	  z-index: 89;
 	  width: 104rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -561,7 +334,6 @@
 	}
 	
 	.view-more {
-	  z-index: 73;
 	  width: 750rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -578,38 +350,13 @@
 	.section18 {
 	  z-index: auto;
 	  width: 750rpx;
-
 	  padding: 20rpx 30rpx;
 	  justify-content: space-between;
 	
 	}
 	.section18-left{justify-content: space-between;display: flex;}
-	.section18-left .icon, .section18-left.text{display: flex;}
-	.section18-left .icon{
-	  z-index: 257;
-	  width: 38rpx;
-	  height: 38rpx;
-	  margin-top: 0rpx;
 
-	}
-	.section18-left .icon.szf{
-	  background:url("https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng00651486d3e8c5e10d0ea7fd9f8e96a9ccc97caba7c2e53baa958315f582de65") no-repeat;
-	  background-size: 36rpx 38rpx;
-	}
-	.section18-left .icon.sfz{
-	  background:url("https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8d9174754b14260af8493f8fb7ed9ca411266d1e5282a5b73225097e655f2169") no-repeat;
-	  background-size: 36rpx 34rpx;
-	}
-	.section18-left .icon.srz{
-	  background:url("https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdd0fa8cf824c17d2cc593e6d954a1d28a5e2c3a49c88124c082784e4226c87f4") no-repeat;
-	  background-size: 36rpx 36rpx;
-	}
-	.section18-left .icon.shb{
-	  background:url("https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng7f7bfbd3bab6723220c18375de7164468598afc6c2e86450e1be6e3cb5c1e2a8") no-repeat;
-	  background-size: 38rpx 32rpx;
-	}
 	.txt6 {
-	  z-index: 106;
 	  width: 86rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -623,7 +370,6 @@
 	}
 	
 	.word10 {
-	  z-index: 125;
 	  width: 232rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -636,7 +382,6 @@
 	}
 	
 	.icon7 {
-	  z-index: 113;
 	  width: 32rpx;
 	  height: 32rpx;
 	  margin: 2rpx 0 0 162rpx;
@@ -649,14 +394,7 @@
 	  justify-content: space-between;
 	  padding: 30rpx;
 	}
-	
-	.main2 {
-	  z-index: 129;
-	}
-	.main2 image{
-		width: 210rpx;
-		border-radius: 4rpx;
-	}
+
 	.main3 {
 	  z-index: auto;
 	  width: 450rpx;
@@ -664,7 +402,6 @@
 	}
 	
 	.info5 {
-	  z-index: 133;
 	  width: 296rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -695,7 +432,6 @@
 	}
 	
 	.txt8 {
-	  z-index: 151;
 	  display: block;
 	  overflow-wrap: break-word;
 	  color: rgba(153, 153, 153, 1);
@@ -706,7 +442,6 @@
 
 	
 	.paragraph1 {
-	  z-index: 157;
 	  width: 296rpx;
 	  height: 72rpx;
 	  display: block;
@@ -729,7 +464,6 @@
 	}
 	
 	.wrap1 {
-	  z-index: 137;
 	  width: 188rpx;
 	  height: 50rpx;
 	  overflow-wrap: break-word;
@@ -766,7 +500,6 @@
 	}
 	
 	.wrap2 {
-	  z-index: 141;
 	  width: 108rpx;
 	  height: 50rpx;
 	  overflow-wrap: break-word;
@@ -791,9 +524,7 @@
 	  overflow: hidden;
 	  text-overflow: ellipsis;
 	}
-	
 
-	
 	.info9 {
 	  font-size: 26rpx;
 	  font-family: PingFang-SC-Bold;
@@ -803,14 +534,12 @@
 	  text-overflow: ellipsis;
 	}
 .section34 {
-  z-index: auto;
   width: 750rpx;
 
   justify-content: space-between;
   padding: 30rpx;
 }
 	.group1 {
-	  z-index: 130;
 	  position:relative
 	}
 	.group1 image{
@@ -818,7 +547,7 @@
 	  border-radius: 4rpx;	
 	}
 .box3 {
-  z-index: 165;
+	z-index: 9;
   height: 40rpx;
   border-radius: 4rpx 0 4rpx 0;
   background-color: rgba(93, 126, 255, 1);
@@ -830,7 +559,6 @@
   top: 0;
 }
 	.word40 {
-	  z-index: 167;
 	  width: 98rpx;
 	  display: block;
 	  overflow-wrap: break-word;
@@ -850,7 +578,6 @@
 	}
 	
 	.txt14 {
-	  z-index: 134;
 
 	  display: flex;
 	  overflow-wrap: break-word;
@@ -864,7 +591,6 @@
 	}
 	.group2 .title{height: 130rpx;}
 	.word26 {
-	  z-index: 158;
 	  display: flex;
 	  overflow-wrap: break-word;
 	  color: rgba(102, 102, 102, 1);
@@ -885,7 +611,6 @@
 	}
 	
 	.section35 {
-	  z-index: 138;
 	  width: 148rpx;
 	  height: 36rpx;
 	  overflow-wrap: break-word;
@@ -920,7 +645,6 @@
 	}
 	
 	.section36 {
-	  z-index: 142;
 	  width: 188rpx;
 	  height: 36rpx;
 	  overflow-wrap: break-word;
@@ -955,27 +679,6 @@
 	}
 	
 
-	.section39 {
-	  z-index: 163;
-	  width: 750rpx;
-	  height: 4rpx;
-	  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga6eeb5cba2c925f32e31245a3df8ea6994cd3687a8ef75a714774644ea8652bb)
-	    100% no-repeat;
-	  margin-top: 18rpx;
-	}
-	
-	.box5 {
-	  height: 100rpx;
-	  background:#fff
-	    100% no-repeat;
-	  width: 750rpx;
-	  position: fixed;
-	  left: 0;
-	  bottom:0rpx;
-	  justify-content: space-between;
-	  z-index: 998;
-	  padding: 10rpx 30rpx;
-	}
 	.tabbar-item{
 		display: flex;
 		flex-flow: column;

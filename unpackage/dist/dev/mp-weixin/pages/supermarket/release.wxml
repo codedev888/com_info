@@ -1,1 +1,1 @@
-<view class="warp p-l-r"><view class="top">启用店铺，在企业超市中发布企业服务，帮助您找到更多合作的伙伴~</view><view class="tips"><text>目前未启用店铺</text><text>立即启用店铺 前往电脑端打开</text></view><image src="../../static/fb.jpg" mode="widthFix"></image></view>
+<view class="warp p-l-r"><view class="top">启用店铺，在企业超市中发布企业服务，帮助您找到更多合作的伙伴~</view><view class="tips"><text>目前未启用店铺</text><text>立即启用店铺 前往电脑端打开</text></view><image src="/static/fb.jpg" mode="widthFix"></image></view>

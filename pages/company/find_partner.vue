@@ -5,31 +5,7 @@
 			<view class="tips">
 				根据你的偏好，智能匹配推荐{{total}}个融资服务
 			</view>
-			
-			<view v-for="(item,index) in list" class="section34 flex-row bd">
-				<view class="group1 flex-col">
-					<view class="box3 flex-col"><text class="word40">{{item.typeOneName}}</text></view>
-					<image :src="item.imgUrl" mode="widthFix"></image>	
-				</view>
-				<view class="group2 flex-col">
-					<view class="flex-col title">
-					  <text class="txt14">{{item.serviceTitle}}</text>
-					  <text class="word26">{{item.corpName}}</text>	
-					</view>
-					<view class="outer3 flex-row">
-						<view class="section35">
-						  <text class="word27">访问</text>
-						  <text class="word28">{{item.visitCount}}</text>
-						  <text class="word29">次</text>
-						</view>
-						<view class="section36">
-						  <text class="info13">登记意向</text>
-						  <text class="word30">{{item.monthHotCount}}</text>
-						  <text class="info14">个</text>
-						</view>
-					</view>
-				</view>
-			</view>
+			<pub-list :list="list" type="partner"></pub-list>
 			 
 
 		</view>

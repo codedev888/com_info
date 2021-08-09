@@ -422,9 +422,17 @@
             }
             
         }
-		
-
-	],
+		 
+        ,{
+            "path" : "components/my-recom/my-recom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

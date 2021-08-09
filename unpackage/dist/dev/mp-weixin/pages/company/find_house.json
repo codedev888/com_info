@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "找房源",
-  "usingComponents": {}
+  "usingComponents": {
+    "pub-list": "/components/pub-list/pub-list"
+  }
 }

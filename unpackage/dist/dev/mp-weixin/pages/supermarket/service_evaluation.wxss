@@ -20,6 +20,21 @@
   font-size: 30rpx;
   padding-bottom: 20rpx;
 }
+.box .right .tags {
+  padding-bottom: 12rpx;
+}
+.box .right .tags .li {
+  background: #E4E8FB;
+  border-radius: 6rpx;
+  padding: 6rpx 10rpx;
+  margin-right: 10rpx;
+  color: #939ED1;
+  font-size: 22rpx;
+}
+.box .right .tags .li:last-child {
+  background: #FBF2E4;
+  color: #C9AE85;
+}
 .score-box {
   padding: 20rpx 30rpx;
   line-height: 80rpx;

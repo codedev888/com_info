@@ -13,10 +13,15 @@ page.data-v-f88808a8 {
           box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
   margin-bottom: 20rpx;
 }
-.shop-item-box .shop-title .shop-icon image.data-v-f88808a8 {
+.shop-item-box .shop-title.data-v-f88808a8 {
+  padding-top: 20rpx;
+}
+.shop-item-box .shop-title .shop-icon .u-image.data-v-f88808a8 {
   width: 80rpx;
   height: 80rpx;
   margin-right: 20rpx;
+  -webkit-box-shadow: 0 0 10rpx 5rpx rgba(121, 121, 121, 0.2);
+          box-shadow: 0 0 10rpx 5rpx rgba(121, 121, 121, 0.2);
 }
 .shop-item-box .shop-title .shop-name.data-v-f88808a8 {
   font-size: 30rpx;

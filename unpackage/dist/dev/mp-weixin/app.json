@@ -55,7 +55,8 @@
     "pages/industryspace/industrial_space_details",
     "pages/service/index",
     "pages/article/index",
-    "pages/robot/index"
+    "pages/robot/index",
+    "components/my-recom/my-recom"
   ],
   "subPackages": [],
   "window": {
