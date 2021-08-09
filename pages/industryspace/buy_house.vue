@@ -47,12 +47,12 @@
 				<view class="modecotent">
 					<pub-list :list="list" type="house" ></pub-list>
 				</view>	
-				<loading-footer :status="status" slotEmpty>
+				<!--<loading-footer :status="status" slotEmpty>
 				    <view slot="empty" class="column-center" style="padding-top: 100rpx">
 				        <image class="img-null" src="/static/images/news_null.png"></image>
 				        <text class="nr muted">暂无数据～</text>
 				    </view> 
-				</loading-footer>
+				</loading-footer>-->
 			</view>
 		</view>
 		<u-tabbar

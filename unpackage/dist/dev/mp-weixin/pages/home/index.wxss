@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.grid-text {
+  margin-top: 10rpx;
+}
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10 {
+  margin-top: 20rpx;
+}
+.h3 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.user {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.user .user-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.user .user-content .u-image {
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+}
+.user .user-content .user-info {
+  margin: 2px 0 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.user .user-content .user-info .user-name {
+  font-size: 15rpx;
+  color: #333;
+  font-weight: bold;
+}
+.user .user-content .user-info .user-summary {
+  font-size: 12rpx;
+  color: #666;
+}
+.user .logout {
+  width: 96rpx;
+  font-size: 12rpx;
+  color: #5D7BFF;
+  line-height: 46rpx;
+  margin-left: 28rpx;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
+}
+

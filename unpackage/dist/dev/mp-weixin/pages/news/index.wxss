@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.grid-text.data-v-452e6662 {
+  margin-top: 10rpx;
+}
+.flex-row.data-v-452e6662 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28.data-v-452e6662 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10.data-v-452e6662 {
+  margin-top: 20rpx;
+}
+.h3.data-v-452e6662 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4.data-v-452e6662 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an.data-v-452e6662 {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+uni-page-body.data-v-452e6662 {
+  height: 100%;
+}
+.news.data-v-452e6662 {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.news .tabs.data-v-452e6662 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.news .tabs .tabs_s.data-v-452e6662 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.news .news-tab-bar.data-v-452e6662 {
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  height: 100rpx;
+  display: block;
+  opacity: 1;
+}
+.news .news-tab-bar.display.data-v-452e6662 {
+  display: none;
+  height: 0;
+  opacity: 0;
+}
+.news .item-con.data-v-452e6662 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.news .tab-bar-content.data-v-452e6662 {
+  padding: 28rpx;
+}
+.news .article-nav.data-v-452e6662 {
+  padding: 28rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 116rpx;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.news .article-nav text.data-v-452e6662 {
+  width: 88rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 40rpx;
+  text-align: center;
+}
+.news .article-nav .on.data-v-452e6662 {
+  color: #fff;
+  background-color: #FBAD0A;
+  border-radius: 4rpx;
+}
+.news .article-nav.data-v-452e6662 .u-search .u-content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.news .swiper-content.data-v-452e6662 {
+  margin-top: 20rpx;
+  padding: 0 28rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.news .swiper-content .view-item.data-v-452e6662 {
+  width: 100%;
+  height: 134rpx;
+  margin-bottom: 38rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.news .swiper-content .item-title.data-v-452e6662 {
+  margin-right: 20rpx;
+  line-height: 1.5;
+}
+.news .swiper-content .item-title .item-top.data-v-452e6662 {
+  width: 80rpx;
+  height: 34rpx;
+  background-color: #83aefd;
+  font-size: 24rpx;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-right: 10rpx;
+  color: #fff;
+  border-radius: 6rpx;
+}
+.news .swiper-content .item-text.data-v-452e6662 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.news .swiper-content .item-text .item-hot.data-v-452e6662 {
+  margin-top: 8rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.news .swiper-content .item-text .item-hot .u-image.data-v-452e6662 {
+  width: 20rpx;
+  height: 24rpx;
+}
+.news .swiper-content .item-text .item-hot text.data-v-452e6662 {
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.news .swiper-content .u-image.data-v-452e6662 {
+  width: 210rpx;
+  height: 134rpx;
+}
+
