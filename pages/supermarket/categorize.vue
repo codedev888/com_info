@@ -1,6 +1,6 @@
 <template>
 	<view class="u-wrap">
-
+		<nav-bar :isBack="true"></nav-bar>
 		<view class="u-menu-wrap">
 			<scroll-view scroll-y scroll-with-animation class="u-tab-view menu-scroll-view" :scroll-top="scrollTop">
 				<view v-for="(item,index) in tabbar" :key="index" class="u-tab-item" :class="[current==index ? 'u-tab-item-active' : '']"

@@ -1,5 +1,6 @@
 <template>
-	<view class="">
+	<view class="pingjia">
+			<nav-bar :isBack="true"></nav-bar>
 		<view class="group">
 			<view class="box flex-row jc">
 				<view class="left">

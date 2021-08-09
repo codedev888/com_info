@@ -15,7 +15,11 @@
 		</view>
 		<view class="article-nav">
 			<text class="on">热门</text>
+<<<<<<< HEAD
 			<text>最新</text>
+=======
+			<text>最新</text> 
+>>>>>>> e380fd093b7ea4cfc394eb4b359bddc2fda212b5
 			<u-search placeholder="搜索" v-model="keyword" :clearabled="false" :show-action="false" height="60"
 				bg-color="#F7F7F7">
 			</u-search>

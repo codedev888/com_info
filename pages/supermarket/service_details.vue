@@ -1,6 +1,6 @@
 <template>
-	
 	<view class="warp">
+		<nav-bar :isBack="true"></nav-bar>
 		<view class="group">
 			<view class="banner">
 				<view class="star"><u-icon name="star"></u-icon></view>
