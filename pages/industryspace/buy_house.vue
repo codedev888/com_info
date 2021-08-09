@@ -3,7 +3,7 @@
 
 		 <view class="NavList"> 
 			<u-grid :col="6" :border="false">
-				<u-grid-item :bg-color="bg" v-for="(item,index) in list" :key="index">
+				<u-grid-item :bg-color="bg" v-for="(item,index) in clist" :key="index">
 					<u-image width="72rpx" height="72rpx" :src="item.icon"></u-image>
 					<view class="grid-text">{{item.label}}</view>
 				</u-grid-item>
@@ -45,73 +45,14 @@
 			<view class="pad28 listHeight">
 
 				<view class="modecotent">
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'/static/fz.jpg'"></u-image>
-					
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					  
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'/static/fz.jpg'"></u-image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
+					<pub-list :list="list" type="house" ></pub-list>
 				</view>	
-				<text class="view-more">没有更多了</text>
+				<loading-footer :status="status" slotEmpty>
+				    <view slot="empty" class="column-center" style="padding-top: 100rpx">
+				        <image class="img-null" src="/static/images/news_null.png"></image>
+				        <text class="nr muted">暂无数据～</text>
+				    </view> 
+				</loading-footer>
 			</view>
 		</view>
 		<u-tabbar
@@ -129,6 +70,16 @@
 </template>
 
 <script>
+	import {
+		pubPostpage,
+	} from '@/api/store';
+	import {
+		loadingFun
+	} from '@/utils/tools';
+	import {
+		loadingType
+	} from '@/utils/type';
+	var url="api/park/garden/list";
 	export default{
 		data(){
 			return{
@@ -186,7 +137,7 @@
 						name: '层政策解读'
 					},
 				],
-				  list: [
+				  clist: [
 					{
 					  label: "买房",
 					  icon:'/static/industryspace/buyhouse/mf.png'
@@ -290,40 +241,37 @@
 				top: 0,
 				height: 0,
 				indexOn: 0,
-				chShow: true
-			}
-		},
-		methods:{
-			goTop() {
-				if (!this.$refs["sticky"].fixed) {
-					this.$u.getRect("#tab").then(res => {
-						uni.pageScrollTo({
-							scrollTop: this.top + res.top - 44,
-						})
-						setTimeout(() => {
-							this.$refs["uDropdown"].getContentHeight()
-						}, 500)
-
-					})
+				chShow: true,
+				status: loadingType.LOADING,
+				total:0,
+				page:1,
+				list:[],
+				params:{
+					buildStatus:"",
+					flagCanteen:"",
+					flagCenterAir:"",
+					flagDormitory:"",
+					flagParking:"",
+					mainUse:"",
+					propertyType:"",
+					rentFeeEnd:"",
+					rentFeeStart:"",
+					rentSell:1,
+					rentSellStatus:"",
+					roomAreaEnd:"",
+					roomAreaStart:"",
+					sellFeeEnd:"",
+					sellFeeStart:"",
+					signs:[],
+					sort:1,
+					streetCode:""
 				}
-			},
-			tabChange(index) {
-				index == 2 ? this.chShow = false : this.chShow = true
-				this.$refs["sticky"].initObserver()
-				this.current = index;
-				this.$refs["uDropdown"].close()
-				this.goTop()
-			},
-			closeDropdown() {
-				this.$refs.uDropdown.close();
-			},
-			typeOn(i) {
-				this.indexOn = i
-			},
-			sorts(){
-				console.log('排序')
 			}
 		},
+		onLoad() {
+		    this.getListFun();
+		},
+		
 		onPageScroll(e) {
 			this.top = e.scrollTop;
 		},
@@ -333,6 +281,78 @@
 		onHide() {},
 		onLaunch() {
 
+		}, 
+	    onPullDownRefresh(){
+		      this.page++;
+			  this.getListFun();
+	      },
+		methods:{
+					goTop() {
+						if (!this.$refs["sticky"].fixed) {
+							this.$u.getRect("#tab").then(res => {
+								uni.pageScrollTo({
+									scrollTop: this.top + res.top - 44,
+								})
+								setTimeout(() => {
+									this.$refs["uDropdown"].getContentHeight()
+								}, 500)
+		
+							})
+						}
+					},
+					tabChange(index) {
+						index == 2 ? this.chShow = false : this.chShow = true
+						this.$refs["sticky"].initObserver()
+						this.current = index;
+						this.$refs["uDropdown"].close()
+						this.goTop()
+					},
+					closeDropdown() {
+						this.$refs.uDropdown.close();
+					},
+					typeOn(i) {
+						this.indexOn = i
+					},
+					sorts(){
+						console.log('排序')
+					},
+						async getListFun() {
+					let {
+						page,
+						list,
+						total,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					const params = {
+						 page: page,
+						 searchType:"project"
+					}
+					var pdata={url:url,params:params};
+					const data = await oloadingFun(pubPostpage, page, list, status, pdata,total)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+					this.total=data.rtotal;
+				},
+		  async getListFun() {
+					let {
+						page,
+						list,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					var params=this.params;
+					    params.page=this.page;
+					var pdata={url:url,params:params};
+					const data = await  loadingFun(pubPostpage, page, list, status, pdata)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+				 	 
+			 }
 		},
 		mounted() {
 			console.log(this.$mp.page)

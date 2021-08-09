@@ -321,7 +321,7 @@
 					},
 				],
 				  list: [
-					{
+					/*{
 					  label: "办公",
 					  icon:'/static/industryspace/BG.png'
 					},
@@ -340,15 +340,15 @@
 					{
 					  label: "商铺",
 					  icon:'/static/industryspace/SP@2x.png'
-					},
+					},*/
 					{
 					  label: "买房",
 					  icon:'/static/industryspace/MF@2x.png'
 					},
-					{
+					/*{
 					  label: "城市更新",
 					  icon:'/static/industryspace/CSGX@2x.png'
-					},
+					},*/
 					{
 					  label: "地图找房",
 					  icon:'/static/industryspace/DTZF@2x.png'
