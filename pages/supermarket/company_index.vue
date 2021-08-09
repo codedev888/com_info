@@ -1,7 +1,7 @@
 <template>
 	
 	<view class="warp">
-		<!-- <nav-bar :isBack="true"></nav-bar> -->
+		<nav-bar :isBack="true"></nav-bar>
 		<view class="group">
 			<view class="company-info p30 bd">
 					<view class="shop-title flex-row jc">

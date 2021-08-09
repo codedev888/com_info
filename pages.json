@@ -19,6 +19,13 @@
 			}
 		},
 		{
+			"path": "pages/industryspace/search_space",
+			"style": {
+				"navigationBarTitleText": "空间搜索",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
 			"path": "pages/service/index",
 			"style": {
 				"navigationBarTitleText": "找服务",

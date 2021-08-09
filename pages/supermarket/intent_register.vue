@@ -1,5 +1,6 @@
 <template>
 	<view class="warp">
+		<nav-bar :isBack="true"></nav-bar>
 		<view class="tips">
 			企业将收到您的登记，与您主动建立联系！
 		</view>

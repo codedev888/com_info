@@ -1,5 +1,6 @@
 <template>
 	<view class="warp">
+		<nav-bar :isBack="true"></nav-bar>
 		<view class="screen flex-row jc p-l-r">
 			<view class="hot_order">热度排序</view>
 			<view class="new_order">最新上架</view>

@@ -1,5 +1,6 @@
 <template>
 	<view class="warp">
+			<nav-bar :isBack="true"></nav-bar>
 		<view class="group p30">
 			<!-- 搜索开始 -->
 			<view class="search">

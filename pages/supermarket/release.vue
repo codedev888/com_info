@@ -1,7 +1,6 @@
 <template>
-	
-	
 	<view class="warp p-l-r">
+			<nav-bar :isBack="true"></nav-bar>
 		<view class="top">
 			启用店铺，在企业超市中发布企业服务，帮助您找到更多合作的伙伴~
 		</view>
