@@ -51,7 +51,7 @@
 				    <view slot="empty" class="column-center" style="padding-top: 100rpx">
 				        <image class="img-null" src="/static/images/news_null.png"></image>
 				        <text class="nr muted">暂无数据～</text>
-				    </view> 
+				    </view>  
 				</loading-footer>-->
 			</view>
 		</view>
