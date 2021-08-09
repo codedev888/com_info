@@ -18,8 +18,7 @@
 					<view class="shop-title flex-row jc p-l-r">
 						<view class="left flex-row jc">
 							<view class="shop-icon">
-								<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9582fb2704521079aa2817ff315a3ced2560bd03d7a258542c8578ade1560ede" mode="widthFix">
-								</image>
+								<u-image width="80rpx" height="80rpx" :src="'/static/fz.jpg'" borderRadius="40"></u-image>
 							</view>
 							<view class="flex-col">
 								<text class="shop-name">创新科技旗舰店</text>
@@ -32,7 +31,8 @@
 					<view class="shop-image flex-row jc">
 						<block v-for="(item,index) in list" > 
 							<view class="image-list">
-								<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5cbce49ba30ba94c7e2c16212a2b6c8c77c352c2a313f3d32f55f225627d2ab7" mode="widthFix"></image>
+								<u-image width="100%" height="284rpx" :src="'/static/fz.jpg'" borderRadius="6"></u-image>
+								
 								<view class="image-text flex-col">
 									<text class="image-name">商标注册商注册备份</text>
 									<text class="price">¥199/次</text>
@@ -115,11 +115,12 @@
 		}
 .shop-item-box{
 	.shop-title{
-		
-		.shop-icon image{
+		padding-top: 20rpx;
+		.shop-icon .u-image{
 			width:80rpx;
 			height:80rpx;
 			margin-right: 20rpx;
+			box-shadow: 0 0 10rpx 5rpx rgba(121, 121, 121, 0.2);
 			}
 		.shop-name{
 			font-size: 30rpx;

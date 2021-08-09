@@ -11,7 +11,7 @@
 			<text>立即启用店铺 前往电脑端打开</text>
 		</view>
 
-		<image src="../../static/fb.jpg" mode="widthFix"></image>
+		<image src="/static/fb.jpg" mode="widthFix"></image>
 	</view>
 </template>
 

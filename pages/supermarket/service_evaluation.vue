@@ -3,11 +3,14 @@
 		<view class="group">
 			<view class="box flex-row jc">
 				<view class="left">
-					<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngc62bca2e26c8d5d266ef3e8f0d1ca1ee4298425e82c2603646f6cc9da2f0a632" mode="widthFix"></image>
+				<u-image border-radius="6" width="160rpx" height="140rpx" :src="'/static/fz.jpg'"></u-image>
 				</view>
 				<view class="right">
 					<view class="name">商标注册</view>
-					<view class="info"><text>地址：</text>深南大道</view>
+					<view class="tags">
+						<text class="li">品牌保障</text>
+						<text class="li">科技创新券服务机构</text>
+					</view>
 					<view class="info"><text>最近登陆：</text>2020-06-22 09:34:15</view>
 				</view>
 				
@@ -115,6 +118,19 @@
 			
 			.name{font-weight:600; font-size: 30rpx;
 			padding-bottom: 20rpx;}
+			.tags{
+				padding-bottom: 12rpx;
+				.li{background: #E4E8FB;
+				border-radius: 6rpx;
+				padding: 6rpx 10rpx;
+				margin-right: 10rpx;
+				color:#939ED1;
+				font-size: 22rpx;
+				}
+				.li:last-child{background: #FBF2E4;
+				color: #C9AE85;
+				}
+			}
 		}
 	}
 	.score-box{padding:20rpx 30rpx;line-height: 80rpx;
