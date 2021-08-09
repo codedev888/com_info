@@ -301,6 +301,7 @@
 						}
 					},
 					tabChange(index) {
+						
 						index == 2 ? this.chShow = false : this.chShow = true
 						this.$refs["sticky"].initObserver()
 						this.current = index;
@@ -309,9 +310,15 @@
 					},
 					closeDropdown() {
 						this.$refs.uDropdown.close();
+						
+						 
 					},
 					typeOn(i) {
 						this.indexOn = i
+						this.params.mainUse=i+1;
+						this.list=[];
+						this.getListFun();
+			
 					},
 					sorts(){
 						console.log('排序')
