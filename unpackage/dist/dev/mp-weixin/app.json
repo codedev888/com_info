@@ -1,9 +1,21 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/service/index",
+    "pages/robot/index",
+    "pages/news/index",
+    "pages/home/index",
+    "pages/index/cyzcList",
+    "pages/index/cyzcSearch",
+    "pages/index/cyzcSearchList",
+    "pages/index/zcfgDetail",
+    "pages/index/cyfzList",
+    "pages/index/departmentSearch",
+    "pages/index/fcxmDetail",
+    "pages/index/zcjdDetail",
     "pages/industryspace/index",
     "pages/appeal/index",
     "pages/supermarket/index",
-    "pages/index/index",
     "pages/company/index",
     "pages/company/setting",
     "pages/company/collection",
@@ -55,8 +67,7 @@
     "pages/industryspace/industrial_space_details",
     "pages/service/index",
     "pages/article/index",
-    "pages/robot/index",
-    "components/my-recom/my-recom"
+    "pages/robot/index"
   ],
   "subPackages": [],
   "window": {
@@ -64,7 +75,7 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8",
-    "navigationStyle": "default"
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#555555",
@@ -79,7 +90,7 @@
         "selectedIconPath": "/static/tabbar/home-active.png"
       },
       {
-        "pagePath": "pages/service/index",
+        "pagePath": "pages/industryspace/index",
         "text": "找服务",
         "iconPath": "/static/tabbar/service.png",
         "selectedIconPath": "/static/tabbar/service-active.png"

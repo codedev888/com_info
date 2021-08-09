@@ -7,6 +7,8 @@
     "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
     "u-dropdown": "/uview-ui/components/u-dropdown/u-dropdown",
     "u-dropdown-item": "/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "pub-list": "/components/pub-list/pub-list",
+    "loading-footer": "/components/loading-footer/loading-footer",
     "u-tabbar": "/uview-ui/components/u-tabbar/u-tabbar"
   }
 }

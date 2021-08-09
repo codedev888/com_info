@@ -4,6 +4,41 @@
  * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
  * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
  */
+.grid-text.data-v-413e7fe0 {
+  margin-top: 10rpx;
+}
+.flex-row.data-v-413e7fe0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28.data-v-413e7fe0 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10.data-v-413e7fe0 {
+  margin-top: 20rpx;
+}
+.h3.data-v-413e7fe0 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4.data-v-413e7fe0 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an.data-v-413e7fe0 {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
 .u-toast.data-v-413e7fe0 {
   position: fixed;
   z-index: -1;

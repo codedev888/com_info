@@ -113,6 +113,12 @@ try {
     uDropdownItem: function() {
       return __webpack_require__.e(/*! import() | uview-ui/components/u-dropdown-item/u-dropdown-item */ "uview-ui/components/u-dropdown-item/u-dropdown-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-dropdown-item/u-dropdown-item.vue */ 859))
     },
+    pubList: function() {
+      return __webpack_require__.e(/*! import() | components/pub-list/pub-list */ "components/pub-list/pub-list").then(__webpack_require__.bind(null, /*! @/components/pub-list/pub-list.vue */ 989))
+    },
+    loadingFooter: function() {
+      return __webpack_require__.e(/*! import() | components/loading-footer/loading-footer */ "components/loading-footer/loading-footer").then(__webpack_require__.bind(null, /*! @/components/loading-footer/loading-footer.vue */ 1133))
+    },
     uTabbar: function() {
       return Promise.all(/*! import() | uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabbar/u-tabbar.vue */ 364))
     }
@@ -171,137 +177,88 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 8));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _store = __webpack_require__(/*! @/api/store */ 22);
+
+
+var _tools = __webpack_require__(/*! @/utils/tools */ 19);
+
+
+var _type = __webpack_require__(/*! @/utils/type */ 20);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+
+var url = "api/park/garden/list";var _default =
 {
   data: function data() {var _ref;
     return _ref = {
@@ -359,7 +316,7 @@ var _default =
         name: '层政策解读' }],
 
 
-      list: [
+      clist: [
       {
         label: "买房",
         icon: '/static/industryspace/buyhouse/mf.png' },
@@ -463,10 +420,52 @@ var _default =
     0), _defineProperty(_ref, "height",
     0), _defineProperty(_ref, "indexOn",
     0), _defineProperty(_ref, "chShow",
-    true), _ref;
+    true), _defineProperty(_ref, "status",
+    _type.loadingType.LOADING), _defineProperty(_ref, "total",
+    0), _defineProperty(_ref, "page",
+    1), _defineProperty(_ref, "list",
+    []), _defineProperty(_ref, "params",
+    {
+      buildStatus: "",
+      flagCanteen: "",
+      flagCenterAir: "",
+      flagDormitory: "",
+      flagParking: "",
+      mainUse: "",
+      propertyType: "",
+      rentFeeEnd: "",
+      rentFeeStart: "",
+      rentSell: 1,
+      rentSellStatus: "",
+      roomAreaEnd: "",
+      roomAreaStart: "",
+      sellFeeEnd: "",
+      sellFeeStart: "",
+      signs: [],
+      sort: 1,
+      streetCode: "" }), _ref;
+
 
   },
-  methods: {
+  onLoad: function onLoad() {
+    this.getListFun();
+  },
+
+  onPageScroll: function onPageScroll(e) {
+    this.top = e.scrollTop;
+  },
+  onShow: function onShow() {
+
+  },
+  onHide: function onHide() {},
+  onLaunch: function onLaunch() {
+
+  },
+  onPullDownRefresh: function onPullDownRefresh() {
+    this.page++;
+    this.getListFun();
+  },
+  methods: _defineProperty({
     goTop: function goTop() {var _this = this;
       if (!this.$refs["sticky"].fixed) {
         this.$u.getRect("#tab").then(function (res) {
@@ -495,18 +494,45 @@ var _default =
     },
     sorts: function sorts() {
       console.log('排序');
-    } },
+    },
+    getListFun: function getListFun() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var page, list, total, status, params, pdata, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
 
-  onPageScroll: function onPageScroll(e) {
-    this.top = e.scrollTop;
-  },
-  onShow: function onShow() {
+                page =
 
-  },
-  onHide: function onHide() {},
-  onLaunch: function onLaunch() {
 
-  },
+
+                _this2.page, list = _this2.list, total = _this2.total, status = _this2.status;if (!(
+                status == _type.loadingType.FINISHED)) {_context.next = 3;break;}return _context.abrupt("return");case 3:
+                params = {
+                  page: page,
+                  searchType: "project" };
+
+                pdata = { url: url, params: params };_context.next = 7;return (
+                  oloadingFun(_store.pubPostpage, page, list, status, pdata, total));case 7:data = _context.sent;if (
+                data) {_context.next = 10;break;}return _context.abrupt("return");case 10:
+                _this2.page = data.page;
+                _this2.list = data.dataList;
+                _this2.status = data.status;
+                _this2.total = data.rtotal;case 14:case "end":return _context.stop();}}}, _callee);}))();
+    } }, "getListFun", function getListFun()
+  {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var page, list, status, params, pdata, data;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+
+              page =
+
+
+              _this3.page, list = _this3.list, status = _this3.status;if (!(
+              status == _type.loadingType.FINISHED)) {_context2.next = 3;break;}return _context2.abrupt("return");case 3:
+              params = _this3.params;
+              params.page = _this3.page;
+              pdata = { url: url, params: params };_context2.next = 8;return (
+                (0, _tools.loadingFun)(_store.pubPostpage, page, list, status, pdata));case 8:data = _context2.sent;if (
+              data) {_context2.next = 11;break;}return _context2.abrupt("return");case 11:
+              _this3.page = data.page;
+              _this3.list = data.dataList;
+              _this3.status = data.status;case 14:case "end":return _context2.stop();}}}, _callee2);}))();
+
+  }),
+
   mounted: function mounted() {
     console.log(this.$mp.page);
   } };exports.default = _default;

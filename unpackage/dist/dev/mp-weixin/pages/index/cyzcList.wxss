@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.grid-text.data-v-221f4bb3 {
+  margin-top: 10rpx;
+}
+.flex-row.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28.data-v-221f4bb3 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10.data-v-221f4bb3 {
+  margin-top: 20rpx;
+}
+.h3.data-v-221f4bb3 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4.data-v-221f4bb3 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an.data-v-221f4bb3 {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.title-url.data-v-221f4bb3 {
+  font-size: 28rpx;
+  color: #4967FA;
+}
+.se-con.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.se-con .se-con-right.data-v-221f4bb3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 60rpx;
+  border-radius: 60rpx;
+  background-color: #f7f7f7;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 24rpx;
+}
+.se-con .se-con-right .u-icon.data-v-221f4bb3 {
+  margin: 0 20rpx 0 30rpx;
+}
+.zcjsq .con.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 20rpx 0;
+}
+.zcjsq .con .item.data-v-221f4bb3 {
+  width: 50%;
+  position: relative;
+}
+.zcjsq .con .item .url.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.zcjsq .con .item .url .title.data-v-221f4bb3 {
+  margin-top: 10rpx;
+}
+.bmcx .con.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 20rpx 0;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.bmcx .con .item.data-v-221f4bb3 {
+  width: calc((100% - 16rpx)/2);
+  font-size: 28rpx;
+  color: #666;
+  height: 60rpx;
+}
+.tabs.data-v-221f4bb3 {
+  height: calc(100vh - 44px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.tabs .tabs_t.data-v-221f4bb3 {
+  height: 100rpx;
+}
+.tabs .tabs_s.data-v-221f4bb3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.type.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 20rpx 0;
+}
+.type .item.data-v-221f4bb3 {
+  width: 320rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+  line-height: 60rpx;
+  color: #666;
+  font-size: 28rpx;
+  background-color: #F3F3F3;
+  border-radius: 60rpx;
+  text-align: center;
+}
+.type .item.on.data-v-221f4bb3 {
+  background-color: #627BF8;
+  color: #fff;
+}
+.zcfg .zcfg-c.data-v-221f4bb3 {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+.zcfg .zcfg-c.sticky.data-v-221f4bb3 {
+  position: relative;
+}
+.list.data-v-221f4bb3 {
+  position: relative;
+  z-index: 8;
+}
+.list .item.data-v-221f4bb3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 30rpx 28rpx;
+}
+.list .item .info.data-v-221f4bb3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  width: 0;
+}
+.list .item .info .h3.data-v-221f4bb3 {
+  font-size: 30rpx;
+  color: #333;
+  height: 50rpx;
+  width: 100%;
+}
+.list .item .info .h4.data-v-221f4bb3 {
+  font-size: 28rpx;
+  color: #666;
+}
+.list .item .status.data-v-221f4bb3 {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: #f2f2f2;
+  color: #999;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.list .item .status.orange.data-v-221f4bb3 {
+  color: #fff;
+  background-color: #FB9274;
+}
+.list2.data-v-221f4bb3 {
+  position: relative;
+  z-index: 8;
+}
+.list2 .item.data-v-221f4bb3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  padding: 20rpx 28rpx;
+}
+.list2 .item view.data-v-221f4bb3 {
+  line-height: 46rpx;
+}
+.list2 .item .h33.data-v-221f4bb3 {
+  font-size: 30rpx;
+  color: #333;
+  width: 100%;
+}
+.list2 .item .con.data-v-221f4bb3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.list2 .item .con .info.data-v-221f4bb3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  width: 0;
+}
+.list2 .item .con .info .h44.data-v-221f4bb3 {
+  margin-top: 6rpx;
+  font-size: 28rpx;
+  color: #666;
+  width: 100%;
+}
+

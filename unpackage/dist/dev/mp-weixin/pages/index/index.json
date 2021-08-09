@@ -1,8 +1,12 @@
 {
-  "navigationBarTitleText": "罗i企",
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-toast": "/uview-ui/components/u-toast/u-toast",
     "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
-    "mosowe-swiper": "/components/mosowe-swiper/mosowe-swiper"
+    "u-grid": "/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/uview-ui/components/u-grid-item/u-grid-item",
+    "u-image": "/uview-ui/components/u-image/u-image",
+    "i-title": "/components/i-title/i-title",
+    "tab-bar": "/components/tab-bar/tab-bar"
   }
 }

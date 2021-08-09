@@ -100,6 +100,41 @@
  * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
  * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
  */
+.grid-text {
+  margin-top: 10rpx;
+}
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10 {
+  margin-top: 20rpx;
+}
+.h3 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
 page {
   padding-bottom: 100rpx;
 }

@@ -500,34 +500,34 @@ var _default =
 
 
       list: [
-      {
-        label: "办公",
-        icon: '/static/industryspace/BG.png' },
-
-      {
-        label: "研发",
-        icon: '/static/industryspace/YF@2x.png' },
-
-      {
-        label: "厂房",
-        icon: '/static/industryspace/CF@2x.png' },
-
-      {
-        label: "仓库",
-        icon: '/static/industryspace/CK@2x.png' },
-
-      {
-        label: "商铺",
-        icon: '/static/industryspace/SP@2x.png' },
-
+      /*{
+               label: "办公",
+               icon:'/static/industryspace/BG.png'
+             },
+             {
+               label: "研发",
+               icon:'/static/industryspace/YF@2x.png'
+             },
+             {
+               label: "厂房",
+               icon:'/static/industryspace/CF@2x.png'
+             },
+             {
+               label: "仓库",
+               icon:'/static/industryspace/CK@2x.png'
+             },
+             {
+               label: "商铺",
+               icon:'/static/industryspace/SP@2x.png'
+             },*/
       {
         label: "买房",
         icon: '/static/industryspace/MF@2x.png' },
 
-      {
-        label: "城市更新",
-        icon: '/static/industryspace/CSGX@2x.png' },
-
+      /*{
+                                                     label: "城市更新",
+                                                     icon:'/static/industryspace/CSGX@2x.png'
+                                                   },*/
       {
         label: "地图找房",
         icon: '/static/industryspace/DTZF@2x.png' },

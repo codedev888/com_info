@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.grid-text.data-v-af4c4024 {
+  margin-top: 10rpx;
+}
+.flex-row.data-v-af4c4024 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.pad28.data-v-af4c4024 {
+  padding: 14rpx 28rpx;
+  background-color: #fff;
+}
+.mt10.data-v-af4c4024 {
+  margin-top: 20rpx;
+}
+.h3.data-v-af4c4024 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.h4.data-v-af4c4024 {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.an.data-v-af4c4024 {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.i-title.data-v-af4c4024 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 80rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.left.data-v-af4c4024 {
+  font-size: 34rpx;
+  color: #333;
+}
+.left.icon.data-v-af4c4024 {
+  padding-left: 32rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAEVElEQVRIS72Wa2wUVRTH/+fO7LYS1GARatQEgoaIJr7io1GSPvbRhRAfMUE0KiZVmj4obaUt1cappIVCoVJqSzG++IAPQjQ+uu223RY+NNYEg9FoggmJNaTxQU2I6Wtn7jEz7Wx3ZyqdT9xPO2fOPb9zz/nPPUu4xouuMQ+egHnH+DwD9wKclp8APRcvpo9NY+gEr9KnUOI8gAQSGEfLsEa6+W5J4MZuvkWRuARmSnMmMoSB1YNldNkMlNfFjxEQdAJZ4MLQDjpp25cE5r/D25n5A2tDijeBRuOl9KgdqKCDX2LCWvtZAJAAmBEdKqNRz8C8o/wJwFvTMmeAiBrj5aSZ9g0a+7NXogYM1QbZ/r7r0N5XRBPegBqL/BX8F4CbXL0hyhneSd9a5Xyb1yuEbeaJUk/IhInBndSeuveqJS1o4xyGHAE73AgTWSO06tQpMsxggTZ9M6A85EyKBL7rr6Aez8DAIdYk5JuuQMCng9XKs8n+tRoVRFiR7idMTZ8crKYLnoEFrXIUzA+7lMfi5XgNfWjaC5o5i3yyHHB0j4T+z/VoObeDEp6ABR2cRZP8BzMr6UBi1U+39lXSuGkPHeRHpJQRZ1IgcXGghk4sUh2Xq2UI7uNtEjL5/SRVRnR+oE7cnyznPv15At3pFpWIxetoxDMw0GR8xMCLrnKQ2D9QT3tMe67GqpohayHhS1Wn9TshOmMa/ekRyBTYK8cBXj23YUGlpIjc/no6Y1oje3mdAfmCq8eEK/1vKIcXq92in0W+NvuAIHHOnR1dmcgWK20hBBo5LCBzXEDB3/c3qF96BgY1ox7MTa5AwBcDjepTtj3YyKXE8mannwH9s0Et42fPwFCDfpaBjW7lUXH/W0q3aQ/U8o0iQ1a6kmLIhDJ2YFhbO+0JGNH4Bj1h/A0sCMHeaEBZE2+i38znUAM/CJZbUsViXW2Sx2LN6vuLwdLVMO8R2KM/TeDTcy9TxwP9EmtWNtiBQq/rW8F8l7A++IUlScZjTb6znoHhWv04g19xl1O0xfYrVZZdY1E4LWsBmeEWjNrd1zx3KXgqaWi3Pgbw7U5nKVA40OLrM+2FdVNrINXtaT4CIBb/RluUQ+YY9AQMV87cDSF+cnoT0eTMciVrWCNLCOHXpgME5XF3UPqht1X9/P9grh4WVhlVzNLM0LmifW2+TbYxXDlbTETZzhMKQz3d00Y/egaGdyViAAedBSEoFb1HFGuQ5pbw8ky/Xg0Bsv5DLCz2TaoHvzpOk56AW17lZYkM/TLAmckN8yIVqm99z+G5ubZp1+x9kPRk0md+KjHxpegR/7tXg6WVNFyubyaWX1sb7CaSdYtejHb419mBIuUzzxCLe9zjD2e+afcNeQZGSmaPMqMsbQOZY1V09nSqpXN2pkiJ3E2Qy9JOCECX6nuxTvrdM7CwePZXAu6wwqbKVMgnersyrYs4UsS3kV8vSgad7yETpqJd6gHzw1gK+B9Oypcs6qvAbwAAAABJRU5ErkJggg==) no-repeat left center/28rpx;
+}
+

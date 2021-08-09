@@ -1,0 +1,1 @@
+<view class="i-title data-v-af4c4024"><view class="{{['left','data-v-af4c4024',(icon)?'icon':'']}}">{{''+title+''}}</view><view class="right data-v-af4c4024"><slot></slot></view></view>
