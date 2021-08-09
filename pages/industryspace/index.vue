@@ -2,12 +2,12 @@
 	<view class="warp">
 		<nav-bar :isBack="true"></nav-bar>
 		<view class="group">
-		<view class="search">
-			<u-search placeholder="搜索产业空间" v-model="keyword" :show-action="false"></u-search>
+		<view  @click="jump({url:'/pages/industryspace/search_space'})"   class="search">
+			<u-search  placeholder="搜索产业空间" v-model="keyword" :show-action="false"></u-search>
 		</view>
 		 <view class="NavList"> 
 			<u-grid :col="4" :border="false">
-				<u-grid-item :bg-color="bg" :custom-style="{padding: '10rpx 0 10rpx',color:'#ffffff'}" v-for="(item,index) in list" :key="index">
+				<u-grid-item @click="jump(item)" :bg-color="bg" :custom-style="{padding: '10rpx 0 10rpx',color:'#ffffff'}" v-for="(item,index) in clist" :key="index">
 					<u-image width="72rpx" height="72rpx" :src="item.icon"></u-image>
 					<view class="grid-text">{{item.label}}</view>
 				</u-grid-item>
@@ -85,164 +85,8 @@
 			<view class="listHeight">
 
 		<view class="modecotent group">
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>															  
-					<view class="section24 flex-row bd">
-						<view class="main2 flex-flex">
-							<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
-						</view>
-						<view class="main3 flex-col">
-						  <text class="info5">深业进元大厦</text>
-						  <view class="outer1 flex-row">
-							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-						  </view>
-						  <text class="paragraph1">
-							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-							<br />
-							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-						  </text>
-						  <view class="outer2 flex-row">
-							<view class="wrap1">
-							  <text class="info6">75</text>
-							  <text class="info7">元</text>
-							  <text class="txt9">/㎡/月起</text>
-							</view>
-							<view class="wrap2">
-							  <text class="word17">在租</text>
-							  <text class="info8"></text>
-							  <text class="info6">4</text>
-							  <text class="info9">套</text>
-							</view>
-						  </view>
-						</view>
-					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
-					
-			</view>	
+				<pub-list :list="list" type="house" ></pub-list>
+		 </view>	
 
 					
 		
@@ -265,6 +109,16 @@
 </template>
 
 <script>
+	import {
+		pubPostpage,
+	} from '@/api/store';
+	import {
+		loadingFun
+	} from '@/utils/tools';
+	import {
+		loadingType
+	} from '@/utils/type';
+	var url="api/park/garden/list";
 	export default{
 		data(){
 			return{
@@ -321,7 +175,7 @@
 						name: '层政策解读'
 					},
 				],
-				  list: [
+				  clist: [
 					/*{
 					  label: "办公",
 					  icon:'/static/industryspace/BG.png'
@@ -344,7 +198,8 @@
 					},*/
 					{
 					  label: "买房",
-					  icon:'/static/industryspace/MF@2x.png'
+					  icon:'/static/industryspace/MF@2x.png',
+					  url:"/pages/industryspace/buy_house"
 					},
 					/*{
 					  label: "城市更新",
@@ -352,19 +207,21 @@
 					},*/
 					{
 					  label: "地图找房",
-					  icon:'/static/industryspace/DTZF@2x.png'
+					  icon:'/static/industryspace/DTZF@2x.png',
+					   url:"/pages/industryspace/buy_house"
 					},
 					{
 					  label: "空间需求",
-					  icon:'/static/industryspace/KJXQ@2x.png'
+					  icon:'/static/industryspace/KJXQ@2x.png',
+					   url:"/pages/industryspace/release_house"
 					},
 					{
 					  label: "发布房源",
-					  icon:'/static/industryspace/FBFY@2x.png'
+					  icon:'/static/industryspace/FBFY@2x.png',
+					  url:"/pages/industryspace/space_requirement"
 					}
 				  ],
-				current: 0,
-				value1: 1,
+			    value1: 1,
 				value2: 2,
 				value3: 2,
 				value4: 2,
@@ -497,8 +354,35 @@
 				tagIndex:0,
 				cqIndex:0,
 				jdIndex:0,
-				chShow: true
+				chShow: true,
+				status: loadingType.LOADING,
+				total:0,
+				page:1,
+				list:[],
+				params:{
+					buildStatus:"",
+					flagCanteen:"",
+					flagCenterAir:"",
+					flagDormitory:"",
+					flagParking:"",
+					mainUse:"",
+					propertyType:"",
+					rentFeeEnd:"",
+					rentFeeStart:"",
+					rentSell:1,
+					rentSellStatus:"",
+					roomAreaEnd:"",
+					roomAreaStart:"",
+					sellFeeEnd:"",
+					sellFeeStart:"",
+					signs:[],
+					sort:1,
+					streetCode:""
+				}
 			}
+		},
+		onLoad() {
+		    this.getListFun();
 		},
 		methods:{
 /* 			tabChange(index) {
@@ -532,20 +416,39 @@
 				console.log('排序')
 			},
 			tagClick(i) {
-				
-				this.tagIndex = i
+			    this.tagIndex = i
 				//this.list[index].active = !this.list[index].active;
 			},
 			cqTagClick(i) {
-				
-				this.cqIndex = i
+				 this.cqIndex = i
 				//this.list[index].active = !this.list[index].active;
 			},
+			jump(obj){
+				 console.log(obj.url);
+				uni.navigateTo({
+					url:obj.url
+				})
+			},
 			jdTagClick(i) {
-				
-				this.jdIndex = i
+				 this.jdIndex = i
 				//this.list[index].active = !this.list[index].active;
-			}
+			},
+			async getListFun() { 
+					let {
+						page,
+						list,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					var params=this.params;
+						params.page=this.page;
+					var pdata={url:url,params:params};
+					const data = await  loadingFun(pubPostpage, page, list, status, pdata)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+			 }
 		},
 		onPageScroll(e) {
 			this.top = e.scrollTop;
