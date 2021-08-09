@@ -1,0 +1,20 @@
+
+.warp{
+		text-align: center;
+		line-height: 50rpx;
+}
+.top{
+		color: #FEA251;
+		font-size: 30rpx;
+		text-align: center;
+}
+.tips{
+	padding: 50rpx 0;
+}
+.tips text{display: block;}
+.tips text:first-child{font-size: 36rpx;
+	font-weight: bold;}
+.tips text:last-child{font-size: 28rpx;
+	color: #4967FA;
+	font-weight: bold;}
+

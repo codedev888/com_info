@@ -1,0 +1,1 @@
+<view class="group flex-flex"><view class="tipMsgBox"><u-image vue-id="6a4fc830-1" width="298rpx" height="256rpx" src="{{src}}" bind:__l="__l"></u-image><view class="tipTitle">提交成功</view><view class="tipMsg"><text>将根据您的需求</text><text>为您定制推荐适合的产业空间</text></view></view></view>

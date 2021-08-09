@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "pages/industryspace/index",
+    "pages/appeal/index",
+    "pages/supermarket/index",
+    "pages/index/index",
+    "pages/company/index",
+    "pages/company/setting",
+    "pages/company/collection",
+    "pages/company/industrial_space",
+    "pages/company/views",
+    "pages/company/intent_register",
+    "pages/company/demand",
+    "pages/company/intent_register_detail",
+    "pages/company/demand_detail",
+    "pages/company/demand_edit",
+    "pages/company/find_partner",
+    "pages/company/find_house",
+    "pages/company/find_government",
+    "pages/company/find_financing",
+    "pages/company/industry_zone",
+    "pages/company/ess",
+    "pages/company/ess_registration",
+    "pages/company/ess_subscribe",
+    "pages/company/ess_evaluate",
+    "pages/company/ess_contact",
+    "pages/supermarket/categorize",
+    "pages/supermarket/categorize_search",
+    "pages/supermarket/intent_register",
+    "pages/supermarket/intention_registration_successful",
+    "pages/supermarket/release",
+    "pages/supermarket/search_service",
+    "pages/supermarket/search_shop",
+    "pages/supermarket/service_details",
+    "pages/supermarket/service_evaluation",
+    "pages/supermarket/shop_evaluation",
+    "pages/supermarket/company_index",
+    "pages/appeal/add",
+    "pages/appeal/detail",
+    "pages/appeal/evaluation",
+    "pages/appeal/list",
+    "pages/appeal/progress",
+    "pages/industryspace/buy_house",
+    "pages/industryspace/in_house",
+    "pages/industryspace/release_house",
+    "pages/industryspace/map_find_house_list",
+    "pages/industryspace/update_project",
+    "pages/industryspace/sorting",
+    "pages/industryspace/register",
+    "pages/industryspace/screening",
+    "pages/industryspace/rental_house",
+    "pages/industryspace/space_requirement",
+    "pages/industryspace/requirement_successful",
+    "pages/industryspace/address_list",
+    "pages/industryspace/industrial_space_details",
+    "pages/service/index",
+    "pages/article/index",
+    "pages/robot/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#555555",
+    "selectedColor": "#2D86F1",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/tabbar/home.png",
+        "selectedIconPath": "/static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/service/index",
+        "text": "找服务",
+        "iconPath": "/static/tabbar/service.png",
+        "selectedIconPath": "/static/tabbar/service-active.png"
+      },
+      {
+        "pagePath": "pages/robot/index",
+        "text": "机器人",
+        "iconPath": "/static/tabbar/robot.png",
+        "selectedIconPath": "/static/tabbar/robot.png"
+      },
+      {
+        "pagePath": "pages/article/index",
+        "text": "看资讯",
+        "iconPath": "/static/tabbar/info.png",
+        "selectedIconPath": "/static/tabbar/info-active.png"
+      },
+      {
+        "pagePath": "pages/company/index",
+        "text": "主页",
+        "iconPath": "/static/tabbar/member.png",
+        "selectedIconPath": "/static/tabbar/member-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

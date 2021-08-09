@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.box {
+  padding: 30rpx 0;
+}
+.box .right {
+  padding-left: 10rpx;
+}
+.box .right .name {
+  font-weight: 600;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+.input-box {
+  margin: 20rpx 0;
+}
+.input-box .left {
+  width: 200rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+.input-box .left .required {
+  width: 20rpx;
+  display: block;
+  color: #FA675C;
+}
+.input-box .input {
+  border-radius: 8rpx;
+  overflow: hidden;
+  border: #f2f2f2 solid 2rpx;
+  width: 540rpx;
+  padding: 0rpx 20rpx;
+}
+.set-bar {
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #ffffff;
+}
+.section3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #6482ff;
+  border-left: #f2f2f2 solid 2rpx;
+}
+.section3.active {
+  background-color: #6482ff;
+  color: #ffffff;
+}
+.section3:after {
+  border: 0;
+  border-radius: 0rpx;
+}
+.section3:first {
+  border: 0;
+}
+.date .u-input {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEb0lEQVRYR+1XXWgcVRT+zt1NmkJaE/qg0VIrtgQEW1T8QaytgkorVEH2RSW0aebONjRIUKhYaMc+WJ9aJbLunNlsFhSRrg9VkaIP1lbUN0U0Dz6E1GqSViVbaTdrN7tz5IadZZIm62yJqOCFeThz7/nOd8/fvZfQYCQSiVhHR8cxInoWwBSAfcx8qpGO1vpOAAxgA4APACSZeWYpHWoEZtt2UkReFpF+AFuIqAfA2kaAWusxAF+KSJ6IjgJ4h5kPRiKwbdu2eHd3dwLAvSJSAnATgBIz24ODgyuLxeIMEe0UkdsXAySiMRF51+yemce01oeI6EEROQOgA8BpZn4fgAT6dQ/09vauamlp+URE7gPwOxH94Pv+GBFNM/M+x3Hik5OTsyKyWynVuxgBEfkUwKFqtbp+eHj4R631SwAeI6IrNdxVAE4WCoUn8/l82WDUCWitXwfQb+Ltuu5xw1JrfRjATgBbATwE4L3Z2dmukZGRXxcjUCNZEJH97e3tI8Vi8UMiOuu6bp/jOGpiYiJJRG+IyAHP847MI2BZ1oRS6rTruk8H4D09PWva2to+A3Bb7d8BZn61Ud5YltVLRG8CiAM45/v+w5lMZjzQ0VobL13HzHct9EBZRI54nncobEBr3UJEm0XkF2Y+18h4MLdr164bWltbby6Xy9/mcrk/FuC5ALYz87qrCAB4hZmdKEaudY3WOk1EO1zXXZTAzwDOXit4FD0R6VZKVZckQET1eEUBbHaNIUBE/lIE/vEQ/E+g7oG+vr5NRLQxiLEpw0wm87mRTcOZmpra7vt+q5GVUiIiXzGzObCwZ8+eDUqpzaH8uOx53sdG/qsqqBPQWn8N4I4QiKnn1cw8a1nWViIyDao+ROSo53nPmx+WZZ0goidC0348Hl+fSqV+ikxg7969ndVq9foAJB6PX0ylUudDHe1WAC2BvGLFivGhoaErRu7v72+vVCprQ7pFY7wpDzRbXlHXR/ZAEOsA2HGcavgYNYeLCb+ZHx0dlXw+b+brw+RJOASO4/hNecC27TMisiUE8huAG00OJJPJe3zf/6J24MwtIaLDruvOnSO2bb8tIs+EdGcqlcrGbDY7GdkDtm3vEJFNAYhS6nw6nc4Z2dwdYrGYRURzVUBEQkQfpdPp72u7fACA+YJxqVAopI2XIhOIGtNm1/13CFiWdVApdXdohxe6urq0SSat9ToReU0pVS9DERlm5hO1HEgCeDzQFZHLlUpFZ7PZS5E9oLU213FzPwzGhenp6adMHG3b3uj7/nCYgO/7Kc/z3qrlwIvhRmQIlMvlRC6XuxiZQLOxjbr+X02gRETHXNc1V+m/bWits+aGzcy3zJVwYElr/R0RXXZd9/5wx1tOJolEorWzs3NURMY9z3t0HgHbtneLSJaIjpuMNo+T5TRORGtE5DkRecRUiOd5J+cRMIJlWfuJyLTTlctpPIRlNvUCM2eCf1c9TgcGBlaXSqXNsVisbTlJVCqVmVgs9s3Ch23D1/FyElgK608MA4I/KvD6qQAAAABJRU5ErkJggg==) no-repeat;
+  background-position: 98% center;
+  background-size: 32rpx;
+}
+uni-button {
+  border-radius: 0;
+}
+.tips {
+  font-size: 28rpx;
+  color: #EB5E00;
+  background-color: rgba(235, 94, 0, 0.02);
+  line-height: 60rpx;
+  padding: 0rpx 30rpx;
+}
+.tags {
+  padding-bottom: 12rpx;
+}
+.tags text {
+  background: #E4E8FB;
+  border-radius: 6rpx;
+  padding: 6rpx 10rpx;
+  margin-right: 10rpx;
+  color: #939ED1;
+  font-size: 22rpx;
+}
+.tags text:last-child {
+  background: #FBF2E4;
+  color: #C9AE85;
+}
+

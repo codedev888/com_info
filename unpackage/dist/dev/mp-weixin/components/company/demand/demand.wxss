@@ -1,0 +1,96 @@
+
+.item-box{padding: 0rpx 30rpx;}
+.tags{padding: 20rpx 0rpx; position: relative; font-size: 13rpx;}
+.tag_txt{display:-webkit-box;display:-webkit-flex;display:flex; padding: 10rpx 20rpx; background-color: rgba(235, 241, 255, 1); color: rgba(98, 123, 248, 1); margin-right: 20rpx;}
+.word8 {
+ 
+  overflow-wrap: break-word;
+  color: rgba(248, 185, 100, 1);
+  font-size: 28rpx;
+
+  font-family: PingFangSC-Semibold;
+  white-space: nowrap;
+  line-height: 54rpx;
+	position: absolute;
+	right: 0rpx;
+	top: 20rpx;
+}
+.area{padding: 20rpx 0rpx;}
+.set{ position: relative;}
+.layer9 {
+  z-index: auto;
+  width: 750rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 20rpx;
+}
+.word7 {
+  z-index: 85;
+  
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(153, 153, 153, 1);
+ 
+  white-space: nowrap;
+  line-height: 34rpx;
+  text-align: left;
+  margin-top: 2rpx;
+}
+.info19 {
+  z-index: 87;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 26rpx;
+
+  white-space: nowrap;
+  line-height: 36rpx;
+  text-align: left;
+}
+.group17{
+	display: none;
+	border: 2px  solid #fff;
+	border-radius: 8rpx;  /*圆角弧度为7px*/
+	position: absolute;
+	overflow: inherit;
+	padding: 2rpx 18rpx;
+	right: 0rpx;
+	top: 54rpx;
+	background: #ffffff;
+	-webkit-box-shadow: #D2D2D2 0rpx 0rpx 8rpx;
+	        box-shadow: #D2D2D2 0rpx 0rpx 8rpx;
+	z-index:10000;
+}
+.group17:after{border: 0;}
+.group17 .word16:hover{color: #007AFF;}
+.set:hover .group17{display: block;}
+.group17:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10rpx solid;
+	position: absolute;
+	top: -20rpx;
+	right: 10rpx;
+	z-index: 2;
+	border-color:  transparent transparent #ffffff;
+}
+.word16 {
+  z-index: 100;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(153, 153, 153, 1);
+  font-size: 22rpx;
+  white-space: nowrap;
+  line-height: 32rpx;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}
+.label1 {
+  z-index: 89;
+  width: 32rpx;
+  height: 32rpx;
+  margin: 4rpx 0 0 2rpx;
+}	
+

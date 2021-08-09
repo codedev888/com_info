@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.center-title {
+  text-align: center;
+}
+.center-title .T {
+  position: relative;
+  line-height: 60rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.center-title .T:before, .center-title .T:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: url(data:image/png;base64,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) no-repeat;
+  background-size: 40rpx;
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+}
+.center-title .T:before {
+  left: -60rpx;
+}
+.center-title .T:after {
+  right: -60rpx;
+}
+.intro {
+  line-height: 42rpx;
+}
+.intro text {
+  display: block;
+}
+.intro text.h {
+  font-weight: 600;
+}
+.borderRadius {
+  border-radius: 10rpx;
+}
+.step {
+  text-align: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.step .li {
+  width: 25%;
+  text-align: center;
+  font-size: 22rpx;
+}
+.u-image {
+  margin: auto;
+}
+.rz-tips {
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+.rz-tips text:last-child {
+  color: #4967FA;
+  text-decoration: underline;
+}
+

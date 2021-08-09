@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.top {
+  width: 100%;
+  position: relative;
+}
+.top .top image {
+  width: 750rpx;
+}
+.top text {
+  position: absolute;
+  left: 80rpx;
+  top: 60%;
+  z-index: 9;
+  display: block;
+  background: #fff;
+  padding: 0rpx 30rpx;
+  border-radius: 50rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+}
+.no {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  display: block;
+  width: 100%;
+  height: 292rpx;
+  text-align: center;
+  margin-top: -146rpx;
+  color: #999999;
+}
+.no image {
+  width: 312rpx !important;
+}
+.no text {
+  display: block;
+}
+.robot {
+  padding: 20rpx;
+  z-index: 999;
+}
+.robot image {
+  width: 100rpx;
+}
+.robot .relative {
+  position: relative;
+  height: 120rpx;
+}
+.robot .relative .tip {
+  position: absolute;
+  left: 90rpx;
+  top: 60rpx;
+  z-index: 999;
+  background: #fff;
+  display: block;
+  width: 360rpx;
+  font-size: 28rpx;
+  border-radius: 0rpx 30rpx 30rpx 30rpx;
+  -webkit-box-shadow: 0rpx 0rpx 8rpx 2rpx rgba(191, 190, 190, 0.5);
+          box-shadow: 0rpx 0rpx 8rpx 2rpx rgba(191, 190, 190, 0.5);
+  text-align: center;
+  line-height: 60rpx;
+}
+.robot .relative .icon {
+  width: 90rpx;
+}
+uni-image {
+  width: 100% !important;
+}
+

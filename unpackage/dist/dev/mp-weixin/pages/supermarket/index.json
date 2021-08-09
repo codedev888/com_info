@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "企服超市",
+  "usingComponents": {
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-tabs-swiper": "/uview-ui/components/u-tabs-swiper/u-tabs-swiper",
+    "service": "/components/supermarket/service",
+    "shop": "/components/supermarket/shop"
+  }
+}

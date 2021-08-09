@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.in {
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0;
+  border-top: solid 2rpx #DDDDDD;
+}
+.in .li {
+  width: 50%;
+  height: 128rpx;
+  line-height: 128rpx;
+  font-size: 26rpx;
+  padding: 0rpx 30rpx;
+  border-bottom: solid 2rpx #DDDDDD;
+  border-right: solid 2rpx #DDDDDD;
+}
+.in .li .big {
+  font-size: 28rpx;
+  color: #627bf8;
+  margin-right: 20rpx;
+  font-weight: 600;
+}
+.in .li .small {
+  font-size: 20rpx;
+}
+.item-box .item {
+  padding: 30rpx;
+}
+.item-box .item .image {
+  margin-right: 30rpx;
+  height: 140rpx;
+}
+.item-box .item .sheight {
+  height: 140rpx;
+}
+.item-box .item .infos {
+  /* height: 140rpx; */
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  /* align-items: center; */
+}
+.item-box .item .infos .ctitle {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 600;
+}
+.item-box .item .infos .tags {
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.item-box .item .infos .tags .tag {
+  background: #F3F3F3;
+  padding: 0rpx 10rpx;
+  border-radius: 6rpx;
+  margin-right: 8rpx;
+  margin-bottom: 8rpx;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+

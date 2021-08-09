@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page.data-v-f88808a8 {
+  height: 100%;
+}
+.screen.data-v-f88808a8 {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+          box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+  margin-bottom: 20rpx;
+}
+.shop-item-box .shop-title .shop-icon image.data-v-f88808a8 {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.shop-item-box .shop-title .shop-name.data-v-f88808a8 {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.shop-item-box .shop-title .hot.data-v-f88808a8 {
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngff615295c98cfd86b1d7bd54f3bb59fad9c5ad086002b40fd70013079d0a8c38) no-repeat;
+  padding-left: 40rpx;
+  color: #fea251;
+  font-size: 24rpx;
+}
+.shop-item-box .shop-title .sees.data-v-f88808a8 {
+  height: 48rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  padding: 0rpx 20rpx;
+  color: #fea251;
+  border: #fea251 solid 2rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 48rpx;
+  margin-top: 20rpx;
+}
+.shop-image.data-v-f88808a8 {
+  padding: 20rpx;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.shop-image .image-list.data-v-f88808a8 {
+  width: 50%;
+  border: 10rpx solid #ffffff;
+  position: relative;
+}
+.shop-image .image-list image.data-v-f88808a8 {
+  width: 100%;
+  height: 141rpx;
+}
+.shop-image .image-text.data-v-f88808a8 {
+  position: absolute;
+  left: 0rpx;
+  bottom: 10rpx;
+  z-index: 2;
+  background-color: rgba(20, 45, 163, 0.6);
+  color: #fff;
+  width: 100%;
+  padding-left: 20rpx;
+}
+.screen.data-v-f88808a8 {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+          box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+  margin-bottom: 20rpx;
+}
+.screen view.data-v-f88808a8 {
+  font-size: 28rpx;
+  line-height: 100rpx;
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8f3bf33343e3196004a4280a227e24030b5bb6b8a2f1666d380a10c7aa32b038) no-repeat;
+  background-position: right center;
+  padding-right: 30rpx;
+  color: #999999;
+}
+.screen view.categorize.data-v-f88808a8 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA10lEQVRYR+3UTQrCMBAF4BmlC0XwQgpu25OIK8EzeAURwQt4gFr3eh03oaumjlhsESFmMhG6meyT9+XlB6HngT3ngwK0AW1AG4hqYLGiycjaEwxge94nN8mnJga8wse1zQloDgAGEFMJQgT4Cm83LkIEAxzhHYIIs+KQXLnHEQTwhL8z0dAQsmLHQ7ABvPB233wECxAWHobwAmThfMRPQFw4D+EENOEPmxM17zxyuO+EE5Auqw0QzCKTu+mIaOqqXF+O0/vnmt478C+Aax0FaAPagDagDTwB+5B0IQU0EdIAAAAASUVORK5CYII=) no-repeat;
+  background-size: 32rpx 32rpx;
+  background-position: right center;
+  color: #007AFF;
+}
+

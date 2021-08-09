@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "更新需求状态",
+  "usingComponents": {
+    "u-radio-group": "/uview-ui/components/u-radio-group/u-radio-group",
+    "u-radio": "/uview-ui/components/u-radio/u-radio",
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-toast": "/uview-ui/components/u-toast/u-toast"
+  }
+}

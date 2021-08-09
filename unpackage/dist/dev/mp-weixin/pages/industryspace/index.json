@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "罗i企",
+  "usingComponents": {
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-grid": "/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/uview-ui/components/u-grid-item/u-grid-item",
+    "u-image": "/uview-ui/components/u-image/u-image",
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "u-dropdown": "/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "u-button": "/uview-ui/components/u-button/u-button"
+  }
+}

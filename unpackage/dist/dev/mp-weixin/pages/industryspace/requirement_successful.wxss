@@ -1,0 +1,32 @@
+
+page{
+	background: #ffffff;
+	height: 100%;
+}
+.group{
+	text-align: center;
+	justify-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.tipMsgBox{
+	margin: auto;
+}
+.tipTitle{
+	font-size: 40rpx;
+	line-height: 120rpx;
+}
+.tipMsg{
+	margin: 0px auto;
+}
+.tipMsg text{
+	display: block;
+	color: #999999;
+}
+.u-image{
+	margin: auto;
+}
+

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.top {
+  width: 100%;
+  position: relative;
+}
+.top .top image {
+  width: 750rpx;
+}
+.top text {
+  position: absolute;
+  left: 80rpx;
+  top: 60%;
+  z-index: 9;
+  display: block;
+  background: #fff;
+  padding: 0rpx 30rpx;
+  border-radius: 50rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+}
+.appeal-list .item {
+  padding: 30rpx;
+}
+.appeal-list .left {
+  line-height: 40rpx;
+}
+.appeal-list .left .name {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.appeal-list .status {
+  display: block;
+  width: 220rpx;
+  line-height: 60rpx;
+  text-align: right;
+  color: #6482FF;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.appeal-list .status.in {
+  color: #F8B964;
+}
+.appeal-list .status.ok {
+  color: #2CCEC5;
+}
+.robot {
+  height: 120rpx;
+  width: 120rpx;
+  position: fixed;
+  left: 30rpx;
+  bottom: 20%;
+  z-index: 999;
+}
+.robot image {
+  width: 120rpx;
+}
+.robot .relative {
+  position: relative;
+  height: 120rpx;
+}
+.robot .relative .tip {
+  position: absolute;
+  right: -330rpx;
+  top: 80rpx;
+  z-index: 999;
+  background: #fff;
+  display: block;
+  width: 360rpx;
+  font-size: 28rpx;
+  border-radius: 0rpx 30rpx 30rpx 30rpx;
+  -webkit-box-shadow: 0rpx 0rpx 8rpx 2rpx rgba(191, 190, 190, 0.5);
+          box-shadow: 0rpx 0rpx 8rpx 2rpx rgba(191, 190, 190, 0.5);
+  text-align: center;
+  line-height: 60rpx;
+}
+uni-image {
+  width: 100% !important;
+}
+

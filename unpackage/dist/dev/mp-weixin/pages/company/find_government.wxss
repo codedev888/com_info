@@ -1,0 +1,13 @@
+
+.tips.data-v-6e3159bc{
+		font-size: 28rpx;
+		color: #EB5E00;
+		 background-color: rgba(235, 94, 0, 0.02);
+		 line-height: 60rpx;
+		 padding: 0rpx 30rpx;
+}
+page.data-v-6e3159bc{height: 100%;}
+.item.data-v-6e3159bc{padding: 30rpx; line-height: 50rpx;}
+.item text.data-v-6e3159bc{display: -webkit-box;display: -webkit-flex;display: flex;}
+.title.data-v-6e3159bc{font-size: 28rpx; color: #333333;}
+

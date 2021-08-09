@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "企服超市",
+  "usingComponents": {
+    "u-cell-group": "/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/uview-ui/components/u-cell-item/u-cell-item",
+    "u-badge": "/uview-ui/components/u-badge/u-badge",
+    "u-switch": "/uview-ui/components/u-switch/u-switch"
+  }
+}

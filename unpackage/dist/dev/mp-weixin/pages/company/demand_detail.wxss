@@ -1,0 +1,118 @@
+
+.item-box{padding: 0rpx 30rpx;}
+.tags{padding: 20rpx 0rpx; position: relative; font-size: 13rpx;}
+.tag_txt{display:-webkit-box;display:-webkit-flex;display:flex; padding: 10rpx 20rpx; background-color: rgba(235, 241, 255, 1); color: rgba(98, 123, 248, 1); margin-right: 20rpx;}
+.word8 {
+ 
+  overflow-wrap: break-word;
+  color: rgba(248, 185, 100, 1);
+  font-size: 28rpx;
+
+  font-family: PingFangSC-Semibold;
+  white-space: nowrap;
+  line-height: 54rpx;
+	position: absolute;
+	right: 0rpx;
+	top: 20rpx;
+}
+.area{padding: 20rpx 0rpx;}
+.set{ position: relative;}
+.layer9 {
+  z-index: auto;
+  width: 750rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 20rpx;
+}
+.word7 {
+  z-index: 85;
+  
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(153, 153, 153, 1);
+ 
+  white-space: nowrap;
+  line-height: 34rpx;
+  text-align: left;
+  margin-top: 2rpx;
+}
+.info19 {
+  z-index: 87;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 26rpx;
+
+  white-space: nowrap;
+  line-height: 36rpx;
+  text-align: left;
+}
+.group17{
+	display: none;
+	border: 2px  solid #fff;
+	border-radius: 8rpx;  /*圆角弧度为7px*/
+	position: absolute;
+	overflow: inherit;
+	padding: 2rpx 18rpx;
+	right: 0rpx;
+	top: 54rpx;
+	background: #ffffff;
+	-webkit-box-shadow: #D2D2D2 0rpx 0rpx 8rpx;
+	        box-shadow: #D2D2D2 0rpx 0rpx 8rpx;
+	z-index:10000;
+}
+.group17:after{border: 0;}
+.group17 .word16:hover{color: #007AFF;}
+.set:hover .group17{display: block;}
+.group17:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10rpx solid;
+	position: absolute;
+	top: -20rpx;
+	right: 10rpx;
+	z-index: 2;
+	border-color:  transparent transparent #ffffff;
+}
+.word16 {
+  z-index: 100;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(153, 153, 153, 1);
+  font-size: 22rpx;
+  white-space: nowrap;
+  line-height: 32rpx;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}
+.label1 {
+  z-index: 89;
+  width: 32rpx;
+  height: 32rpx;
+  margin: 4rpx 0 0 2rpx;
+}	
+
+
+page{padding-bottom: 100rpx;}
+.status{color:#F8B964}
+.set-bar{position: fixed; width: 100%; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; bottom: 0rpx; left: 0rpx; background: #ffffff;}
+.section3{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1; line-height: 90rpx; text-align: center; font-size: 28rpx;color: rgba(100, 130, 255, 1); border-left: #f2f2f2 solid 2rpx;}
+.section3.active{background-color: rgba(100, 130, 255, 1); color: #ffffff;}
+.section3:first{border: 0;}
+.info-item{line-height: 80rpx; padding: 0rpx 30rpx;}
+.set-itme{padding: 0rpx 30rpx;}
+.word13{font-size: 32rpx; padding: 20rpx 0rpx 10rpx 0rpx; display: block;}
+.box9{}
+.box9-item{
+	 background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdf066cf97096a97ced6e749b316739f7e70db2bbeccaf6cc3c61cd04f2a3c55d) no-repeat;
+	 background-size: 40rpx 40rpx;
+	 padding:0rpx 0rpx 20rpx 60rpx;
+	 line-height: 42rpx;
+	 font-size: 28rpx;
+	 margin-top: 20rpx;
+}
+
+
+

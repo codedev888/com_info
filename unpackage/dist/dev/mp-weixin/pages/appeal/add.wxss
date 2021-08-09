@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  padding-bottom: 50rpx;
+  background: #ffffff;
+}
+.u-input {
+  padding: 0rpx !important;
+}
+.uni-input-input, .uni-input-placeholder {
+  padding: 0rpx 20rpx !important;
+}
+.sborder {
+  border: #ccc solid 2rpx;
+}
+.agreement {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 40rpx 0;
+}
+.agreement .agreement-text {
+  padding-left: 8rpx;
+  color: #909399;
+}
+.uni-input-input {
+  border: #ccc solid 1px;
+}
+.title {
+  line-height: 1;
+}
+.required {
+  color: #ff0000;
+  margin-right: 10rpx;
+}
+.button {
+  line-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #6482FF;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  width: 80%;
+  margin: auto;
+  margin-top: 100rpx;
+  margin-bottom: 100rpx;
+}
+

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  padding-bottom: 100rpx;
+}
+.changelist {
+  padding: 10rpx 20rpx;
+  background: #F7F7F7;
+  margin-right: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.set-bar {
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #ffffff;
+}
+.section3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #6482ff;
+  border-left: #f2f2f2 solid 2rpx;
+}
+.section3.active {
+  background-color: #6482ff;
+  color: #ffffff;
+}
+.section3:first {
+  border: 0;
+}
+.info-item {
+  line-height: 80rpx;
+  padding: 0rpx 30rpx;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.set-itme {
+  padding: 0rpx 30rpx;
+}
+.word13 {
+  font-size: 32rpx;
+  padding: 20rpx 0rpx 10rpx 0rpx;
+  display: block;
+}
+.box9-item {
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdf066cf97096a97ced6e749b316739f7e70db2bbeccaf6cc3c61cd04f2a3c55d) no-repeat;
+  background-size: 40rpx 40rpx;
+  padding: 0rpx 0rpx 20rpx 60rpx;
+  line-height: 42rpx;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.item-box {
+  margin-bottom: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.item-box .item {
+  border: 1px solid #F7F7F7;
+  /* color: $u-type-primary; */
+  padding: 0rpx 20rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+  background: #F7F7F7;
+}
+.item-box .active {
+  color: #FFFFFF;
+  background-color: #6482FF;
+}
+

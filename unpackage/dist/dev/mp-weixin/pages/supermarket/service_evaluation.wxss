@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.box {
+  padding: 30rpx;
+}
+.box .left image {
+  width: 160rpx;
+  height: 140rpx;
+}
+.box .right {
+  width: 520rpx;
+  padding-left: 10rpx;
+}
+.box .right .name {
+  font-weight: 600;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+.score-box {
+  padding: 20rpx 30rpx;
+  line-height: 80rpx;
+}
+.score-box .score-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.score-box .score-total {
+  font-size: 28rpx;
+}
+.score-box .score-total .left text {
+  font-size: 32rpx;
+  color: #FF2419;
+  font-weight: 600;
+}
+.score-box .score-total .right {
+  color: #FF2419;
+}
+.score {
+  color: #4967FA;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+.right.isok {
+  color: #FEA251;
+}
+.set-bar {
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #ffffff;
+}
+.section3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #6482ff;
+  border-left: #f2f2f2 solid 2rpx;
+}
+.section3.active {
+  background-color: #6482ff;
+  color: #ffffff;
+}
+.section3:after {
+  border: 0;
+  border-radius: 0rpx;
+}
+.section3:first {
+  border: 0;
+}
+uni-button {
+  border-radius: 0;
+}
+

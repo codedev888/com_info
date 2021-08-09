@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="3px" viewBox="0 0 101 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>直线 7</title>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#333333" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988" stroke-linecap="square">
+        <g id="产业空间详情页" transform="translate(-31.000000, -410.000000)" stroke="url(#linearGradient-1)" stroke-width="2">
+            <line x1="31" y1="411.5" x2="131" y2="411.5" id="直线-7" transform="translate(81.000000, 411.500000) scale(-1, 1) translate(-81.000000, -411.500000) "></line>
+        </g>
+    </g>
+</svg>

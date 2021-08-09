@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page.data-v-50bd2cc9 {
+  height: 100%;
+}
+.screen.data-v-50bd2cc9 {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+          box-shadow: 0rpx 6rpx 12rpx rgba(121, 121, 121, 0.2);
+  margin-bottom: 20rpx;
+}
+.shop-item-box .shop-title .shop-icon image.data-v-50bd2cc9 {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.shop-item-box .shop-title .shop-name.data-v-50bd2cc9 {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.shop-item-box .shop-title .hot.data-v-50bd2cc9 {
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngff615295c98cfd86b1d7bd54f3bb59fad9c5ad086002b40fd70013079d0a8c38) no-repeat;
+  padding-left: 40rpx;
+  color: #fea251;
+  font-size: 24rpx;
+}
+.shop-item-box .shop-title .sees.data-v-50bd2cc9 {
+  height: 48rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  padding: 0rpx 20rpx;
+  color: #fea251;
+  border: #fea251 solid 2rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 48rpx;
+  margin-top: 20rpx;
+}
+.shop-image.data-v-50bd2cc9 {
+  padding: 20rpx;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.shop-image .image-list.data-v-50bd2cc9 {
+  width: 50%;
+  border: 10rpx solid #ffffff;
+  position: relative;
+}
+.shop-image .image-list image.data-v-50bd2cc9 {
+  width: 100%;
+  height: 141rpx;
+}
+.shop-image .image-text.data-v-50bd2cc9 {
+  position: absolute;
+  left: 0rpx;
+  bottom: 10rpx;
+  z-index: 2;
+  background-color: rgba(20, 45, 163, 0.6);
+  color: #fff;
+  width: 100%;
+  padding-left: 20rpx;
+}
+

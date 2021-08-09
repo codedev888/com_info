@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  padding-bottom: 100rpx;
+}
+.status {
+  color: #F8B964;
+}
+.info-item {
+  line-height: 80rpx;
+  padding: 0rpx 30rpx;
+}
+.info-item text {
+  margin-right: 80rpx;
+  display: block;
+}
+.set-itme {
+  padding: 0rpx 30rpx;
+}
+.word13 {
+  font-size: 32rpx;
+  padding: 20rpx 0rpx 10rpx 0rpx;
+  display: block;
+}
+.box9-item {
+  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdf066cf97096a97ced6e749b316739f7e70db2bbeccaf6cc3c61cd04f2a3c55d) no-repeat;
+  background-size: 40rpx 40rpx;
+  padding: 0rpx 0rpx 20rpx 60rpx;
+  line-height: 42rpx;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.nav {
+  width: 750rpx;
+  white-space: nowrap;
+  background: #ffffff;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.nav .cu-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #666666;
+}
+.nav .cu-item.cur {
+  font-size: 28rpx;
+  color: #627bf8;
+  position: relative;
+}
+.nav .cu-item.cur:after {
+  content: " ";
+  z-index: 2;
+  width: 40rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background-color: #627bf8;
+  position: absolute;
+  left: calc(50% - 20rpx);
+  bottom: 0rpx;
+  /* 	  align-self: flex-start;
+	  margin-left: 39px; */
+}
+.cur {
+  color: #333333;
+}
+

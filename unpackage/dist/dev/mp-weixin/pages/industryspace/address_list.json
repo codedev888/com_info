@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产业空间通讯录",
+  "usingComponents": {
+    "u-image": "/uview-ui/components/u-image/u-image"
+  }
+}

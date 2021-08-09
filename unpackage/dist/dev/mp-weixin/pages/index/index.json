@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "罗i企",
+  "usingComponents": {
+    "u-toast": "/uview-ui/components/u-toast/u-toast",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "mosowe-swiper": "/components/mosowe-swiper/mosowe-swiper"
+  }
+}

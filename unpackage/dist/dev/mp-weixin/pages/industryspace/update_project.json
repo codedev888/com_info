@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "城市更新项目",
+  "usingComponents": {
+    "u-sticky": "/uview-ui/components/u-sticky/u-sticky",
+    "u-dropdown": "/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "u-image": "/uview-ui/components/u-image/u-image"
+  }
+}

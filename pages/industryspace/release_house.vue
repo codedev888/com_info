@@ -1,0 +1,140 @@
+<template>
+	<view class="rental p30">
+		<view class="group">
+			<u-image border-radius="6" width="690rpx" height="234rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb423fa2136984081f6915c0132cc2be00b08279e73a7febb83eda1dedbcf064d'"></u-image>
+		</view>
+		<view class="height20"></view>
+		<view class="group p30 borderRadius">
+			<view class="center-title">
+				<text class="T">平台介绍</text>
+			</view>
+			<view class="intro p-t-b">
+				 罗湖政企服务平台——产业空间是按照区政府要求建设的统一、公开、常设性的产业空间资源供需服务平台。
+			</view>
+		</view>	
+		<view class="height20"></view>
+		<view class="group p30 borderRadius">
+			<view class="center-title">
+				<text class="T">入驻平台优势</text>
+			</view>
+			<view class="intro p-t-b">
+				<text class="h">政府搭建空间供需服务平台</text>
+				<text>罗湖政企服务平台——产业空间是按照区政府要求建设的统一、公开、常设性的产业空间资源供需服务平台。</text>
+				<text class="h">汇聚全区产业空间需求企业信息</text>
+				<text>平台统一受理企业的产业空间需求申报，并为企业提供需求跟踪、撮合对接等服务，有利于园区与企业供需对接。</text>
+				<text class="h">优质市场园区可免费入驻</text>
+				<text> 平台致力于实现产业空间供需之间的高效链接，扶持促进产业经济发展，具有公益性，符合要求的优质市场园区可免费入驻。</text>
+			</view>
+		</view>		
+		<view class="height20"></view>
+		<view class="group p30 borderRadius">
+			<view class="center-title">
+				<text class="T">入驻门槛</text>
+			</view>
+			<view class="intro p-t-b">
+		
+				<text>产业园区应有一定规模，产业用房总建筑面积</text>
+				<text>园区或建设运营单位有一定的品牌知名度</text>
+				<text> 园区产权清晰，入驻方拥有对园区的主要管理权</text>
+				<text> 园区或建设运营单位有一定的品牌知名度</text>
+			</view>
+		</view>				
+		<view class="height20"></view>
+		<view class="group p30 borderRadius">
+			<view class="center-title">
+				<text class="T">入驻流程</text>
+			</view>
+			<view class="intro p-t-b">
+				<view class="step flex-row">
+					<view class="li">
+						<u-image border-radius="6" width="108rpx" height="108rpx" :src="'/static/industryspace/rental/step1.png'"></u-image>
+						<text>认领园区</text>
+					</view>
+					<view class="li">
+						<u-image border-radius="6" width="108rpx" height="108rpx" :src="'/static/industryspace/rental/step2.png'"></u-image>
+						<text>管理园区\n楼栋和房间</text>
+					</view>
+					<view class="li">
+						<u-image border-radius="6" width="108rpx" height="108rpx" :src="'/static/industryspace/rental/step3.png'"></u-image>
+						<text>发布租售信息</text>
+					</view>
+					<view class="li">
+						<u-image border-radius="6" width="108rpx" height="108rpx" :src="'/static/industryspace/rental/step4.png'"></u-image>
+						<text>对接登记意向</text>
+					</view>
+				</view>
+				<view class="rz-tips flex-row">
+					<text>入驻请用电脑打开</text> <text>罗湖政企服务平台</text>
+				</view>
+			</view>
+		</view>	
+		
+	</view>
+</template>
+
+<script>
+</script>
+
+<style lang="scss">
+	.center-title{
+		
+		text-align: center;
+		.T{
+			position: relative;
+			line-height: 60rpx;
+			font-size: 34rpx;
+			font-weight: 600;
+		}
+		.T:before,.T:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			background:url(/static/tb@2x.png) no-repeat;
+			background-size: 40rpx;
+			display:block;
+			width: 40rpx;
+			height: 40rpx;
+		}
+		.T:before{
+			left:-60rpx
+		}
+		.T:after{
+			right:-60rpx
+		}
+	}
+	.intro{
+		line-height: 42rpx;
+		text{
+			display: block;
+		}
+		text.h{
+			font-weight: 600;
+		}
+	}
+.borderRadius{
+	border-radius: 10rpx;
+}
+.step{
+	text-align: center;
+	flex-wrap: wrap;
+	.li{
+		width: 25%;
+		text-align: center;
+
+		font-size: 22rpx;
+
+	}
+}
+.u-image{
+	margin: auto;
+}
+.rz-tips{
+	font-size: 28rpx;
+	padding: 20rpx 0;
+
+}
+.rz-tips text:last-child{
+	color: #4967FA;
+	text-decoration: underline;
+}
+</style>

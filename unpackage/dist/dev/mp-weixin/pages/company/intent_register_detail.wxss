@@ -1,0 +1,48 @@
+
+.set-bar{position: fixed; width: 100%; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; bottom: 0rpx; left: 0rpx; background: #ffffff;}
+.section3{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1; line-height: 90rpx; text-align: center; font-size: 28rpx;color: rgba(100, 130, 255, 1);}
+.section3.active{background-color: rgba(100, 130, 255, 1); color: #ffffff;}
+.box2{
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	padding: 30rpx;
+	font-size: 28rpx;
+}
+.txt2 {
+  z-index: 51;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(248, 185, 100, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  white-space: nowrap;
+  line-height: 40rpx;
+  text-align: left;
+}
+.item-box{padding: 30rpx;}
+.box4{-webkit-box-pack: justify;-webkit-justify-content: space-between;justify-content: space-between; padding: 20rpx 0; position: relative;}
+.box5{-webkit-box-pack: justify;-webkit-justify-content: space-between;justify-content: space-between; width:550rpx;}
+.txt3{ font-size: 28rpx; padding: 5rpx 0; width: 200rpx;}
+.txt4{font-size: 28rpx; padding: 5rpx 0;}
+.box4 image{width: 100rpx; height: 100rpx;}
+.mod4{height: 44rpx; line-height: 44rpx; padding: 0rpx 20rpx;border-radius: 2px;
+  background-color: rgba(100, 130, 255, 0.2);
+  position: absolute;
+  top: 20rpx;
+  right: 0rpx;
+}
+.info2{color: #ffffff;}
+.set-itme{padding: 0rpx 30rpx;}
+.word13{font-size: 32rpx; padding: 20rpx 0rpx 10rpx 0rpx; display: block;}
+.box9{}
+.box9-item{
+	 background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdf066cf97096a97ced6e749b316739f7e70db2bbeccaf6cc3c61cd04f2a3c55d) no-repeat;
+	 background-size: 40rpx 40rpx;
+	 padding:0rpx 0rpx 20rpx 60rpx;
+	 line-height: 42rpx;
+	 font-size: 28rpx;
+	 margin-top: 20rpx;
+}
+
+

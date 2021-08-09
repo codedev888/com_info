@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page {
+  padding-bottom: 150rpx;
+}
+.info-box .left {
+  font-size: 24rpx;
+  line-height: 48rpx;
+}
+.info-box .left .name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.info-box .left .tags {
+  font-size: 22rpx;
+}
+.info-box .left .tags text {
+  padding: 10rpx;
+  background: rgba(98, 123, 248, 0.2);
+  color: #627bf8;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+.info-box .right .bar {
+  text-align: right;
+  /* line-height: 60rpx; */
+  font-size: 28rpx;
+  height: 130rpx;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20rpx;
+}
+.info-box .right .bar view {
+  margin-left: 10rpx;
+}
+.item-box .item {
+  padding: 30rpx;
+}
+.item-box .item .image {
+  margin-right: 30rpx;
+  height: 210rpx;
+}
+.item-box .item .sheight {
+  height: 210rpx;
+}
+.item-box .item .infos {
+  /* height: 140rpx; */
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  /* align-items: center; */
+}
+.item-box .item .infos .ctitle {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 600;
+  padding-bottom: 10rpx;
+}
+.item-box .item .infos .tags {
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.item-box .item .infos .tags .tag {
+  /* 					background: #F3F3F3;
+					padding: 0rpx 10rpx;
+					border-radius: 6rpx; */
+  margin-right: 8rpx;
+  margin-bottom: 8rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+.item-box .item .infos .tags .tag.xq {
+  font-size: 22rpx;
+}
+.item-box .item .infos .price {
+  font-size: 28rpx;
+  color: #FB9673;
+}
+.item-box .item .infos .price > text {
+  font-size: 32rpx;
+}
+.huxing .huxing-title {
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.huxing .huxing-title text {
+  position: relative;
+  line-height: 1;
+}
+.huxing .huxing-title text:before {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAABCAIAAAAzXzUYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVGRENBRkNCRjg1MzExRUJBQ0JEQTkzOTQzRkE3MzQ5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVGRENBRkNDRjg1MzExRUJBQ0JEQTkzOTQzRkE3MzQ5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUZEQ0FGQzlGODUzMTFFQkFDQkRBOTM5NDNGQTczNDkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUZEQ0FGQ0FGODUzMTFFQkFDQkRBOTM5NDNGQTczNDkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6SpREYAAAAL0lEQVR42mL8//8/A7XBfyTwDwzgDDTw9+9fZAYaiVUQjURmoAGIpXCSJJ8CBBgA0ruaxE0CDhQAAAAASUVORK5CYII=) no-repeat;
+  height: 2rpx;
+  width: 180rpx;
+  content: "";
+  position: absolute;
+  left: -200rpx;
+  top: 18rpx;
+}
+.huxing .huxing-title text:after {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAABCAIAAAAzXzUYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUxMjFERjI0Rjg1MzExRUJCMjcwOTg4NDE3MTE0MkZGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUxMjFERjI1Rjg1MzExRUJCMjcwOTg4NDE3MTE0MkZGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTEyMURGMjJGODUzMTFFQkIyNzA5ODg0MTcxMTQyRkYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTEyMURGMjNGODUzMTFFQkIyNzA5ODg0MTcxMTQyRkYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7SB7/SAAAALklEQVR42mKcNm0aA9GAEQyYmJiQSUzAzMyMzMBD4pJCZqABuKWMSICB2gAgwACuVwL/J+x5pAAAAABJRU5ErkJggg==) no-repeat;
+  height: 2rpx;
+  width: 180rpx;
+  content: "";
+  position: absolute;
+  right: -200rpx;
+  top: 18rpx;
+}
+.huxing .box .li {
+  line-height: 120rpx;
+  padding: 20rpx 0;
+}
+.huxing .box .li .image text {
+  margin-left: 40rpx;
+}
+.huxing .moreHouse {
+  text-align: center;
+  border-top: #cccccc solid 1px;
+  line-height: 80rpx;
+  color: #4967fa;
+}
+.base_info .nav {
+  width: 750rpx;
+  white-space: nowrap;
+  background: #ffffff;
+  text-align: center;
+}
+.base_info ::-webkit-scrollbar {
+  display: none;
+}
+.base_info .nav .cu-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #666666;
+}
+.base_info .nav .cu-item.cur {
+  font-size: 28rpx;
+  color: #627bf8;
+  position: relative;
+}
+.base_info .nav .cu-item.cur:after {
+  content: " ";
+  z-index: 2;
+  width: 40rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background-color: #627bf8;
+  position: absolute;
+  left: calc(50% - 20rpx);
+  bottom: 0rpx;
+  /* 	  align-self: flex-start;
+	  margin-left: 39px; */
+}
+.base_info .cur {
+  color: #333333;
+}
+.base_info .catelist {
+  text-align: center;
+}
+.base_info .info_box {
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #666666;
+}
+.base_info .info_box .li text:first-child {
+  margin-right: 30rpx;
+  color: #333333;
+  text-align: justify;
+  width: 140rpx;
+  display: block;
+  font-weight: 600;
+}
+.base_info .info_box .li text:first-child text {
+  display: inline-block;
+  padding-left: 100%;
+}
+/* 	<view class="group base_info">
+			<view class=".catelist{
+				
+			} flex-row">
+				<text>基本信息</text><text>入驻企业</text>
+			</view>
+			<view class="info_box">
+				<view class="">
+					<text>主要用途</text><text>办公、仓库、厂房</text>
+				</view>
+				<view class="">
+					<text>地 址</text><text>罗湖区-黄贝街道-深南大道207号</text>
+				</view>
+				<view class="">
+					<text>产权性质</text><text>区属国企</text>
+				</view>
+				<view class="">
+					<text>产权单位</text><text>深圳市罗湖xx控股有限公司</text>
+				</view>
+				<view class="flex-row jc">
+					<view class="">
+						<text>建筑面积</text><text>40120㎡</text>
+					</view>
+					<view class="">
+						<text>空置面积</text><text>40120㎡</text>
+					</view>
+				</view>
+				<view class="flex-row jc">
+					<view class="">
+						<text>建设进度</text><text>已建成</text>
+					</view>
+					<view class="">
+						<text>竣工时间</text><text>2019-12</text>
+					</view>
+				</view>
+				<view class="flex-row jc">
+					<view class="">
+						<text>租售类型</text><text>仅出租</text>
+					</view>
+					<view class="">
+						<text>租售进度</text><text>租售中</text>
+					</view>
+				</view>				
+				
+			</view>
+		</view> */
+.group-title {
+  font-size: 30rpx;
+  color: #999999;
+}
+.group-title .changeBar {
+  width: 200rpx;
+  height: 60rpx;
+  border: #627bf8 solid 2rpx;
+  border-radius: 30rpx;
+  position: relative;
+}
+.group-title .changeBar text {
+  width: 50%;
+  display: block;
+  text-align: center;
+  line-height: 58rpx;
+  border-radius: 30rpx;
+  position: relative;
+  z-index: 2;
+}
+.group-title .changeBar:before {
+  content: "";
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  display: block;
+  height: 58rpx;
+  border-radius: 30rpx;
+  width: 50%;
+  background: #627bf8;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.group-title .changeBar.left:before {
+  left: 50%;
+}
+.group-title .changeBar text.active {
+  /* background:rgba(98, 123, 248, 1); */
+  color: #ffffff;
+}
+.set-bar {
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #ffffff;
+}
+.section3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #6482ff;
+  border-left: #f2f2f2 solid 2rpx;
+}
+.section3.active {
+  background-color: #6482ff;
+  color: #ffffff;
+}
+.section3:after {
+  border: 0;
+  border-radius: 0rpx;
+}
+.section3:first {
+  border: 0;
+}
+uni-button {
+  border-radius: 0;
+}
+
