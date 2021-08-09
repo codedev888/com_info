@@ -71,7 +71,7 @@
 					</view>
 				
 				</view>
-				<view class="moreHouse">更多户型</view>
+				<view class="moreHouse"><text class="down">更多户型</text></view>
 			</view>
 		</view>
 		<view class="height20"></view>
@@ -83,7 +83,7 @@
 			</scroll-view>
 			<view class="modecotent">
 				<view class="mode1" v-if="currentItem === 0">
-					<view class="info_box p30">
+					<view class="info_box p30 bd">
 						<view class="li flex-row">
 							<text>主要用途</text><text>办公、仓库、厂房</text>
 						</view>
@@ -157,22 +157,28 @@
 							</view>
 						</view>
 					</view>
-					<view class="moreHouse">收起信息</view>
+					<view class="moreHouse"><text class="up">收起信息</text></view>
 				</view>
 				<view class="mode2" v-if="currentItem === 1">
 					
-					<view class="group">
-						<text>入驻企业：51 家</text>
-						<text>入驻列表</text>
+					<view class="group p30">
+						<view class="flex-row jc">
+							<text>入驻企业：<text class="blue">51</text> 家</text>
+							<text @tap="go()" class="blue tab-li">入驻列表</text>	
+						</view>
+						<view class="p-t-b">
+							饼图
+						</view>
 					</view>
 				</view>
 
 			</view>
 		</view>
-		<view class="group">
-			<view class="">
-				周边配套
-			</view>
+		<view class="group facilities">
+				<view class="huxing-title">
+					<text>周边配套</text>
+				</view>
+
 			<view class="">
 			<view class="page-body">
 				<view class="page-section page-section-gap">
@@ -413,7 +419,7 @@
 			}
 		}
 	}
-.huxing{
+.huxing,.facilities{
 	.huxing-title{
 		text-align: center;
 		line-height: 60rpx;
@@ -451,13 +457,56 @@
 				margin-left:40rpx
 			}
 		}
+
+}
+.peitao{
+	.huxing-title{
+		text-align: center;
+		line-height: 60rpx;
+		font-size: 30rpx;
+		font-weight: 600;
+	}
+	.huxing-title text{
+		position: relative;
+		line-height: 1;
+	}
+	.huxing-title text:before{
+		background:url(/static/line-left.png) no-repeat;
+		height: 2rpx;
+		width: 180rpx;
+		content: "";
+		position: absolute;
+		left: -200rpx;
+		top: 18rpx;
+	}
+	.huxing-title text:after{
+		background:url(/static/line.png) no-repeat;
+		height: 2rpx;
+		width: 180rpx;
+		content: "";
+		position: absolute;
+		right: -200rpx;
+		top: 18rpx;
+	}
+}
 	.moreHouse{
 		text-align: center;
 		border-top: #cccccc solid 1px;
 		line-height: 80rpx;
 		color: rgba(73, 103, 250, 1);
+		.down{
+			background:url(../../static/d-d-arrow.png) no-repeat;
+			background-size: 26rpx;
+			background-position: right center;
+			padding-right: 40rpx;
+		}
+		.up{
+			background:url(../../static/d-t-arrow.png) no-repeat;
+			background-size: 26rpx;
+			background-position: right center;
+			padding-right: 40rpx;
+		}
 	}
-}
 .base_info{
 .nav {
 	width: 750rpx;
@@ -528,52 +577,7 @@
 	}
 	
 }
-/* 	<view class="group base_info">
-			<view class=".catelist{
-				
-			} flex-row">
-				<text>基本信息</text><text>入驻企业</text>
-			</view>
-			<view class="info_box">
-				<view class="">
-					<text>主要用途</text><text>办公、仓库、厂房</text>
-				</view>
-				<view class="">
-					<text>地 址</text><text>罗湖区-黄贝街道-深南大道207号</text>
-				</view>
-				<view class="">
-					<text>产权性质</text><text>区属国企</text>
-				</view>
-				<view class="">
-					<text>产权单位</text><text>深圳市罗湖xx控股有限公司</text>
-				</view>
-				<view class="flex-row jc">
-					<view class="">
-						<text>建筑面积</text><text>40120㎡</text>
-					</view>
-					<view class="">
-						<text>空置面积</text><text>40120㎡</text>
-					</view>
-				</view>
-				<view class="flex-row jc">
-					<view class="">
-						<text>建设进度</text><text>已建成</text>
-					</view>
-					<view class="">
-						<text>竣工时间</text><text>2019-12</text>
-					</view>
-				</view>
-				<view class="flex-row jc">
-					<view class="">
-						<text>租售类型</text><text>仅出租</text>
-					</view>
-					<view class="">
-						<text>租售进度</text><text>租售中</text>
-					</view>
-				</view>				
-				
-			</view>
-		</view> */
+
 .group-title{
 	font-size: 30rpx; 
 	color: rgba(153, 153, 153, 1);
@@ -613,6 +617,13 @@
 		/* background:rgba(98, 123, 248, 1); */
 		color: #ffffff;
 	}
+}
+.tab-li{
+	text-decoration: underline;
+	background: url(/static/d-right-arrow.png) no-repeat;
+	background-position: right center;
+	background-size: 26rpx;
+	padding-right: 40rpx;
 }
 .set-bar{position: fixed; width: 100%; justify-content: space-between; bottom: 0rpx; left: 0rpx; background: #ffffff;}
 .section3{flex: 1; line-height: 100rpx; text-align: center; font-size: 28rpx;color: rgba(100, 130, 255, 1); border-left: #f2f2f2 solid 2rpx;}
