@@ -1,23 +1,25 @@
 <template>
 	<view class="warp">
-		
+		 
 		<view class="group">
 			<view class="tips">
-				根据你的偏好，智能匹配推荐20个房源
+				根据你的偏好，智能匹配推荐{{total}}个房源
 			</view>
+			
+			<block v-for="(item,index) in list">
 			<view class="section24 flex-row bd">
 				<view class="main2 flex-flex">
-					<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa" mode="widthFix"></image>
+					<image :src="item.gardenImg" mode="widthFix"></image>
 				</view>
 				<view class="main3 flex-col">
-				  <text class="info5">深业进元大厦</text>
+				  <text class="info5">{{item.gardenName}}</text>
 				  <view class="outer1 flex-row">
 					<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
 					<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
 					<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
 				  </view>
 				  <text class="paragraph1">
-					社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
+					社会物业&nbsp;|&nbsp;面积&nbsp;{{item.roomTotalArea}}㎡
 					<br />
 					清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
 				  </text>
@@ -49,55 +51,13 @@
 				</view>
 
 			</view>
-			<view class="section24 flex-row bd">
-				<view class="main2 flex-flex">
-					<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
-				</view>
-				<view class="main3 flex-col">
-				  <text class="info5">深业进元大厦</text>
-				  <view class="outer1 flex-row">
-					<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-					<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-					<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-				  </view>
-				  <text class="paragraph1">
-					社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
-					<br />
-					清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
-				  </text>
-				  <view class="outer2 flex-row">
-					<view class="wrap1">
-					  <text class="info6">75</text>
-					  <text class="info7">元</text>
-					  <text class="txt9">/㎡/月起</text>
-					</view>
-					<view class="wrap2">
-					  <text class="word17">在租</text>
-					  <text class="info8"></text>
-					  <text class="info6">4</text>
-					  <text class="info9">套</text>
-					</view>
-				  </view>
-				</view>
-			</view>
-			<view class="layer9 flex-row bd">
-				<text class="word7">查看时间&nbsp;2020/5/12&nbsp;14:40:13</text>
-				<view class="set flex-row active">
-					<text class="info19">操作</text>
-					<image class="label1" referrerpolicy="no-referrer" src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngbed6e58f24353c225e678e3eb1d1fd30dc9f7970edbe6b28e657c2064978b04e"></image>
-					<view class="group17 flex-col">
-						<span class="word16" @click="update()">更新状态</span>
-						<span class="word16" @click="edit()">修改</span>
-						<span class="word16" @click="del()">删除</span>
-					</view>
-				</view>
-
-			</view>
+			</block>
+			  
 			<!-- <text class="view-more">查看更多&gt;</text> -->
 
 		</view>
 		<view class="bottom">
-			<view class="total-msg">已为您推荐312条数据</view>
+			<view class="total-msg">已为您推荐{{total}}条数据</view>
 			<view class="but">保存</view>
 		</view>
 
@@ -105,25 +65,59 @@
 </template>
 
 <script>
-	export default{
-		data(){
-			return{
-				
+	import {
+			pubPostpage,
+		} from '@/api/store';
+    import {
+    		oloadingFun
+    	} from '@/utils/tools';
+    	import {
+    		loadingType
+    	} from '@/utils/type';
+		var url="park/recommend/list";
+		 export default {
+			  data() {
+			    return {
+					status: loadingType.LOADING,
+					total:0,
+					page:1,
+					list:[],
+					
+					
+				};
+			},
+			onLoad() {
+				this.getListFun();
+			},
+			onPullDownRefresh(){
+				this.page++;
+				this.getListFun();
+			},
+			methods:{
+				async getListFun() {
+					let {
+						page,
+						list,
+						total,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					const params = {
+						 page: page,
+						 searchType:"project"
+					}
+					var pdata={url:url,params:params};
+					const data = await oloadingFun(pubPostpage, page, list, status, pdata,total)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+					this.total=data.rtotal;
+				}
 			}
-		},
-		methods:{
-			update(){
-				
-			},
-			edit(){
-				
-			},
-			del(){
-				
-			},
-		}
-	}
+	   };
 </script>
+
 
 <style scoped>
 	.tips{

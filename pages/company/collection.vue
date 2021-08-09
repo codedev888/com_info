@@ -19,7 +19,7 @@
 </template>
 <script>
 import collection from '../../components/company/collection.vue';
-import {
+import { 
 		pubGetpage,
 		pubPostpage,
 	} from '@/api/store';

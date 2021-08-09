@@ -54,7 +54,7 @@ service.interceptors.request.use(
 		if (config.method == 'GET') {
 			config.url += paramsToStr(config.params)
 		}
-		config.header.access_token = Cache.get(TOKEN)?Cache.get(TOKEN):"add9bbb5-54cf-4f1a-8bb3-0ebdd022562d";
+		config.header.access_token = Cache.get(TOKEN)?Cache.get(TOKEN):"4a15159e-0170-4b99-af53-b304c295fe6f";
 		return config
 	},
 	error => {

@@ -98,14 +98,24 @@ page{
 .title > .title-right{
 		font-size: 24rpx;
 		position:relative;
-		
-		.blue{color: #627BF8;}
-		
 	}
-.title > .title-right:before{content: ""; position: absolute; left:-20rpx; top:45%;
+.blue{color: #627BF8;}
+.title > .title-right:before{
+	content: ""; 
+	position: absolute; 
+	left:-20rpx; 
+	top:45%;
 	height: 8rpx;
 	width: 8rpx;
 	border-radius: 4rpx;
 	background:#666666
 	}
 .p30{padding: 30rpx;}
+.p-t-b{
+	padding-top: 30rpx;
+	padding-bottom: 30rpx;
+	
+}
+.flex-wrap{
+	flex-wrap: wrap;
+}

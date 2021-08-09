@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-		
+  
 		<view class="group">
 			<view class="search">
 				<u-search placeholder="搜索产业空间" height="56" v-model="keyword" :show-action="false"></u-search>
@@ -33,7 +33,8 @@
             </view>
 		</view>
 		<view class="height20"></view>
-			<view class="group">
+			  <block v-for="(item,index) in mlist" >
+	     <view class="group">
 				<view class="word14_box">
 				  <view class="main12 flex-row">
 					<text class="info5 fw">产业空间名称产业空间</text>
@@ -55,56 +56,20 @@
 				</view>
 			</view>
 		<view class="height20"></view>
-			<view class="group">
-				<view class="word14_box">
-				  <view class="main12 flex-row">
-					<text class="info5 fw">产业空间名称产业空间</text>
-					<text class="word15">已关闭</text>
-				  </view>
-				  <view class="main13 flex-row">
-					<text class="txt6">价格:<text class="fw">21元/㎡/月</text></text>
-					<text class="txt6">面积:<text class="fw">550㎡</text></text>
-					<text class="txt6">楼层:<text class="fw">低层</text></text>
-				  </view>
-				  <view class="main14 flex-row">
-					<text class="txt9">预约时间:2020-6-5 13:45</text>
-				   
-				  </view>	
-				</view>
-				<view class="nav_button flex-row">
-					 <text class="info6">删除</text>
-					 
-				</view>
-			</view>
-		<view class="height20"></view>		
-			<view class="group">
-				<view class="word14_box">
-				  <view class="main12 flex-row">
-					<text class="info5 fw">产业空间名称产业空间</text>
-					<text class="word15">已关闭</text>
-				  </view>
-				  <view class="main13 flex-row">
-					<text class="txt6">价格:<text class="fw">21元/㎡/月</text></text>
-					<text class="txt6">面积:<text class="fw">550㎡</text></text>
-					<text class="txt6">楼层:<text class="fw">低层</text></text>
-				  </view>
-				  <view class="main14 flex-row">
-					<text class="txt9">预约时间:2020-6-5 13:45</text>
-				   
-				  </view>	
-				</view>
-				<view class="nav_button flex-row">
-					 <text class="info6">删除</text>
-					 
-				</view>
-			</view>
-		<view class="height20"></view>		
+      </block>
+		 
 	</view>
 
 </template>
 
 <script>
   export default {
+	  	props:{
+	  			mlist: {
+	  				type: Array,
+	  				default: () => []
+	  			},
+	  		},
     data() {
       return {
       			show: false,

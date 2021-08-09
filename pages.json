@@ -2,7 +2,27 @@
 	"easycom": {
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsC/test/index", //启动页面，必选
+	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
+	// 	}]
+	// },
 	"pages": [
+		{
+			"path": "pages/industryspace/index",
+			"style": {
+				"navigationBarTitleText": "罗i企"
+			}
+		},
+		{
+			"path": "pages/appeal/index",
+			"style": {
+				"navigationBarTitleText": "诉求记录"
+			}
+		},
 		{
 			"path": "pages/supermarket/index",
 			"style": {
@@ -259,8 +279,149 @@
 			"style": {
 				"navigationBarTitleText": "超市评价"
 			}
+		},
+		{
+			"path": "pages/supermarket/company_index",
+			"style": {
+				"navigationBarTitleText": "企业主页"
+			}
+		},
+		{
+			"path": "pages/appeal/add",
+			"style": {
+				"navigationBarTitleText": "新建诉求"
+			}
+		},
+		{
+			"path": "pages/appeal/detail",
+			"style": {
+				"navigationBarTitleText": "诉求详情"
+			}
+		},
+		{
+			"path": "pages/appeal/evaluation",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+		},
+		{
+			"path": "pages/appeal/list",
+			"style": {
+				"navigationBarTitleText": "诉求记录"
+			}
+		},
+		{
+			"path": "pages/appeal/progress",
+			"style": {
+				"navigationBarTitleText": "进度"
+			}
+		},
+		{
+			"path": "pages/industryspace/buy_house",
+			"style": {
+				"navigationBarTitleText": "进度"
+			}
+		},
+		{
+			"path": "pages/industryspace/in_house",
+			"style": {
+				"navigationBarTitleText": "入驻"
+			}
+		},
+		{
+			"path": "pages/industryspace/release_house",
+			"style": {
+				"navigationBarTitleText": "发布房源"
+			}
+		},
+		{
+			"path": "pages/industryspace/map_find_house_list",
+			"style": {
+				"navigationBarTitleText": "发布房源"
+			}
+		},
+		{
+			"path": "pages/industryspace/update_project",
+			"style": {
+				"navigationBarTitleText": "城市更新项目"
+			}
+		},
+		{
+			"path": "pages/industryspace/sorting",
+			"style": {
+				"navigationBarTitleText": "城市更新项目2"
+			}
+		},
+		{
+			"path": "pages/industryspace/register",
+			"style": {
+				"navigationBarTitleText": "意向登记"
+			}
+		},
+		{
+			"path": "pages/industryspace/screening",
+			"style": {
+				"navigationBarTitleText": "办公租赁"
+			}
+		},
+		{
+			"path": "pages/industryspace/rental_house",
+			"style": {
+				"navigationBarTitleText": "办公租赁"
+			}
+		},
+		{
+			"path": "pages/industryspace/space_requirement",
+			"style": {
+				"navigationBarTitleText": "空间需求"
+			}
+		},
+		{
+			"path": "pages/industryspace/requirement_successful",
+			"style": {
+				"navigationBarTitleText": "空间需求"
+			}
+		},
+		{
+			"path": "pages/industryspace/address_list",
+			"style": {
+				"navigationBarTitleText": "产业空间通讯录"
+			}
+		},
+		{
+			"path": "pages/industryspace/industrial_space_details",
+			"style": {
+				"navigationBarTitleText": "产业空间详情"
+			}
 		}
 		
+	    ,{
+            "path" : "pages/service/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/article/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/robot/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
 		
 
 	],
@@ -268,7 +429,8 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "default"
 	},
 	"tabBar" : {
 	    "color" : "#555555",
@@ -279,32 +441,32 @@
 	        {
 				"pagePath":"pages/index/index",
 				"text":"首页",
-				"iconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnge69b3a4862babedce18f9ea692bcaabdd58eb84eb96af329e47eace1acf6421d",
-				"selectedIconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnge69b3a4862babedce18f9ea692bcaabdd58eb84eb96af329e47eace1acf6421d"
+				"iconPath":"/static/tabbar/home.png",
+				"selectedIconPath":"/static/tabbar/home-active.png"
 	        },
 			{
 				"pagePath":"pages/service/index",
 				"text":"找服务",
-				"iconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng46752f3a021443ae067410d09aa16af7610703e3d22754a6d63005efdb78a82f",
-				"selectedIconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng46752f3a021443ae067410d09aa16af7610703e3d22754a6d63005efdb78a82f"
+				"iconPath":"/static/tabbar/service.png",
+				"selectedIconPath":"/static/tabbar/service-active.png"
 			},
 			{
 				"pagePath":"pages/robot/index",
 				"text":"机器人",
-				"iconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng19e27530bf1d0a515825aa63ad5d6a757e6dee1a0ba8f0edec0cf08bc8699cbf",
-				"selectedIconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng19e27530bf1d0a515825aa63ad5d6a757e6dee1a0ba8f0edec0cf08bc8699cbf"
+				"iconPath":"/static/tabbar/robot.png",
+				"selectedIconPath":"/static/tabbar/robot.png"
 			},
 			{
 				"pagePath":"pages/article/index",
 				"text":"看资讯",
-				"iconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngacec24a50773e196dbdf534d1541e392a0ceb7e9dd3896a8a25322c1bab85617",
-				"selectedIconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngacec24a50773e196dbdf534d1541e392a0ceb7e9dd3896a8a25322c1bab85617"
+				"iconPath":"/static/tabbar/info.png",
+				"selectedIconPath":"/static/tabbar/info-active.png"
 			},
 			{
 				"pagePath":"pages/company/index",
 				"text":"主页",
-				"iconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng96b80854036e22e93f087ecc64c3dbd0e87b447925c5a3887d52c6dea2540e21",
-				"selectedIconPath":"https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng96b80854036e22e93f087ecc64c3dbd0e87b447925c5a3887d52c6dea2540e21"
+				"iconPath":"/static/tabbar/member.png",
+				"selectedIconPath":"/static/tabbar/member-active.png"
 			}
 	    ]
 	}

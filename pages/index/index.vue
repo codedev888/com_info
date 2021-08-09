@@ -15,7 +15,7 @@
 				<view class="banner">
 					<view class="u-demo-area">
 						<u-toast ref="uToast"></u-toast>
-						<u-swiper @change="change" :height="250"  name="coverImg" :list="index_data.informationId" :title="title" :effect3d="effect3d" 
+						<u-swiper @change="change" :height="250"  name="coverImg" :list="index_data.informations" :title="title" :effect3d="effect3d" 
 						:indicator-pos="indicatorPos" :mode="mode" :interval="3000" @click="click"></u-swiper>
 					</view>
 				</view>
@@ -187,6 +187,7 @@
 			init(){
 				pubGet({url:"api/index/get"}).then(res=>{
 					  this.index_data=res.data;
+					 // console.log(this.index_data.informations);
 				})
 			}
 		}

@@ -3,17 +3,17 @@
 
  <view class="wrap">
  	<view class="u-tabs-box bd">
- 		<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8'}" :list="list" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
+ 		<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8'}" :list="clist" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
  	</view>
  	<swiper class="swiper-box" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
  		<swiper-item class="swiper-item">
  			<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-				<fangyuan></fangyuan>
+				<fangyuan :list="list"></fangyuan>
  			</scroll-view>
  		</swiper-item>
  		<swiper-item class="swiper-item">
  			<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
- 				<yuanqu></yuanqu>
+ 				<yuanqu :list="list"></yuanqu>
  			</scroll-view>
  		</swiper-item>
  	
@@ -26,10 +26,20 @@
 <script>
 import fangyuan from '../../components/company/contact/fangyuan.vue';
 import yuanqu from '../../components/company/contact/yuanqu.vue';
-export default {
-	onload(){
+	import {
+				pubPostpage,
+			} from '@/api/store';
+	    import {
+	    		oloadingFun
+	    	} from '@/utils/tools';
+	    	import {
+	    		loadingType
+	    	} from '@/utils/type';
+    var url="park/recommend/list";
+	
 
-	},
+export default {
+	 
   data() {
     return {
       constants: {},
@@ -40,7 +50,7 @@ export default {
 			tabsHeight: 0,
 			dx: 0,
 			loadStatus: ['loadmore','loadmore','loadmore','loadmore'],
-			list:[
+			clist:[
 				{
 					name:'房源',
 					check:true
@@ -51,11 +61,44 @@ export default {
 				},
 			],
 			checkIndex:0,
-			currentItem:0
+			currentItem:0,
+				status: loadingType.LOADING,
+						total:0,
+						page:1,
+						list:[],
+			
 
     };
   },
+  onLoad() {
+  			this.getListFun();
+  		},
+  		onPullDownRefresh(){
+  			this.page++;
+  			this.getListFun();
+  		},
+  		
   methods: {
+	  async getListFun() {
+	  			let {
+	  				page,
+	  				list,
+	  				total,
+	  				status
+	  			} = this;
+	  			if (status == loadingType.FINISHED) return;
+	  			const params = {
+	  				 page: page,
+	  				 searchType:"project"
+	  			}
+	  			var pdata={url:url,params:params};
+	  			const data = await oloadingFun(pubPostpage, page, list, status, pdata,total)
+	  			if (!data) return
+	  			this.page = data.page
+	  			this.list = data.dataList
+	  			this.status = data.status
+	  			this.total=data.rtotal;
+	  		},
 	  tabSelect(e) {
 	  	this.TabCur = e.currentTarget.dataset.id;
 		this.currentItem =  e.currentTarget.dataset.id;

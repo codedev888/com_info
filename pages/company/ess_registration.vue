@@ -1,6 +1,8 @@
 <template>
 	<view class="warp">
 		<view class="group">
+			
+         <block v-for="(item,index) in list" >  
 			<view class="card-wrap">
 				<view class="title">
 					指北针生活服务880店铺
@@ -31,35 +33,8 @@
 
 			</view>
 			<view class="height20"></view>
-			<view class="card-wrap">
-				<view class="title">
-					指北针生活服务880店铺
-				</view>
-				<view class="u-body-item flex-row">
-					<image src="https://img11.360buyimg.com/n7/jfs/t1/94448/29/2734/524808/5dd4cc16E990dfb6b/59c256f85a8c3757.jpg" mode="aspectFill"></image>
-					<view class="flex-col textbox">
-						<view class="flex-1 fw">
-							服务标题服务标题服务标题
-						</view>
-						<view class="flex-1">
-							需求400箱，什么时候能出货？
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="layer9 flex-row bd">
-				<text class="word7">查看时间&nbsp;2020/5/12&nbsp;14:40:13</text>
-				<view class="set flex-row active">
-					<text class="info19">操作</text>
-					<image class="label1" referrerpolicy="no-referrer" src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngbed6e58f24353c225e678e3eb1d1fd30dc9f7970edbe6b28e657c2064978b04e"></image>
-					<view class="group17 flex-col">
-						<!-- <span class="word16" @click="update()">更新状态</span> -->
-						<span class="word16" @click="edit()">修改</span>
-						<span class="word16" @click="del()">删除</span>
-					</view>
-				</view>
-
-			</view>
+		</block>
+		 
 		</view>
 		<view class="no-more">
 			没有更多了
@@ -68,22 +43,55 @@
 </template>
 
 <script>
+	
+		import {
+					pubPostpage,
+				} from '@/api/store';
+		    import {
+		    		oloadingFun
+		    	} from '@/utils/tools';
+		    	import {
+		    		loadingType
+		    	} from '@/utils/type';
+	    var url="park/recommend/list";
 	export default{
 		data(){
 			return{
-				
+				 status: loadingType.LOADING,
+				 total:0,
+				 page:1,
+				 list:[],
 			}
 		},
+			
+	    onLoad() {
+					this.getListFun();
+		  },
+		 onPullDownRefresh(){
+					this.page++;
+					this.getListFun();
+		 },
 		methods:{
-		//	update(){
-				
-		//	},
-			edit(){
-				
-			}, 
-			del(){
-				
-			},
+		async getListFun() {
+					let {
+						page,
+						list,
+						total,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					const params = {
+						 page: page,
+						 searchType:"project"
+					}
+					var pdata={url:url,params:params};
+					const data = await oloadingFun(pubPostpage, page, list, status, pdata,total)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+					this.total=data.rtotal;
+				}
 		}
 	}
 </script>

@@ -4,8 +4,8 @@
 				<!-- 用户账号信息开始 -->
 			  <view class="section3 flex-row bd">
 				<view class="userinfo flex-flex">
-					<view class="section4 flex-col">
-						<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd1fe087671bd8852d108646b5073bfeecd3d6b5381285ebaecdda36f8c54f90a" mode="widthFix"></image>
+					<view class="section4 flex-col"> 
+						<image src="../../static/company/user.png" mode="widthFix"></image>
 						
 					</view>
 					<view class="section5 flex-col">
@@ -22,7 +22,7 @@
 					<image
 					  class="icon"
 					  mode ="aspectFit"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9dc780dae7c1e93d5e65eaccaa2c02c28e77fdd03a385a2c856e13d598352d01"
+					  src="../../static/company/wdsc.png"
 					></image>
 					<text class="word">我的收藏</text>
 				</view>
@@ -30,7 +30,7 @@
 				  <image
 					class="icon"
 					mode ="aspectFit"
-					src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga0796e9e6b2d9bd62d199155451ad5694cc6c16a065ddd49cc2ed38e4164e95b"
+					src=" ../../static/company/kj.png"
 				  ></image>
 				  <text class="word">产业空间</text>
 				</view>
@@ -38,7 +38,7 @@
 				  <image
 					class="icon"
 					mode ="aspectFit"
-					src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng01f475858e45973a5a649d3bca451361a13dca5c7f4275d64db06b0b112347f3"
+					src="../../static/company/qfcs.png"
 				  ></image>
 				  <text class="word">企服超市</text>
 				</view>
@@ -46,7 +46,7 @@
 				  <image
 					class="icon"
 					mode ="aspectFit"
-					src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngae60570b820838e5e89286f406b67b3553118db3789d56cbfdea05664d1797f1"
+					src="../../static/company/bzzx.png"
 				  ></image>
 				  <text class="word">帮助中心</text>
 				</view>
@@ -57,7 +57,7 @@
 					<image
 					  class="icon"
 					  mode ="aspectFit"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng402cb5065af8d363438e8bc9e7d8dc2966dac587026888713351cb23b8ce0597"
+					  src="../../static/company/1.png"
 					></image>
 					<text class="txt3 fw">空间发布</text>
 				</view>
@@ -65,7 +65,7 @@
 				<image
 				  class="icon-right"
 				  mode ="widthFix"
-				  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
+				  src="../../static/company/jt.png"
 				></image>
 			  </view>
 
@@ -74,14 +74,14 @@
 					<image
 					  class="icon"
 					  mode ="aspectFit"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng59ff3d93fdd415ab3d718751172bba1feeff3aef03db40a03aac9240f4119aa0"
+					  src="../../static/company/2.png"
 					></image>
 					<text class="txt3 fw">服务发布</text>
 				</view>
 				<image
 				  class="icon-right"
 				  mode ="widthFix"
-				  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
+				  src="../../static/company/jt.png"
 				></image>
 			  </view>
 
@@ -90,14 +90,14 @@
 					<image
 					  class="icon"
 					  mode ="aspectFit"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5c9a7ce38819f4cfbbf5f4422c99112905900a191a9dd88bb8e20604fa60e73e"
+					  src="../../static/company/3.png"
 					></image>
 					<text class="txt3 fw">消息中心</text>
 				</view>
 				<image
 				  class="icon-right"
 				  mode ="widthFix"
-				  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
+				  src="../../static/company/jt.png"
 				></image>
 				
 			  </view>
@@ -124,7 +124,7 @@
 					<image
 					  class="icon7"
 					  mode="widthFix"
-					  src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8058361730b2f967efe7b955a8e1ea1ff83a3e5cc3c48e08f71570d338e5b7be"
+					  src=" ../../static/company/jt.png"
 					></image>
 				</view>
 				<view class="tips-item bd">

@@ -6,9 +6,9 @@
 			<text class="fw">需求状态：</text>
 		</view>
 		<view class="info-item">
-			<u-radio-group v-model="value" @change="radioGroupChange">
+			<u-radio-group v-model="enter_status" @change="radioGroupChange">
 				<u-radio 
-					@change="radioChange" 
+					@change="radioChange(item.value)" 
 					v-for="(item, index) in list" :key="index" 
 					:name="item.name"
 					:disabled="item.disabled"
@@ -19,55 +19,78 @@
 			</u-radio-group>
 			
 		</view>	
-		<view class="info-item">
-		<u-input v-model="values" :type="type" :border="border" :placeholder="placeholder" :customStyle="customstyle"/>
-		</view>	
-		<view class="info-item flex-flex">
-		<!--	<text class="changelist" @tap = "chage(index)" v-for="(item,index) in chlist" :key="index">{{item.name}}</text> 
-		 	<text class="changelist" @tap = "chage(2)">已入驻其他区域</text>
-			<text class="changelist" @tap = "chage(3)">没有满足需求的园区</text>
-			<text class="changelist" @tap = "chage(4)">不符合本地落户条件</text> -->
-			<view class="item-box">
-				<view class="item" :class="[item.active ? 'active' : '']" @tap="tagClick(index)" v-for="(item, index) in chlist" :key="index">
-					{{item.name}}
-				</view>
-			</view>
-		</view>	
+		
+		<block v-if="form_data.enterStatus==3"> 
+				<view class="info-item">
+				<u-input v-model="form_data.inc_text" :type="type" :border="border" :placeholder="placeholder"  />
+				</view>	
+				<view class="info-item flex-flex">
+			 
+					<view class="item-box">
+						<view class="item" :class="[item.active ? 'active' : '']" @tap="tagClick(index)" v-for="(item, index) in chlist" :key="index">
+							{{item.name}}
+						</view>
+					</view>
+				</view>	
+		</block>
+		<block v-if="form_data.enterStatus==2">
+				<view class="info-item">
+				<u-input v-model="form_data.inc_text" :type="type" :border="border" :placeholder="tplaceholder"  />
+				</view>	
+				 
+		</block>
+		
+		
 	</view>
-
+    <u-toast :type="toast.type" ref="uToast"></u-toast>
 
 	<view class="set-bar flex-row">
 		<view class="section3 flex-col">取消</view>
-		<view class="section3 flex-col active">保存</view>
+		<view @click="save" class="section3 flex-col active">保存</view>
 	</view>
   </view>
 </template>
 <script>
-import demand from '../../components/company/demand/demand.vue';
+ import {
+ 	   pubGet,
+	   pubPost
+ 	   } from '@/api/store';
+var url="park/project/details";
+var update_url="park/project/update/status";
+var details_key="parkProjectDO";
 export default {
-	onload(){
-
-	},
   data() {
     return {
-				value: '',
+		        id:0,
+				toast:{
+					type:"error",
+					title:"请选择不入驻理由",
+					icon:true,
+					position:"center",
+					url:""
+				},
+				tplaceholder:"填写入驻物业名称",
+				form_data:{enterStatus:1},
+				enter_status:"考虑中",
 				type: 'text',
 				border: true,
-				values:'',
-				placeholder:'填写不入驻原因',
+				 placeholder:'填写不入驻原因',
  			list: [
  				{
  					name: '考虑中',
  					disabled: false,
-					color: '#6482FF'
- 				},
- 				{
- 					name: '不入驻',
- 					disabled: false,
+					value:1,
 					color: '#6482FF'
  				},
  				{
  					name: '已入驻',
+ 					disabled: false,
+					value:2,
+					color: '#6482FF'
+ 				},
+ 				{ 
+ 					name: '不入驻',
+					value:3,
  					disabled: false,
 					color: '#6482FF'
  				}
@@ -94,20 +117,78 @@ export default {
 						active: false
 					}
 			],
+			
  			// u-radio-group的v-model绑定的值如果设置为某个radio的name，就会被默认选中
  			value: 'orange',
 			activeColor: '#6482FF'
 
     };
   },
+  onLoad(opt){
+  	  opt.id=opt.id?opt.id:28;
+  	  if(opt.id){
+  		  url+="/"+opt.id;
+  		  this.id=opt.id;
+  		  this.getDetails();
+  	  }else{
+  		  uni.navigateBack();
+  	  }
+      
+  },
   methods: {
+	 getDetails(){
+		 pubGet({url:url}).then(res=>{
+			 // console.log(res);
+			  if(res.code==0){ 
+				   this.form_data.enterStatus=res.data[details_key].enterStatus;
+				   this.form_data.projectId=res.data[details_key].projectId;
+				   for (var i in this.list) {
+				   	  if(this.list[i].value==this.form_data.enterStatus){
+						   this.enter_status=this.list[i].name;
+					  }
+				   }
+				   
+			  }
+			  
+		 });
+	 },
 	chage(val){
 		console.log(val);
 		
 	},
+	radioChange(e) {
+		this.form_data.enterStatus=e;
+        //console.log(e,"----");
+	},
+	radioGroupChange(e) {
+		//this.form_data.enter_status = e;
+				//console.log(e);
+	},
+	save(){ 
+	    if(this.form_data.enterStatus==3){
+			this.show(); 
+			return; 
+		}
+		
+		pubPost({url:update_url,params:this.form_data}).then(res=>{
+			   if(res.code==0){
+				   this.toast.title=res.message;
+				   this.toast.type="success";
+				   this.show();
+				   this.getDetails();
+			   }else{
+				   this.toast.title="操作失败";
+				    this.show();
+			   }
+		})
+	},
+	show(){
+		this.$refs.uToast.show(this.toast);
+	},
 	tagClick(index) {
 		this.chlist[index].active = !this.chlist[index].active;
-	},
+	}
+	 
   },
   components:{
   }

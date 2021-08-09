@@ -1,6 +1,7 @@
 <template>
 	<view class="warp">
 		<view class="group">
+			<block v-for="(item,index) in list" >  
 			<view class="card-wrap">
 				<view class="u-body-item flex-row bd">
 					<image src="https://img11.360buyimg.com/n7/jfs/t1/94448/29/2734/524808/5dd4cc16E990dfb6b/59c256f85a8c3757.jpg" mode="aspectFill"></image>
@@ -14,24 +15,20 @@
 					</view>
 				</view>
 			</view>
-			<view class="card-wrap">
-				<view class="u-body-item flex-row">
-					<image src="https://img11.360buyimg.com/n7/jfs/t1/94448/29/2734/524808/5dd4cc16E990dfb6b/59c256f85a8c3757.jpg" mode="aspectFill"></image>
-					<view class="flex-col textbox">
-						<view class="flex-1 fw">
-							服务标题服务标题服务标题
-						</view>
-						<view>
-							2020-7-20&nbsp;19:13:42
-						</view>
-					</view>
-				</view>
-			</view>
+			</block>
 		</view>
 	</view>
 </template>
 
 <script>
+	 export default {
+		 props:{
+				list: {
+					type: Array,
+					default: () => []
+				},
+		 },
+}
 </script>
 
 <style>

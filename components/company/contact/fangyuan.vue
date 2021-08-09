@@ -1,6 +1,8 @@
 <template>
 	<view>
 			<view class="group">
+				
+				<block v-for="(item,index) in list" >  
 					<view class="section24 flex-col">
 						<view class="names">
 								金和瑞瑚琳工业园
@@ -48,53 +50,8 @@
 
 					</view>
 					</view>
-					  
-					<view class="section24 bd">
-						<view class="names">甘坑同富裕工业区</view>
-						<view class="item-box flex-row bd">
-							<view class="main2 flex-flex">
-								<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
-							</view>
-							<view class="main3 flex-col">
-								<view class="flex-col flex-1">
-									<text class="info5">深业进元大厦</text>
-									<view class="outer1 flex-row">
-										<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-										<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-										<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-									</view>
-								</view>
-
-								<view class="outer2 flex-row">
-									<view class="wrap1">
-									  <text class="info6">75</text>
-									  <text class="info7">元</text>
-									  <text class="txt9">/㎡/月起</text>
-									</view>
-									<view class="wrap2">
-									<text class="info6">租</text> 
-									</view>
-								</view>
-							</view>
-						</view>
-					<view class="layer9 flex-row bd">
-						<text class="word7">查看时间&nbsp;2020/5/12&nbsp;14:40:13</text>
-						<view class="set flex-row">
-						  <text class="info19">操作</text>
-						  <image
-							class="label1"
-							referrerpolicy="no-referrer"
-							src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngbed6e58f24353c225e678e3eb1d1fd30dc9f7970edbe6b28e657c2064978b04e"
-						  ></image>
-							<button class="group17 flex-col" @click="onClick_1">
-							  <span class="word16">删除</span>
-							</button>
-						</view>
-
-					</view>
-					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
-					
+			 </block>	  
+					 
 			</view>
 			<text class="word19">没有更多了</text>
 		</view>
@@ -104,6 +61,12 @@
 
 <script>
 export default {
+  props:{
+				list: {
+					type: Array,
+					default: () => []
+				},
+  },
   data() {
     return {
       constants: {},

@@ -3,24 +3,17 @@
 
  <view class="wrap">
  	<view class="u-tabs-box bd">
- 		<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8',borderRadius:'6rpx',}" :list="list" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
+ 		<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8',borderRadius:'6rpx',}" :list="tlist" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
  	</view>
  	<swiper class="swiper-box" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
- 		<swiper-item class="swiper-item">
- 			<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-				<demand :type="0"></demand>
- 			</scroll-view>
- 		</swiper-item>
- 		<swiper-item class="swiper-item">
- 			<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
- 				<demand :type="1"></demand>
- 			</scroll-view>
- 		</swiper-item>
-		 <swiper-item class="swiper-item">
-			<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-				<demand :type="2"></demand>
-			</scroll-view>
-		 </swiper-item>	
+ 		<block v-for="(item,index) in tlist">
+			<swiper-item class="swiper-item">
+				<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
+					<demand :list="list" :type="index"></demand>
+				</scroll-view>
+			</swiper-item>
+ 		</block> 
+		  
  	</swiper>
  </view> 
  	  
@@ -29,11 +22,18 @@
 </template>
 <script>
 import demand from '../../components/company/demand/demand.vue';
+import {
+			pubPostpage,
+		} from '@/api/store';
+    import {
+    		loadingFun
+    	} from '@/utils/tools';
+    	import {
+    		loadingType
+    	} from '@/utils/type';
+ var url="park/project/list";
 export default {
-	onload(){
-
-	},
-  data() {
+ data() {
     return {
       constants: {},
 	  TabCur: 0,
@@ -42,25 +42,43 @@ export default {
 			swiperCurrent: 0,
 			tabsHeight: 0,
 			dx: 0,
-			loadStatus: ['loadmore','loadmore','loadmore','loadmore'],
-			list:[
+			tlist:[
 				{
 					name:'全部',
+					enter_status:0,
 					check:true
 				},
 				{
 					name:'待入驻',
+					enter_status:1,
+					check:false
+				},
+				{
+					name:'已入驻',
+					enter_status:2,
 					check:false
 				},
 				{
 					name:'不入驻',
+					enter_status:3,
 					check:false
 				}
 			],
 			checkIndex:0,
-			currentItem:0
+			currentItem:0,
+			status: loadingType.LOADING,
+			total:0,
+			page:1,
+			list:[],
 
     };
+  },
+  onLoad() {
+  	this.getListFun();
+  },
+  onPullDownRefresh(){
+  	 this.page++;
+  	 this.getListFun();
   },
   methods: {
 	  tabSelect(e) {
@@ -70,15 +88,63 @@ export default {
 	  },		// tab栏切换
 		change(index) {
 			this.swiperCurrent = index;
-			this.getOrderList(index);
+			
+			
 		},
 		transition({ detail: { dx } }) {
 			this.$refs.tabs.setDx(dx);
 		},
 		animationfinish({ detail: { current } }) {
+			if(this.current==current){
+				//console.log(current,"-----current-----");
+				return;
+			}
+			
 			this.$refs.tabs.setFinishCurrent(current);
 			this.swiperCurrent = current;
+		
 			this.current = current;
+			this.page=1;
+			this.status=loadingType.LOADING;
+			this.list=[];
+			this.getListFun();
+			//this.change(current);
+		},
+		async getListFun() {
+			let {
+				page,
+				list,
+				total,
+				status
+			} = this;
+			if (status == loadingType.FINISHED) return;
+			const params = {
+				 page: page
+			}
+			var act_list=this.tlist[this.swiperCurrent];
+			     if(act_list.enter_status>0){
+					 params.enterStatus=act_list.enter_status;
+				 }else{
+					 params.enterStatus=null;
+				 }
+			var pdata={url:url,params:params};
+			const data = await loadingFun(pubPostpage, page, list, status, pdata,total)
+			if (!data) return
+			// console.log(data.dataList);
+			this.page = data.page
+			this.list = data.dataList
+			for (var i in this.list) {
+				if(this.list[i]['mainUse']){
+					this.list[i].is_ep=0;
+					this.list[i].tarr=this.list[i]['mainUse'].split(",");
+				}else{
+					this.list[i].is_ep=1;
+				}
+				
+			}
+			 //console.log(this.list);
+			this.status = data.status
+			//this.total=data.rtotal;
 		}
   },
   components:{

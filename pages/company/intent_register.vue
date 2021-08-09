@@ -3,7 +3,7 @@
 	  
 		<view class="wrap">
 			<view class="u-tabs-box">
-				<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8'}" :list="list" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
+				<u-tabs-swiper activeColor="#000000" ref="tabs":bar-style="{color:'#627BF8',background:'#627BF8'}" :list="clist" :current="current" @change="change" :is-scroll="false" swiperWidth="750"></u-tabs-swiper>
 			</view>
 			<swiper class="swiper-box" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
 				<swiper-item class="swiper-item">
@@ -44,6 +44,7 @@
 					</view>
 				 
 					  <!-- 工作统计 -->
+					  <block v-for="(item,index) in list" >  
 					  <view class="height20"></view>
 					<view class="group">
 						  <view class="word14 bd">今日待办（0）</view>
@@ -68,28 +69,20 @@
 							 <text class="info6">编辑</text>
 						</view>
 					</view>
+					</block>
+					
+					
 					</scroll-view>
 				</swiper-item>
-				<swiper-item class="swiper-item">
+				<block v-for="(item,index) in list">
+				<swiper-item v-if="index>0" class="swiper-item">
 					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<unconfirmed></unconfirmed>
+						<unconfirmed :mlist="list"></unconfirmed>
 					</scroll-view>
 				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;">
-					<untakelook></untakelook>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<unfollowup></unfollowup>
-					</scroll-view>
-				</swiper-item>
-				<swiper-item class="swiper-item">
-					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
-						<closeds></closeds>
-					</scroll-view>
-				</swiper-item>
+				 </block>
+				
+				 
 			</swiper>
 		</view> 
 	  
@@ -103,6 +96,16 @@ import unconfirmed from '../../components/company/intention/unconfirmed.vue';
 import untakelook from '../../components/company/intention/untakelook.vue';
 import unfollowup from '../../components/company/intention/unfollowup.vue';
 import closeds from '../../components/company/intention/closeds.vue';
+import {
+				pubPostpage,
+			} from '@/api/store';
+	    import {
+	    		loadingFun
+	    	} from '@/utils/tools';
+	    	import {
+	    		loadingType
+	    	} from '@/utils/type';
+    var url="park/appoint/list";
 export default {
   data() {
     return {
@@ -114,34 +117,55 @@ export default {
 			dx: 0,
 			loadStatus: ['loadmore','loadmore','loadmore','loadmore'],
 	  scrollLeft: 0,
-			list:[
+			clist:[
 				{
 					name:'今日待办',
-					check:true
+					check:true,
+					value:0,
 				},
 				{
 					name:'待确认',
-					check:false
+					check:false,
+					value:0,
 				},
 				{
 					name:'待带看',
-					check:false
+					check:false,
+					value:1,
 				},
 				{
 					name:'待跟进',
-					check:false
+					check:false,
+					value:2,
 				},
 				{
 					name:'已关闭',
-					check:false
+					check:false,
+					value:3,
 				},
 			],
+			appointType:"",
+			beginDate:"",
+			endDate:"",
+			gardenName:"",
+			sort:5,
 			checkIndex:0,
-			currentItem:0
-
+			currentItem:0,
+            status: loadingType.LOADING,
+            total:0,
+            page:1,
+            list:[],
     };
   },
+  onLoad() {
+  			this.getListFun();
+  		},
+  onPullDownRefresh(){
+  			this.page++;
+  			this.getListFun();
+   },
   methods: {
+	 
 	  tabSelect(e) {
 	  	this.TabCur = e.currentTarget.dataset.id;
 		this.currentItem =  e.currentTarget.dataset.id;
@@ -149,19 +173,53 @@ export default {
 	  },
 	  checkOne(index){
 	  			 this.checkIndex=index;
-				 console.log(index)
+				// console.log(index)
 	  },		// tab栏切换
 		change(index) {
 			this.swiperCurrent = index;
-			this.getOrderList(index);
+			 
 		},
 		transition({ detail: { dx } }) {
 			this.$refs.tabs.setDx(dx);
 		},
 		animationfinish({ detail: { current } }) {
+	      if(this.current==current){
+				return;
+			}
 			this.$refs.tabs.setFinishCurrent(current);
 			this.swiperCurrent = current;
 			this.current = current;
+			this.page=1;
+			this.list=[];
+			this.status=loadingType.LOADING;
+			this.getListFun();
+		},
+		async getListFun() {
+			     let {
+						page,
+						list,
+						total,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					const params = {
+						 page: page,
+						 appointStatus:0,
+						 appointType:this.appointType,
+						 beginDate:this.beginDate,
+						 endDate:this.endDate,
+						 gardenName:this.gardenName,
+						 sort:this.sort
+					} 
+					 var act_list=this.clist[this.swiperCurrent];
+			             params.appointStatus=act_list.value;
+					var pdata={url:url,params:params};
+					const data = await loadingFun(pubPostpage, page, list, status, pdata)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+					//this.total=data.rtotal;
 		}
   },
   components:{

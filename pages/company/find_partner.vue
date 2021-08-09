@@ -3,56 +3,34 @@
 		
 		<view class="group">
 			<view class="tips">
-				根据你的偏好，智能匹配推荐9个企业服务
+				根据你的偏好，智能匹配推荐{{total}}个融资服务
 			</view>
-			<view class="section34 flex-row bd">
+			
+			<view v-for="(item,index) in list" class="section34 flex-row bd">
 				<view class="group1 flex-col">
-					<view class="box3 flex-col"><text class="word40">法律服务</text></view>
-					<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb895c0e64f27a9ebe83cd114bdaf250154eac91a15c93e0a2be4a917ad4a1686" mode="widthFix"></image>	
+					<view class="box3 flex-col"><text class="word40">{{item.typeOneName}}</text></view>
+					<image :src="item.imgUrl" mode="widthFix"></image>	
 				</view>
 				<view class="group2 flex-col">
 					<view class="flex-col title">
-					  <text class="txt14">服务标题服务标题服务标题服务标题</text>
-					  <text class="word26">创新科技旗舰店</text>	
+					  <text class="txt14">{{item.serviceTitle}}</text>
+					  <text class="word26">{{item.corpName}}</text>	
 					</view>
 					<view class="outer3 flex-row">
 						<view class="section35">
 						  <text class="word27">访问</text>
-						  <text class="word28">430</text>
+						  <text class="word28">{{item.visitCount}}</text>
 						  <text class="word29">次</text>
 						</view>
 						<view class="section36">
 						  <text class="info13">登记意向</text>
-						  <text class="word30">43</text>
+						  <text class="word30">{{item.monthHotCount}}</text>
 						  <text class="info14">个</text>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="section34 flex-row bd">
-				<view class="group1 flex-col">
-					<view class="box3 flex-col"><text class="word40">法律服务</text></view>
-					<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb895c0e64f27a9ebe83cd114bdaf250154eac91a15c93e0a2be4a917ad4a1686" mode="widthFix"></image>	
-				</view>
-				<view class="group2 flex-col">
-					<view class="flex-col title">
-					  <text class="txt14">服务标题服务标题服务标题服务标题</text>
-					  <text class="word26">创新科技旗舰店</text>	
-					</view>
-					<view class="outer3 flex-row">
-						<view class="section35">
-						  <text class="word27">访问</text>
-						  <text class="word28">430</text>
-						  <text class="word29">次</text>
-						</view>
-						<view class="section36">
-						  <text class="info13">登记意向</text>
-						  <text class="word30">43</text>
-						  <text class="info14">个</text>
-						</view>
-					</view>
-				</view>
-			</view>
+			 
 
 		</view>
 
@@ -61,6 +39,56 @@
 </template>
 
 <script>
+	import {
+			pubPostpage,
+		} from '@/api/store';
+    import {
+    		oloadingFun
+    	} from '@/utils/tools';
+    	import {
+    		loadingType
+    	} from '@/utils/type';
+		var url="sm/recommend/list/service";
+		 export default {
+			  data() {
+			    return {
+					status: loadingType.LOADING,
+					total:0,
+					page:1,
+					list:[],
+					
+				};
+			},
+			onLoad() {
+				this.getListFun();
+			},
+			onPullDownRefresh(){
+				this.page++;
+				this.getListFun();
+			},
+			methods:{
+				async getListFun() {
+					let {
+						page,
+						list,
+						total,
+						status
+					} = this;
+					if (status == loadingType.FINISHED) return;
+					const params = {
+						 page: page,
+						 flagFinance:false
+					}
+					var pdata={url:url,params:params};
+					const data = await oloadingFun(pubPostpage, page, list, status, pdata,total)
+					if (!data) return
+					this.page = data.page
+					this.list = data.dataList
+					this.status = data.status
+					this.total=data.rtotal;
+				}
+			}
+	   };
 </script>
 
 <style scoped>

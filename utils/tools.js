@@ -111,23 +111,57 @@ export function paramsToStr(params) {
 export async function loadingFun(fun, page, dataList = [], status, params) {
 	// 拷贝对象 
 	dataList = Object.assign([], dataList)
-	
 	if (status == loadingType.FINISHED) return false
-	 
 	const {
 		code,
 		data
-	} = await fun({
+	} =await fun({
 		page: page,
 		...params
-	})
-	//console.log(data,"---data---");
+	});
 	uni.stopPullDownRefresh()
 	if (code == 0) {
+		   let {
+				list,
+				total,
+			} = data
+	    dataList.push(...list)
+		page = ++page
+		if (params.params.pageSize>total) {
+			status = loadingType.FINISHED
+		}
+		if (dataList.length <= 0) {
+			status = loadingType.EMPTY
+		}
+	} else {
+		status = loadingType.ERROR
+	}
+	return{
+		page,
+		dataList,
+		status
+	};
+}
+//分页加载
+export async function oloadingFun(fun, page, dataList = [], status, params,rtotal) {
+	// 拷贝对象 
+	dataList = Object.assign([], dataList)
+	if (status == loadingType.FINISHED) return false
+	const {
+		code,
+		data
+	} =await fun({
+		page: page,
+		...params
+	});
+	uni.stopPullDownRefresh()
+	 
+	if (code == 0) {
 		let {
-			list,
-			total,
-		} = data
+			 list,
+			 total,
+		 } = data.pageVO
+		 rtotal+=total;
 		dataList.push(...list)
 		page = ++page
 		if (params.params.pageSize>total) {
@@ -139,13 +173,13 @@ export async function loadingFun(fun, page, dataList = [], status, params) {
 	} else {
 		status = loadingType.ERROR
 	}
-	var res={
+	
+	return{
 		page,
 		dataList,
+		rtotal,
 		status
 	};
-	//console.log(res,"res---")
-	return res;
 }
 
 

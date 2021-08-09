@@ -16,6 +16,11 @@ export function pubGet(data) {
 		params: data.params
 	});
 }
+export function pubPost(data) {
+	var url=data.url==undefined?'park/attent/gardenList':data.url;
+	  data.params=data.params?data.params:{};
+	return request.post(url,data.params);
+}
 //公共请求POST分页
 export function pubPostpage(data) {
 	var url=data.url==undefined?'park/attent/gardenList':data.url;

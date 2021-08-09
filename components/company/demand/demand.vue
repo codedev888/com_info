@@ -2,13 +2,23 @@
 	
 	<view class="warp">
 		<view class="height20"></view>
-		<view class="group">
+		
+		<block v-for="(item,index) in list" >
+		<navigator :url="'demand_detail?id='+item.projectId" class="group">
 			<view class="item-box bd">
 				<view class="tags flex-row">
-					<text class="tag_txt">用房需求</text>
-					<text class="tag_txt">租赁</text>
-					<text class="tag_txt">厂房</text>
-					<text class="word8">待入驻</text>
+					<block v-if="item.is_ep==0">
+						 
+						<text v-for="(row,ky) in item.tarr" class="tag_txt">{{xq_type[row]}}</text>
+						 
+						 
+					</block>
+					<block v-else>
+						<text class="tag_txt">用房需求</text>
+						<text class="tag_txt">暂无需求</text>
+					</block>
+					<text class="word8">
+					{{enter_status[item.enterStatus]}}</text>
 				</view>
 	
 				<view class="area flex-row">
@@ -17,7 +27,7 @@
 				</view>
 			</view>
 			<view class="layer9 flex-row bd">
-				<text class="word7">查看时间&nbsp;2020/5/12&nbsp;14:40:13</text>
+				<text class="word7">查看时间&nbsp;{{item.createDate}}</text>
 				<view class="set flex-row active">
 					<text class="info19">操作</text>
 					<image class="label1" referrerpolicy="no-referrer" src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngbed6e58f24353c225e678e3eb1d1fd30dc9f7970edbe6b28e657c2064978b04e"></image>
@@ -29,52 +39,39 @@
 				</view>
 
 			</view>
-		</view>
+		</navigator>
 		<view class="height20"></view>
-		<view class="group">
-			<view class="item-box bd">
-				<view class="tags flex-row">
-					<text class="tag_txt">用房需求</text>
-					<text class="tag_txt">租赁</text>
-					<text class="tag_txt">厂房</text>
-					<text class="word8">待入驻</text>
-				</view>
-	
-				<view class="area flex-row">
-				  <text class="word9">面积:</text>
-				  <text class="word10">800-1200㎡</text>
-				</view>
-			</view>
-			<view class="layer9 flex-row bd">
-				<text class="word7">查看时间&nbsp;2020/5/12&nbsp;14:40:13</text>
-				<view class="set flex-row active">
-					<text class="info19">操作</text>
-					<image class="label1" referrerpolicy="no-referrer" src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngbed6e58f24353c225e678e3eb1d1fd30dc9f7970edbe6b28e657c2064978b04e"></image>
-					<view class="group17 flex-col">
-						<span class="word16" @click="update()">更新状态</span>
-						<span class="word16" @click="edit()">修改</span>
-						<span class="word16" @click="del()">删除</span>
-					</view>
-				</view>
-
-			</view>
-		</view>		
+	   </block>
+			
 	</view>
 </template>
 
 <script>
 export default{
 	props:{
+		list: {
+			type: Array,
+			default: () => []
+		},
 		type : {type : Number, default : 0}
 	},
+	
 	components:{
 		
+	},
+	data() {
+	  return {
+	    enter_status:{1:'待入住',2:'已入驻',3:'不入驻'},
+		xq_type:{"1":'办公',"2":'公寓',"3":'厂房',"4":"仓库","5":"商铺","6":"其他"},
+	
+	  };
 	},
 	created(){
 		//console.log(type);
 		//console.log(this.type)
 	},
 	methods: {
+		 
 		update(e){
 			console.log('你点了更新')
 		},
@@ -151,6 +148,7 @@ export default{
 	top: 54rpx;
 	background: #ffffff;
 	box-shadow: #D2D2D2 0rpx 0rpx 8rpx;
+	z-index:10000;
 }
 .group17:after{border: 0;}
 .group17 .word16:hover{color: #007AFF;}
