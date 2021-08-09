@@ -12,6 +12,111 @@
 	// },
 	"pages": [
 		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/index",
+			"style": {
+				"navigationBarTitleText": "找服务",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/robot/index",
+			"style": {
+				"navigationBarTitleText": "机器人",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/news/index",
+			"style": {
+				"navigationBarTitleText": "看资讯",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "主页",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,{
+			"path": "pages/index/cyzcList",
+			"style": {
+				"navigationBarTitleText": "罗i企",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/index/cyzcSearch",
+			"style": {
+				"navigationBarTitleText": "分类查询",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/index/cyzcSearchList",
+			"style": {
+				"navigationBarTitleText": "罗i企",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/index/zcfgDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		
+		},
+		{
+            "path" : "pages/index/cyfzList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "产业发展",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/departmentSearch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "部门查询",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/index/fcxmDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+		    "path" : "pages/index/zcjdDetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "详情",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
 			"path": "pages/industryspace/index",
 			"style": {
 				"navigationBarTitleText": "罗i企"
@@ -27,12 +132,6 @@
 			"path": "pages/supermarket/index",
 			"style": {
 				"navigationBarTitleText": "企服超市"
-			}
-		},
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "罗i企"
 			}
 		},
 		{
@@ -422,23 +521,15 @@
             }
             
         }
-		 
-        ,{
-            "path" : "components/my-recom/my-recom",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+		
+
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
-		"navigationStyle": "default"
+		"navigationStyle": "custom"
 	},
 	"tabBar" : {
 	    "color" : "#555555",
@@ -453,7 +544,7 @@
 				"selectedIconPath":"/static/tabbar/home-active.png"
 	        },
 			{
-				"pagePath":"pages/service/index",
+				"pagePath":"pages/industryspace/index",
 				"text":"找服务",
 				"iconPath":"/static/tabbar/service.png",
 				"selectedIconPath":"/static/tabbar/service-active.png"
