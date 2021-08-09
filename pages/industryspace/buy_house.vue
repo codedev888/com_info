@@ -280,7 +280,7 @@
 		},
 		onHide() {},
 		onLaunch() {
-
+ 
 		}, 
 	    onPullDownRefresh(){
 		      this.page++;
