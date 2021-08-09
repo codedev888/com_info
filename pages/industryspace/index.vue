@@ -28,8 +28,8 @@
 				<view class="an">
 				
 					<view class="tab-con" v-show="chShow">
-						<view class="choose u-border" @tap="goTop">
-							<u-dropdown ref="uDropdown" class="u-dropdown">
+						<view class="choose u-border">
+							<u-dropdown ref="uDropdown" class="u-dropdown" @goTop="goTop">
 								
 								<u-dropdown-item v-model="value1" title="罗湖区" :options="options1" height="600">
 								</u-dropdown-item>
@@ -115,7 +115,99 @@
 						  </view>
 						</view>
 					</view>
-					  
+					<view class="section24 flex-row bd">
+						<view class="main2 flex-flex">
+							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
+						</view>
+						<view class="main3 flex-col">
+						  <text class="info5">深业进元大厦</text>
+						  <view class="outer1 flex-row">
+							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
+							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
+							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
+						  </view>
+						  <text class="paragraph1">
+							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
+							<br />
+							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
+						  </text>
+						  <view class="outer2 flex-row">
+							<view class="wrap1">
+							  <text class="info6">75</text>
+							  <text class="info7">元</text>
+							  <text class="txt9">/㎡/月起</text>
+							</view>
+							<view class="wrap2">
+							  <text class="word17">在租</text>
+							  <text class="info8"></text>
+							  <text class="info6">4</text>
+							  <text class="info9">套</text>
+							</view>
+						  </view>
+						</view>
+					</view>
+					<view class="section24 flex-row bd">
+						<view class="main2 flex-flex">
+							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
+						</view>
+						<view class="main3 flex-col">
+						  <text class="info5">深业进元大厦</text>
+						  <view class="outer1 flex-row">
+							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
+							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
+							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
+						  </view>
+						  <text class="paragraph1">
+							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
+							<br />
+							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
+						  </text>
+						  <view class="outer2 flex-row">
+							<view class="wrap1">
+							  <text class="info6">75</text>
+							  <text class="info7">元</text>
+							  <text class="txt9">/㎡/月起</text>
+							</view>
+							<view class="wrap2">
+							  <text class="word17">在租</text>
+							  <text class="info8"></text>
+							  <text class="info6">4</text>
+							  <text class="info9">套</text>
+							</view>
+						  </view>
+						</view>
+					</view>
+					<view class="section24 flex-row bd">
+						<view class="main2 flex-flex">
+							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
+						</view>
+						<view class="main3 flex-col">
+						  <text class="info5">深业进元大厦</text>
+						  <view class="outer1 flex-row">
+							<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
+							<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
+							<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
+						  </view>
+						  <text class="paragraph1">
+							社会物业&nbsp;|&nbsp;面积&nbsp;79048㎡
+							<br />
+							清水河街道&nbsp;|&nbsp;办公&nbsp;、商铺
+						  </text>
+						  <view class="outer2 flex-row">
+							<view class="wrap1">
+							  <text class="info6">75</text>
+							  <text class="info7">元</text>
+							  <text class="txt9">/㎡/月起</text>
+							</view>
+							<view class="wrap2">
+							  <text class="word17">在租</text>
+							  <text class="info8"></text>
+							  <text class="info6">4</text>
+							  <text class="info9">套</text>
+							</view>
+						  </view>
+						</view>
+					</view>															  
 					<view class="section24 flex-row bd">
 						<view class="main2 flex-flex">
 							<image src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng41d91673d7be21d120e5a1e39d2f64faf29371787424ccd0978145584de631ad" mode="widthFix"></image>
@@ -157,7 +249,17 @@
 
 			</view>
 		</view>
-
+		<u-tabbar
+			v-model="current"
+			:show="show"
+			:bg-color="bgColor"
+			:border-top="borderTop"
+			:list="barlist"
+			:mid-button="midButton"
+			:inactive-color="inactiveColor"
+			:activeColor="activeColor"
+		></u-tabbar>	
+		<!-- 底部菜单结束 -->
 	</view>
 </template>
 
@@ -165,6 +267,46 @@
 	export default{
 		data(){
 			return{
+				current: 0,
+				show: true,
+				bgColor: '#ffffff',
+				borderTop: true,
+				barlist: [{
+						iconPath: "/static/tabbar/home.png",
+						selectedIconPath: "/static/tabbar/home-active.png",
+						//pagePath:'/page/company/index',
+						text: '首页',
+						//count: 2,
+						//isDot: true,
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/service.png",
+						selectedIconPath: "/static/tabbar/service-active.png",
+						//pagePath:'/page/company/index',
+						text: '客服',
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/info.png",
+						selectedIconPath: "/static/tabbar/info-active.png",
+						//pagePath:'/page/company/index',
+						text: '消息',
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/member.png",
+						selectedIconPath: "/static/tabbar/member-active.png",
+						//pagePath:'/page/company/index',
+						text: '主页',
+						//count: 23,
+						isDot: false,
+						customIcon: false,
+					},
+				],
+				midButton: false,
+				inactiveColor: '#909399',
+				activeColor: '#5098FF',
 				keyword:'',
 				bg:'none',
 				sort:'/static/sort.png',
@@ -403,6 +545,19 @@
 				this.jdIndex = i
 				//this.list[index].active = !this.list[index].active;
 			}
+		},
+		onPageScroll(e) {
+			this.top = e.scrollTop;
+		},
+		onShow() {
+
+		},
+		onHide() {},
+		onLaunch() {
+
+		},
+		mounted() {
+			console.log(this.$mp.page)
 		}
 		
 	}

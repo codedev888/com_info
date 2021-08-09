@@ -15,9 +15,9 @@
 			<u-sticky ref="sticky">
 				<view class="an">
 				
-					<view class="tab-con" v-show="chShow">
-						<view class="choose u-border" @tap="goTop">
-							<u-dropdown ref="uDropdown" class="u-dropdown">
+					<view class="tab-con">
+						<view class="choose u-border">
+							<u-dropdown ref="uDropdown" class="u-dropdown" @goTop="goTop">
 								
 								<u-dropdown-item v-model="value1" title="罗湖区" :options="options1" height="600">
 								</u-dropdown-item>
@@ -29,7 +29,7 @@
 								</u-dropdown-item>
 
 							</u-dropdown>
-							<view class="absolute" @tap="sort">
+							<view class="absolute" @tap="sorts">
 								<u-image width="22rpx" height="30rpx" :src="sort"></u-image>
 							</view>
 						</view>
@@ -44,11 +44,10 @@
 			</u-sticky>
 			<view class="pad28 listHeight">
 
-		<view class="modecotent">
-			
+				<view class="modecotent">
 					<view class="section24 flex-row bd">
 						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
+							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'/static/fz.jpg'"></u-image>
 					
 						</view>
 						<view class="main3 flex-col">
@@ -81,7 +80,7 @@
 					  
 					<view class="section24 flex-row bd">
 						<view class="main2 flex-flex">
-							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
+							<u-image border-radius="6" width="210rpx" height="210rpx" :src="'/static/fz.jpg'"></u-image>
 						</view>
 						<view class="main3 flex-col">
 						  <text class="info5">深业进元大厦</text>
@@ -111,78 +110,21 @@
 						</view>
 					</view>
 					<!-- <text class="view-more">查看更多&gt;</text> -->
-					
-			</view>	
-
-					<view class="section24 flex-col bd">
-						<view class="names">
-								金和瑞瑚琳工业园
-						</view>
-
-						<view class="item-box flex-row">
-							<view class="main2 flex-flex">
-								<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-							</view>
-							<view class="main3 flex-col">
-								<view class="flex-col flex-1">
-									<text class="info5">深业进元大厦</text>
-									<view class="outer1 flex-row">
-										<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-										<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-										<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-									</view>
-								</view>
-
-								<view class="outer2 flex-row">
-									<view class="wrap1">
-									  <text class="info6">75</text>
-									  <text class="info7">元</text>
-									  <text class="txt9">/㎡/月起</text>
-									</view>
-									<view class="wrap2">
-									<text class="info6">租</text> 
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-					  
-					<view class="section24 bd">
-						<view class="names">甘坑同富裕工业区</view>
-						<view class="item-box flex-row">
-							<view class="main2 flex-flex">
-								<u-image border-radius="6" width="210rpx" height="210rpx" :src="'//lanhu.oss-cn-beijing.aliyuncs.com/SketchPng180cd5f8fc68461226816244d9f111bd55b106161ee87c0ee9ea7cb54f701efa'"></u-image>
-							</view>
-							<view class="main3 flex-col">
-								<view class="flex-col flex-1">
-									<text class="info5">深业进元大厦</text>
-									<view class="outer1 flex-row">
-										<view class="mod2 flex-col"><text class="txt8">租售中</text></view>
-										<view class="mod2 flex-col"><text class="txt8">198-500</text></view>
-										<view class="mod2 flex-col"><text class="txt8">建设中</text></view>
-									</view>
-								</view>
-
-								<view class="outer2 flex-row">
-									<view class="wrap1">
-									  <text class="info6">75</text>
-									  <text class="info7">元</text>
-									  <text class="txt9">/㎡/月起</text>
-									</view>
-									<view class="wrap2">
-									<text class="info6">租</text> 
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
-					<!-- <text class="view-more">查看更多&gt;</text> -->
-		
-			<text class="view-more">没有更多了</text>
-
+				</view>	
+				<text class="view-more">没有更多了</text>
 			</view>
 		</view>
-
+		<u-tabbar
+			v-model="current"
+			:show="show"
+			:bg-color="bgColor"
+			:border-top="borderTop"
+			:list="barlist"
+			:mid-button="midButton"
+			:inactive-color="inactiveColor"
+			:activeColor="activeColor"
+		></u-tabbar>	
+		<!-- 底部菜单结束 -->
 	</view>
 </template>
 
@@ -190,6 +132,46 @@
 	export default{
 		data(){
 			return{
+				current: 0,
+				show: true,
+				bgColor: '#ffffff',
+				borderTop: true,
+				barlist: [{
+						iconPath: "/static/tabbar/home.png",
+						selectedIconPath: "/static/tabbar/home-active.png",
+						//pagePath:'/page/company/index',
+						text: '首页',
+						//count: 2,
+						//isDot: true,
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/service.png",
+						selectedIconPath: "/static/tabbar/service-active.png",
+						//pagePath:'/page/company/index',
+						text: '客服',
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/info.png",
+						selectedIconPath: "/static/tabbar/info-active.png",
+						//pagePath:'/page/company/index',
+						text: '消息',
+						customIcon: false,
+					},
+					{
+						iconPath: "/static/tabbar/member.png",
+						selectedIconPath: "/static/tabbar/member-active.png",
+						//pagePath:'/page/company/index',
+						text: '主页',
+						//count: 23,
+						isDot: false,
+						customIcon: false,
+					},
+				],
+				midButton: false,
+				inactiveColor: '#909399',
+				activeColor: '#5098FF',
 				custonStyle:'',
 				keyword:'',
 				bg:'none',
@@ -312,15 +294,7 @@
 			}
 		},
 		methods:{
-/* 			tabChange(index) {
-				index == 2 ? this.chShow = false : this.chShow = true
-				this.$refs["sticky"].initObserver()
-				this.current = index;
-				this.$refs["uDropdown"].close()
-				this.goTop()
-			}, */
 			goTop() {
-				console.log(111111);
 				if (!this.$refs["sticky"].fixed) {
 					this.$u.getRect("#tab").then(res => {
 						uni.pageScrollTo({
@@ -333,15 +307,35 @@
 					})
 				}
 			},
+			tabChange(index) {
+				index == 2 ? this.chShow = false : this.chShow = true
+				this.$refs["sticky"].initObserver()
+				this.current = index;
+				this.$refs["uDropdown"].close()
+				this.goTop()
+			},
 			closeDropdown() {
 				this.$refs.uDropdown.close();
 			},
 			typeOn(i) {
 				this.indexOn = i
 			},
-			sort(){
+			sorts(){
 				console.log('排序')
 			}
+		},
+		onPageScroll(e) {
+			this.top = e.scrollTop;
+		},
+		onShow() {
+
+		},
+		onHide() {},
+		onLaunch() {
+
+		},
+		mounted() {
+			console.log(this.$mp.page)
 		}
 		
 	}
